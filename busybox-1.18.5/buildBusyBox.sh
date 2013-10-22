@@ -1,5 +1,4 @@
 #!/bin/bash
-make clean
 timeout 200 make -j 4
 
 RETVAL=$?
