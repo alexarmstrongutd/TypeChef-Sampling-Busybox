@@ -1,0 +1,62 @@
+//applet:IF_XARGS(APPLET_NOEXEC(xargs, xargs, _BB_DIR_USR_BIN, _BB_SUID_DROP, xargs))
+//kbuild:lib-$(CONFIG_XARGS) += xargs.o
+//config:config XARGS
+//config:	bool "xargs"
+//config:	default y
+//config:	help
+//config:	  xargs is used to execute a specified command for
+//config:	  every item from standard input.
+//config:
+//config:config FEATURE_XARGS_SUPPORT_CONFIRMATION
+//config:	bool "Enable -p: prompt and confirmation"
+//config:	default y
+//config:	depends on XARGS
+//config:	help
+//config:	  Support -p: prompt the user whether to run each command
+//config:	  line and read a line from the terminal.
+//config:
+//config:config FEATURE_XARGS_SUPPORT_QUOTES
+//config:	bool "Enable single and double quotes and backslash"
+//config:	default y
+//config:	depends on XARGS
+//config:	help
+//config:	  Support quoting in the input.
+//config:
+//config:config FEATURE_XARGS_SUPPORT_TERMOPT
+//config:	bool "Enable -x: exit if -s or -n is exceeded"
+//config:	default y
+//config:	depends on XARGS
+//config:	help
+//config:	  Support -x: exit if the command size (see the -s or -n option)
+//config:	  is exceeded.
+//config:
+//config:config FEATURE_XARGS_SUPPORT_ZERO_TERM
+//config:	bool "Enable -0: NUL-terminated input"
+//config:	default y
+//config:	depends on XARGS
+//config:	help
+//config:	  Support -0: input items are terminated by a NUL character
+//config:	  instead of whitespace, and the quotes and backslash
+//config:	  are not special.
+//usage:#define xargs_trivial_usage
+//usage:       "[OPTIONS] [PROG ARGS]"
+//usage:#define xargs_full_usage "\n\n"
+//usage:       "Run PROG on every item given by stdin\n"
+//usage:     "\nOptions:"
+//usage:	IF_FEATURE_XARGS_SUPPORT_CONFIRMATION(
+//usage:     "\n	-p	Ask user whether to run each command"
+//usage:	)
+//usage:     "\n	-r	Don't run command if input is empty"
+//usage:	IF_FEATURE_XARGS_SUPPORT_ZERO_TERM(
+//usage:     "\n	-0	Input is separated by NUL characters"
+//usage:	)
+//usage:     "\n	-t	Print the command on stderr before execution"
+//usage:     "\n	-e[STR]	STR stops input processing"
+//usage:     "\n	-n N	Pass no more than N args to PROG"
+//usage:     "\n	-s N	Pass command line of no more than N bytes"
+//usage:	IF_FEATURE_XARGS_SUPPORT_TERMOPT(
+//usage:     "\n	-x	Exit if size is exceeded"
+//usage:	)
+//usage:#define xargs_example_usage
+//usage:       "$ ls | xargs gzip\n"
+//usage:       "$ find . -name '*.c' -print | xargs rm\n"

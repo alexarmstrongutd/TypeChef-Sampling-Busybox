@@ -1,0 +1,11 @@
+//applet:IF_SMEMCAP(APPLET(smemcap, _BB_DIR_USR_BIN, _BB_SUID_DROP))
+//kbuild:lib-$(CONFIG_SMEMCAP) += smemcap.o
+//config:config SMEMCAP
+//config:	bool "smemcap"
+//config:	default y
+//config:	help
+//config:	  smemcap is a tool for capturing process data for smem,
+//config:	  a memory usage statistic tool.
+//usage:#define smemcap_trivial_usage ">SMEMDATA.TAR"
+//usage:#define smemcap_full_usage "\n\n"
+//usage:       "Collect memory usage data in /proc and write it to stdout"

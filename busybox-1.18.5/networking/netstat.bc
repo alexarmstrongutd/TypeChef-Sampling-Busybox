@@ -1,0 +1,24 @@
+//usage:#define netstat_trivial_usage
+//usage:       "[-"IF_ROUTE("r")"al] [-tuwx] [-en"IF_FEATURE_NETSTAT_WIDE("W")IF_FEATURE_NETSTAT_PRG("p")"]"
+//usage:#define netstat_full_usage "\n\n"
+//usage:       "Display networking information\n"
+//usage:     "\nOptions:"
+//usage:	IF_ROUTE(
+//usage:     "\n	-r	Routing table"
+//usage:	)
+//usage:     "\n	-a	All sockets"
+//usage:     "\n	-l	Listening sockets"
+//usage:     "\n		Else: connected sockets"
+//usage:     "\n	-t	TCP sockets"
+//usage:     "\n	-u	UDP sockets"
+//usage:     "\n	-w	Raw sockets"
+//usage:     "\n	-x	Unix sockets"
+//usage:     "\n		Else: all socket types"
+//usage:     "\n	-e	Other/more information"
+//usage:     "\n	-n	Don't resolve names"
+//usage:	IF_FEATURE_NETSTAT_WIDE(
+//usage:     "\n	-W	Wide display"
+//usage:	)
+//usage:	IF_FEATURE_NETSTAT_PRG(
+//usage:     "\n	-p	Show PID/program name for sockets"
+//usage:	)

@@ -1,0 +1,11 @@
+//applet:IF_POWERTOP(APPLET(powertop, _BB_DIR_BIN, _BB_SUID_DROP))
+//kbuild:lib-$(CONFIG_POWERTOP) += powertop.o
+//config:config POWERTOP
+//config:	bool "powertop"
+//config:	default y
+//config:	help
+//config:	  Analyze power consumption on Intel-based laptops
+//usage:#define powertop_trivial_usage
+//usage:       ""
+//usage:#define powertop_full_usage "\n\n"
+//usage:       "Analyze power consumption on Intel-based laptops\n"

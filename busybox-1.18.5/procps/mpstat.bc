@@ -1,0 +1,16 @@
+//applet:IF_MPSTAT(APPLET(mpstat, _BB_DIR_BIN, _BB_SUID_DROP))
+//kbuild:lib-$(CONFIG_MPSTAT) += mpstat.o
+//config:config MPSTAT
+//config:	bool "mpstat"
+//config:	default y
+//config:	help
+//config:	  Per-processor statistics
+//usage:#define mpstat_trivial_usage
+//usage:       "[-A] [-I SUM|CPU|ALL|SCPU] [-u] [-P num|ALL] [INTERVAL [COUNT]]"
+//usage:#define mpstat_full_usage "\n\n"
+//usage:       "Per-processor statistics\n"
+//usage:     "\nOptions:"
+//usage:     "\n	-A			Same as -I ALL -u -P ALL"
+//usage:     "\n	-I SUM|CPU|ALL|SCPU	Report interrupt statistics"
+//usage:     "\n	-P num|ALL		Processor to monitor"
+//usage:     "\n	-u			Report CPU utilization"

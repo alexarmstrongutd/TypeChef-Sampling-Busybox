@@ -1,0 +1,14 @@
+//applet:IF_PMAP(APPLET(pmap, _BB_DIR_USR_BIN, _BB_SUID_DROP))
+//kbuild:lib-$(CONFIG_PMAP)     += pmap.o
+//config:config PMAP
+//config:       bool "pmap"
+//config:       default y
+//config:       help
+//config:         Display processes' memory mappings.
+//usage:#define pmap_trivial_usage
+//usage:       "[-x][-q] PID"
+//usage:#define pmap_full_usage "\n\n"
+//usage:       "Display detailed precesses' memory usage\n"
+//usage:       "\nOptions:"
+//usage:       "\n     -x              show details"
+//usage:       "\n     -q              quiet"

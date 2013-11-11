@@ -1,0 +1,29 @@
+//applet:IF_PATCH(APPLET(patch, _BB_DIR_USR_BIN, _BB_SUID_DROP))
+//kbuild:lib-$(CONFIG_PATCH) += patch.o
+//config:config PATCH
+//config:	bool "patch"
+//config:	default y
+//config:	help
+//config:	  Apply a unified diff formatted patch.
+//usage:#define patch_trivial_usage
+//usage:       "[OPTIONS] [ORIGFILE [PATCHFILE]]"
+//usage:#define patch_full_usage "\n\n"
+//usage:	IF_LONG_OPTS(
+//usage:       "	-p,--strip N		Strip N leading components from file names"
+//usage:     "\n	-i,--input DIFF		Read DIFF instead of stdin"
+//usage:     "\n	-R,--reverse		Reverse patch"
+//usage:     "\n	-N,--forward		Ignore already applied patches"
+//usage:     "\n	--dry-run		Don't actually change files"
+//usage:     "\n	-E,--remove-empty-files	Remove output files if they become empty"
+//usage:	)
+//usage:	IF_NOT_LONG_OPTS(
+//usage:       "	-p N	Strip N leading components from file names"
+//usage:     "\n	-i DIFF	Read DIFF instead of stdin"
+//usage:     "\n	-R	Reverse patch"
+//usage:     "\n	-N	Ignore already applied patches"
+//usage:     "\n	-E	Remove output files if they become empty"
+//usage:	)
+//usage:
+//usage:#define patch_example_usage
+//usage:       "$ patch -p1 < example.diff\n"
+//usage:       "$ patch -p0 -i example.diff"

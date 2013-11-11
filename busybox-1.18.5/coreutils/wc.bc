@@ -1,0 +1,17 @@
+//usage:#define wc_trivial_usage
+//usage:       "[-c"IF_UNICODE_SUPPORT("m")"lwL] [FILE]..."
+//usage:
+//usage:#define wc_full_usage "\n\n"
+//usage:       "Count lines, words, and bytes for each FILE (or stdin)\n"
+//usage:     "\nOptions:"
+//usage:     "\n	-c	Count bytes"
+//usage:	IF_UNICODE_SUPPORT(
+//usage:     "\n	-m	Count characters"
+//usage:	)
+//usage:     "\n	-l	Count newlines"
+//usage:     "\n	-w	Count words"
+//usage:     "\n	-L	Print longest line length"
+//usage:
+//usage:#define wc_example_usage
+//usage:       "$ wc /etc/passwd\n"
+//usage:       "     31      46    1365 /etc/passwd\n"

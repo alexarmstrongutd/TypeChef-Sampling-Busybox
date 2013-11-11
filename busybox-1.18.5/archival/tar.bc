@@ -1,0 +1,50 @@
+//usage:#define tar_trivial_usage
+//usage:       "-[" IF_FEATURE_TAR_CREATE("c") "xt" IF_FEATURE_SEAMLESS_GZ("z")
+//usage:	IF_FEATURE_SEAMLESS_BZ2("j") IF_FEATURE_SEAMLESS_LZMA("a")
+//usage:	IF_FEATURE_SEAMLESS_Z("Z") IF_FEATURE_TAR_NOPRESERVE_TIME("m") "vO] "
+//usage:	IF_FEATURE_TAR_FROM("[-X FILE] ")
+//usage:       "[-f TARFILE] [-C DIR] [FILE]..."
+//usage:#define tar_full_usage "\n\n"
+//usage:	IF_FEATURE_TAR_CREATE("Create, extract, ")
+//usage:	IF_NOT_FEATURE_TAR_CREATE("Extract ")
+//usage:	"or list files from a tar file\n"
+//usage:     "\nOperation:"
+//usage:	IF_FEATURE_TAR_CREATE(
+//usage:     "\n	c	Create"
+//usage:	)
+//usage:     "\n	x	Extract"
+//usage:     "\n	t	List"
+//usage:     "\nOptions:"
+//usage:     "\n	f	Name of TARFILE ('-' for stdin/out)"
+//usage:     "\n	C	Change to DIR before operation"
+//usage:     "\n	v	Verbose"
+//usage:	IF_FEATURE_SEAMLESS_GZ(
+//usage:     "\n	z	(De)compress using gzip"
+//usage:	)
+//usage:	IF_FEATURE_SEAMLESS_BZ2(
+//usage:     "\n	j	(De)compress using bzip2"
+//usage:	)
+//usage:	IF_FEATURE_SEAMLESS_LZMA(
+//usage:     "\n	a	(De)compress using lzma"
+//usage:	)
+//usage:	IF_FEATURE_SEAMLESS_Z(
+//usage:     "\n	Z	(De)compress using compress"
+//usage:	)
+//usage:     "\n	O	Extract to stdout"
+//usage:	IF_FEATURE_TAR_CREATE(
+//usage:     "\n	h	Follow symlinks"
+//usage:	)
+//usage:	IF_FEATURE_TAR_NOPRESERVE_TIME(
+//usage:     "\n	m	Don't restore mtime"
+//usage:	)
+//usage:	IF_FEATURE_TAR_FROM(
+//usage:	IF_FEATURE_TAR_LONG_OPTIONS(
+//usage:     "\n	exclude	File to exclude"
+//usage:	)
+//usage:     "\n	X	File with names to exclude"
+//usage:     "\n	T	File with names to include"
+//usage:	)
+//usage:
+//usage:#define tar_example_usage
+//usage:       "$ zcat /tmp/tarball.tar.gz | tar -xf -\n"
+//usage:       "$ tar -cf /tmp/tarball.tar /usr/local\n"

@@ -1,0 +1,13 @@
+//applet:IF_BASE64(APPLET(base64, _BB_DIR_BIN, _BB_SUID_DROP))
+//kbuild:lib-$(CONFIG_BASE64) += uudecode.o
+//config:config BASE64
+//config:	bool "base64"
+//config:	default y
+//config:	help
+//config:	  Base64 encode and decode
+//usage:#define base64_trivial_usage
+//usage:	"[-d] [FILE]"
+//usage:#define base64_full_usage "\n\n"
+//usage:       "Base64 encode or decode FILE to standard output"
+//usage:     "\nOptions:"
+//usage:     "\n	-d	Decode data"

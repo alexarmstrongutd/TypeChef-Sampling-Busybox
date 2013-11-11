@@ -1,0 +1,11 @@
+//applet:IF_NBDCLIENT(APPLET_ODDNAME(nbd-client, nbdclient, _BB_DIR_USR_SBIN, _BB_SUID_DROP, nbdclient))
+//kbuild:lib-$(CONFIG_NBDCLIENT) += nbd-client.o
+//config:config NBDCLIENT
+//config:	bool "nbd-client"
+//config:	default y
+//config:	help
+//config:	  Network block device client
+//usage:#define nbdclient_trivial_usage
+//usage:       "HOST PORT BLOCKDEV"
+//usage:#define nbdclient_full_usage "\n\n"
+//usage:       "Connect to HOST and provide a network block device on BLOCKDEV"
