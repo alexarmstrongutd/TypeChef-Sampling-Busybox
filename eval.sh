@@ -1,7 +1,7 @@
 #!/bin/bash -e
 #!/bin/bash -vxe
 
-path= /local/janker/eval/build/cRefactor-BusyBoxEvaluation
+path=/local/janker/eval/build/cRefactor-BusyBoxEvaluation
 
 filesToProcess() {
   local listFile=$path/busybox_files
