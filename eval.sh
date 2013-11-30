@@ -1,15 +1,15 @@
-#!/bin/bash -e
-#!/bin/bash -vxe
+#!/bin/bash -vx
 
-path=/local/janker/eval/build/cRefactor-BusyBoxEvaluation
+path=$(cd "$(dirname "$0")"; pwd)
+
 
 filesToProcess() {
-  local listFile=$path/busybox_files
+  local listFile=busybox_files
   cat $listFile
 }
 
 flags=" --bdd \
-  --canBuild --refLink $path/busyboxfinal.interface
+  --refEval extract --study busybox --refLink $path/busyboxfinal.interface
   -x CONFIG_ \
   -c $path/redhat.properties \
   --include $path/config.h \
