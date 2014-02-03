@@ -1,0 +1,64 @@
+fm True
+features (0)
+	
+imports (58)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_daemonize_or_rexec: (signed int) => void 		if (def(CONFIG_ACPID)&!def(CONFIG_NOMMU))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44
+	bb_daemonize_or_rexec: (signed int, char**) => void 		if (def(CONFIG_ACPID)&def(CONFIG_NOMMU))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44
+	bb_error_msg: (const char*, ...) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:83:2
+	bb_signals: (signed int, (signed int) => void*) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:225:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:224:1
+	bb_simple_perror_msg: (const char*) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:93:2
+	bb_simple_perror_msg_and_die: (const char*) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:237:4
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	close: (signed int) => signed int 		if (def(CONFIG_ACPID)&def(CONFIG_FEATURE_CLEAN_UP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:287:4
+	config_close: (struct parser_t*) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:172:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:147:2
+	config_open2: (const char*, (const char*) => struct _IO_FILE**) => struct parser_t* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:159:10, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:138:10
+	config_read: (struct parser_t*, char**, unsigned int, const char*) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1157:59, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1157:59
+	fopen_for_read: (const char*) => struct _IO_FILE* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:159:33, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:159:33, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:138:33, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:138:33
+	free: (void*) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:290:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:95:1
+	full_read: (signed int, void*, unsigned long) => signed long 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:269:22
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:202:8
+	memset: (void*, signed int, unsigned long) => void* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:253:3
+	open: (const char*, signed int, ...) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:234:7
+	openlog: (const char*, signed int, signed int) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:213:2
+	poll: (struct pollfd*, unsigned long, signed int) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:248:8
+	record_signo: (signed int) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:225:27, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:225:27
+	spawn: (char**) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:91:2
+	stat: (const char*, struct stat*) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:90:10
+	strlen: (const char*) => unsigned long 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:264:10, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:113:37, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:113:37
+	strncmp: (const char*, const char*, unsigned long) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:113:7
+	strstr: (const char*, const char*) => char* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:123:7
+	unlink: (const char*) => signed int 		if (def(CONFIG_ACPID)&def(CONFIG_FEATURE_PIDFILE))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:986:53
+	write_pidfile: (const char*) => void 		if (def(CONFIG_ACPID)&def(CONFIG_FEATURE_PIDFILE))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:989:29, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:989:29
+	xasprintf: (const char*, ...) => char* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:233:14, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:78:17
+	xatoi_positive: (const char*) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:168:26
+	xatoll: (const char*) => signed long long 		if def(CONFIG_ACPID)		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_ACPID)		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_ACPID)		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_ACPID)		at string literal: xatoll_sfx:1:0
+	xatou16: (const char*) => unsigned short 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:167:27
+	xatou: (const char*) => unsigned int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xatoull_sfx:1:0
+	xchdir: (const char*) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:222:1
+	xmalloc_reads: (signed int, char*, unsigned long*) => char* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:262:10
+	xmove_fd: (signed int, signed int) => void 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:216:2
+	xopen: (const char*, signed int) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:216:11, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:216:11
+	xrealloc_vector_helper: (void*, unsigned int, signed int) => void* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:642:45, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:642:45, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:642:45
+	xstrdup: (const char*) => char* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:169:25, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:166:27, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:164:27, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:144:27, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:143:24
+	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_ACPID)		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_ACPID)		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_ACPID)		at string literal: xstrtoll_range_sfx:1:0
+	xstrtou: (const char*, signed int) => unsigned int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:165:27
+	xstrtoull: (const char*, signed int) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ACPID)		at string literal: xstrtoull_sfx:1:0
+	xzalloc: (unsigned long) => void* 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:59:42
+exports (1)
+	acpid_main: (signed int, char**) => signed int 		if def(CONFIG_ACPID)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/acpid.c:184:0

@@ -1,0 +1,53 @@
+fm True
+features (0)
+	
+imports (47)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	access: (const char*, signed int) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:46:5
+	bb_error_msg: (const char*, ...) => void 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:279:3
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	close: (signed int) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:107:1
+	config_close: (struct parser_t*) => void 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:235:1
+	config_open2: (const char*, (const char*) => struct _IO_FILE**) => struct parser_t* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:192:11, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:190:11, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:188:10
+	config_read: (struct parser_t*, char**, unsigned int, const char*) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1157:59
+	fopen_for_read: (const char*) => struct _IO_FILE* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:192:44, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:192:44, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:190:41, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:190:41, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:188:42, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:188:42
+	free: (void*) => void 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:267:5, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:231:3, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:116:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:99:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:73:3
+	getenv: (const char*) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:180:10, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:178:9, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:173:20
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:166:7
+	open_zipped: (const char*) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:108:1
+	puts: (const char*) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:50:2
+	skip_whitespace: (const char*) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:80:13
+	strchr: (const char*, signed int) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:242:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:205:16, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:89:6
+	strchrnul: (const char*, signed int) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:250:22, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:79:3
+	strcmp: (const char*, const char*) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:230:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:214:9, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:198:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:197:6
+	strcpy: (char*, const char*) => char* 		if (def(CONFIG_MAN)&((def(CONFIG_FEATURE_SEAMLESS_LZMA)&(def(CONFIG_FEATURE_SEAMLESS_BZ2)|def(CONFIG_FEATURE_SEAMLESS_GZ)))|(def(CONFIG_FEATURE_SEAMLESS_BZ2)&def(CONFIG_FEATURE_SEAMLESS_GZ)&!def(CONFIG_FEATURE_SEAMLESS_LZMA))))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:138:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:130:1
+	strncmp: (const char*, const char*, unsigned long) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:72:15
+	strrchr: (const char*, signed int) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:145:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:138:8, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:138:8, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:130:8, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:130:8, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:90:7, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:85:6
+	system: (const char*) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:115:1
+	xasprintf: (const char*, ...) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:258:20, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:111:7, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:98:17
+	xatoll: (const char*) => signed long long 		if def(CONFIG_MAN)		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_MAN)		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_MAN)		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_MAN)		at string literal: xatoll_sfx:1:0
+	xatou: (const char*) => unsigned int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xatoull_sfx:1:0
+	xmalloc_open_zipped_read_close: (const char*, unsigned long*) => void* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:71:9
+	xrealloc_vector_helper: (void*, unsigned int, signed int) => void* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:642:45
+	xstat: (const char*, struct stat*) => void 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:67:2
+	xstrdup: (const char*) => char* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:232:14, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:219:30, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:169:12
+	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_MAN)		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_MAN)		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_MAN)		at string literal: xstrtoll_range_sfx:1:0
+	xstrtoull: (const char*, signed int) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_MAN)		at string literal: xstrtoull_sfx:1:0
+	xzalloc: (unsigned long) => void* 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:172:17
+exports (1)
+	man_main: (signed int, char**) => signed int 		if def(CONFIG_MAN)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/man.c:154:0

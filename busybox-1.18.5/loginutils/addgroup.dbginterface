@@ -1,0 +1,45 @@
+fm True
+features (0)
+	
+imports (39)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_error_msg_and_die: (const char*, ...) => void 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:124:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:57:3, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:52:3, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:28:2
+	bb_internal_getgrgid: (unsigned int) => struct group* 		if (def(CONFIG_ADDGROUP)&def(CONFIG_USE_BB_PWD_GRP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:38:21, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:38:21
+	bb_internal_getgrnam: (const char*) => struct group* 		if (def(CONFIG_ADDGROUP)&def(CONFIG_USE_BB_PWD_GRP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:39:21, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:39:21
+	bb_show_usage: (void) => void 		if (def(CONFIG_ADDGROUP)&def(CONFIG_FEATURE_ADDUSER_TO_GROUP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:147:3
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	die_if_bad_username: (const char*) => void 		if (def(CONFIG_ADDGROUP)&def(CONFIG_FEATURE_CHECK_NAMES))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:826:34, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:826:34, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:826:34, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:826:34
+	exit: (signed int) => void 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:78:2
+	free: (void*) => void 		if (def(CONFIG_ADDGROUP)&def(CONFIG_FEATURE_CLEAN_UP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:80:2
+	geteuid: (void) => unsigned int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:123:5
+	getgrgid: (unsigned int) => struct group* 		if (def(CONFIG_ADDGROUP)&!def(CONFIG_USE_BB_PWD_GRP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:38:21
+	getgrnam: (const char*) => struct group* 		if (def(CONFIG_ADDGROUP)&!def(CONFIG_USE_BB_PWD_GRP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:39:21
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:135:8
+	itoa: (signed int) => char* 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:52:49, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:52:49
+	strcmp: (const char*, const char*) => signed int 		if (def(CONFIG_ADDGROUP)&def(CONFIG_FEATURE_ADDUSER_TO_GROUP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:155:8
+	update_passwd: (const char*, const char*, const char*) => signed int 		if (!def(CONFIG_FEATURE_ADDUSER_TO_GROUP)&!def(CONFIG_FEATURE_DEL_USER_FROM_GROUP)&def(CONFIG_ADDGROUP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57
+	update_passwd: (const char*, const char*, const char*, const char*) => signed int 		if (def(CONFIG_ADDGROUP)&(def(CONFIG_FEATURE_ADDUSER_TO_GROUP)|def(CONFIG_FEATURE_DEL_USER_FROM_GROUP)))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:164:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:164:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:160:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:160:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1235:57
+	xasprintf: (const char*, ...) => char* 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:76:5
+	xatoll: (const char*) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoll_sfx:1:0
+	xatou: (const char*) => unsigned int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xatoull_sfx:1:0
+	xgetgrnam: (const char*) => struct group* 		if (def(CONFIG_ADDGROUP)&def(CONFIG_FEATURE_ADDUSER_TO_GROUP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:152:7
+	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoll_range_sfx:1:0
+	xstrtoull: (const char*, signed int) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ADDGROUP)		at string literal: xstrtoull_sfx:1:0
+	xuname2uid: (const char*) => signed long 		if (def(CONFIG_ADDGROUP)&def(CONFIG_FEATURE_ADDUSER_TO_GROUP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:151:2
+exports (1)
+	addgroup_main: (signed int, char**) => signed int 		if def(CONFIG_ADDGROUP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/addgroup.c:117:0

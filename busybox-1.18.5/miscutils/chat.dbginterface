@@ -1,0 +1,57 @@
+fm True
+features (0)
+	
+imports (51)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	alarm: (unsigned int) => unsigned int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:410:4, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:372:4
+	atoi: (const char*) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:201:14
+	bb_error_msg: (const char*, ...) => void 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:221:4
+	bb_process_escape_sequence: (const char**) => char 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:72:9, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:72:9
+	bb_signals: (signed int, (signed int) => void*) => void 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:128:1
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	cfmakeraw: (struct termios*) => void 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_TTY_HIFI))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:138:1
+	close: (signed int) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:215:5
+	free: (void*) => void 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:418:5
+	full_write: (signed int, const void*, unsigned long) => signed long 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:407:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:295:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:287:6
+	getopt32: (char**, const char*, ...) => unsigned int 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_SWALLOW_OPTS))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:143:1
+	index_in_strings: (const char*, const char*) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:151:12
+	llist_add_to_end: (struct llist_t**, void*) => void 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:175:4
+	llist_unlink: (struct llist_t**, struct llist_t*) => void 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_CLR_ABORT))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:189:6
+	memcmp: (const void*, const void*, unsigned long) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:320:23, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:313:24
+	memmove: (void*, const void*, unsigned long) => void* 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:300:6
+	poll: (struct pollfd*, unsigned long, signed int) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:376:11, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:276:10
+	safe_read: (signed int, void*, unsigned long) => signed long 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:284:8
+	safe_write: (signed int, const void*, unsigned long) => signed long 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_SEND_ESCAPES))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:402:9
+	signal: (signed int, (signed int) => void*) => (signed int) => void* 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:167:4
+	sleep: (unsigned int) => unsigned int 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_SEND_ESCAPES))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:386:7
+	strcmp: (const char*, const char*) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:188:9, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:163:22
+	strlen: (const char*) => unsigned long 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:311:18, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:186:18, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:171:17
+	tcgetattr: (signed int, struct termios*) => signed int 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_TTY_HIFI))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:136:1
+	tcsendbreak: (signed int, signed int) => signed int 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_SEND_ESCAPES))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:396:7
+	tcsetattr: (signed int, signed int, const struct termios*) => signed int 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_TTY_HIFI))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:432:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:139:1
+	trim: (char*) => void 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:365:5
+	usleep: (unsigned int) => signed int 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_SEND_ESCAPES))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:391:7
+	xatoll: (const char*) => signed long long 		if def(CONFIG_CHAT)		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_CHAT)		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_CHAT)		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_CHAT)		at string literal: xatoll_sfx:1:0
+	xatou: (const char*) => unsigned int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xatoull_sfx:1:0
+	xmalloc_xopen_read_close: (const char*, unsigned long*) => void* 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:366:20
+	xopen: (const char*, signed int) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:217:26
+	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_CHAT)		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_CHAT)		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_CHAT)		at string literal: xstrtoll_range_sfx:1:0
+	xstrtoull: (const char*, signed int) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_CHAT)		at string literal: xstrtoull_sfx:1:0
+	xwrite: (signed int, const void*, unsigned long) => void 		if (def(CONFIG_CHAT)&def(CONFIG_FEATURE_CHAT_IMPLICIT_CR))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:422:5
+exports (1)
+	chat_main: (signed int, char**) => signed int 		if def(CONFIG_CHAT)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/chat.c:94:0
