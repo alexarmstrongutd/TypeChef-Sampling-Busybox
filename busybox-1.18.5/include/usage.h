@@ -745,6 +745,271 @@ n	IF_FEATURE_MODPROBE_BLACKLIST( \
      "\n	-b	Apply blacklist to module names too" \
 n	) \
 n#endif /* !ENABLE_MODPROBE_SMALL */ \
+n#if !ENABLE_MODPROBE_SMALL \
+n#define rmmod_trivial_usage \
+       "[-wfa] [MODULE]..." \
+n#define rmmod_full_usage "\n\n" \
+       "Unload kernel modules\n" \
+     "\nOptions:" \
+     "\n	-w	Wait until the module is no longer used" \
+     "\n	-f	Force unload" \
+     "\n	-a	Remove all unused modules (recursively)" \
+n#define rmmod_example_usage \
+       "$ rmmod tulip\n" \
+n#endif \
+n#define nbdclient_trivial_usage \
+       "HOST PORT BLOCKDEV" \
+n#define nbdclient_full_usage "\n\n" \
+       "Connect to HOST and provide a network block device on BLOCKDEV" \
+n#if !ENABLE_NC_110_COMPAT \
+n#if ENABLE_NC_SERVER || ENABLE_NC_EXTRA \
+n#define NC_OPTIONS_STR "\n\nOptions:" \
+n#else \
+n#define NC_OPTIONS_STR \
+n#endif \
+n#define nc_trivial_usage \
+n	IF_NC_EXTRA("[-iN] [-wN] ")IF_NC_SERVER("[-l] [-p PORT] ") \
+       "["IF_NC_EXTRA("-f FILE|")"IPADDR PORT]"IF_NC_EXTRA(" [-e PROG]") \
+n#define nc_full_usage "\n\n" \
+       "Open a pipe to IP:PORT" IF_NC_EXTRA(" or FILE") \
+n	NC_OPTIONS_STR \
+n	IF_NC_EXTRA( \
+     "\n	-e PROG	Run PROG after connect" \
+n	IF_NC_SERVER( \
+     "\n	-l	Listen mode, for inbound connects" \
+n	IF_NC_EXTRA( \
+     "\n		(use -l twice with -e for persistent server)") \
+     "\n	-p PORT	Local port" \
+n	) \
+     "\n	-w SEC	Timeout for connect" \
+     "\n	-i SEC	Delay interval for lines sent" \
+     "\n	-f FILE	Use file (ala /dev/ttyS0) instead of network" \
+n	) \
+n#define nc_notes_usage "" \
+n	IF_NC_EXTRA( \
+       "To use netcat as a terminal emulator on a serial port:\n\n" \
+       "$ stty 115200 -F /dev/ttyS0\n" \
+       "$ stty raw -echo -ctlecho && nc -f /dev/ttyS0\n" \
+n	) \
+n#define nc_example_usage \
+       "$ nc foobar.somedomain.com 25\n" \
+       "220 foobar ESMTP Exim 3.12 #1 Sat, 15 Apr 2000 00:03:02 -0600\n" \
+       "help\n" \
+       "214-Commands supported:\n" \
+       "214-    HELO EHLO MAIL RCPT DATA AUTH\n" \
+       "214     NOOP QUIT RSET HELP\n" \
+       "quit\n" \
+       "221 foobar closing connection\n" \
+n#endif \
+n#if ENABLE_NC_110_COMPAT \
+n#define nc_trivial_usage \
+       "[OPTIONS] HOST PORT  - connect" \
+n	IF_NC_SERVER("\n" \
+       "nc [OPTIONS] -l -p PORT [HOST] [PORT]  - listen" \
+n	) \
+n#define nc_full_usage "\n\n" \
+       "Options:" \
+     "\n	-e PROG	Run PROG after connect (must be last)" \
+n	IF_NC_SERVER( \
+     "\n	-l	Listen mode, for inbound connects" \
+n	) \
+     "\n	-p PORT	Local port" \
+     "\n	-s ADDR	Local address" \
+     "\n	-w SEC	Timeout for connects and final net reads" \
+n	IF_NC_EXTRA( \
+     "\n	-i SEC	Delay interval for lines sent" /* ", ports scanned" */ \
+n	) \
+     "\n	-n	Don't do DNS resolution" \
+     "\n	-u	UDP mode" \
+     "\n	-v	Verbose" \
+n	IF_NC_EXTRA( \
+     "\n	-o FILE	Hex dump traffic" \
+     "\n	-z	Zero-I/O mode (scanning)" \
+n	) \
+n#endif \
+n#define netstat_trivial_usage \
+       "[-"IF_ROUTE("r")"al] [-tuwx] [-en"IF_FEATURE_NETSTAT_WIDE("W")IF_FEATURE_NETSTAT_PRG("p")"]" \
+n#define netstat_full_usage "\n\n" \
+       "Display networking information\n" \
+     "\nOptions:" \
+n	IF_ROUTE( \
+     "\n	-r	Routing table" \
+n	) \
+     "\n	-a	All sockets" \
+     "\n	-l	Listening sockets" \
+     "\n		Else: connected sockets" \
+     "\n	-t	TCP sockets" \
+     "\n	-u	UDP sockets" \
+     "\n	-w	Raw sockets" \
+     "\n	-x	Unix sockets" \
+     "\n		Else: all socket types" \
+     "\n	-e	Other/more information" \
+     "\n	-n	Don't resolve names" \
+n	IF_FEATURE_NETSTAT_WIDE( \
+     "\n	-W	Wide display" \
+n	) \
+n	IF_FEATURE_NETSTAT_PRG( \
+     "\n	-p	Show PID/program name for sockets" \
+n	) \
+n#define iostat_trivial_usage \
+       "[-c] [-d] [-t] [-z] [-k|-m] [ALL|BLOCKDEV...] [INTERVAL [COUNT]]" \
+n#define iostat_full_usage "\n\n" \
+       "Report CPU and I/O statistics\n" \
+     "\nOptions:" \
+     "\n	-c	Show CPU utilization" \
+     "\n	-d	Show device utilization" \
+     "\n	-t	Print current time" \
+     "\n	-z	Omit devices with no activity" \
+     "\n	-k	Use kb/s" \
+     "\n	-m	Use Mb/s" \
+n#define mpstat_trivial_usage \
+       "[-A] [-I SUM|CPU|ALL|SCPU] [-u] [-P num|ALL] [INTERVAL [COUNT]]" \
+n#define mpstat_full_usage "\n\n" \
+       "Per-processor statistics\n" \
+     "\nOptions:" \
+     "\n	-A			Same as -I ALL -u -P ALL" \
+     "\n	-I SUM|CPU|ALL|SCPU	Report interrupt statistics" \
+     "\n	-P num|ALL		Processor to monitor" \
+     "\n	-u			Report CPU utilization" \
+n#define pmap_trivial_usage \
+       "[-x][-q] PID" \
+n#define pmap_full_usage "\n\n" \
+       "Display detailed precesses' memory usage\n" \
+       "\nOptions:" \
+       "\n     -x              show details" \
+       "\n     -q              quiet" \
+n#define powertop_trivial_usage \
+       "" \
+n#define powertop_full_usage "\n\n" \
+       "Analyze power consumption on Intel-based laptops\n" \
+n#define smemcap_trivial_usage ">SMEMDATA.TAR" \
+n#define smemcap_full_usage "\n\n" \
+       "Collect memory usage data in /proc and write it to stdout" \
+n#define ash_trivial_usage NOUSAGE_STR \
+n#define ash_full_usage "" \
+n#define sh_trivial_usage NOUSAGE_STR \
+n#define sh_full_usage "" \
+n#define bash_trivial_usage NOUSAGE_STR \
+n#define bash_full_usage "" \
+n#define cttyhack_trivial_usage \
+       "PROG ARGS" \
+n#define cttyhack_full_usage "\n\n" \
+       "Give PROG a controlling tty if possible." \
+     "\nExample for /etc/inittab (for busybox init):" \
+     "\n	::respawn:/bin/cttyhack /bin/sh" \
+     "\nGiving controlling tty to shell running with PID 1:" \
+     "\n	$ exec cttyhack sh" \
+     "\nStarting interactive shell from boot shell script:" \
+     "\n	setsid cttyhack sh" \
+n#define hush_trivial_usage NOUSAGE_STR \
+n#define hush_full_usage "" \
+n#define msh_trivial_usage NOUSAGE_STR \
+n#define msh_full_usage "" \
+n#define sh_trivial_usage NOUSAGE_STR \
+n#define sh_full_usage "" \
+n#define bash_trivial_usage NOUSAGE_STR \
+n#define bash_full_usage "" \
+n#define blockdev_trivial_usage \
+n	"OPTION BLOCKDEV" \
+n#define blockdev_full_usage "\n\n" \
+       "Options:" \
+     "\n	--setro		Set ro" \
+     "\n	--setrw		Set rw" \
+     "\n	--getro		Get ro" \
+     "\n	--getss		Get sector size" \
+     "\n	--getbsz	Get block size" \
+     "\n	--setbsz BYTES	Set block size" \
+     "\n	--getsize	Get device size in 512-byte sectors" \
+     "\n	--getsize64	Get device size in bytes" \
+     "\n	--flushbufs	Flush buffers" \
+     "\n	--rereadpt	Reread partition table" \
+n#define rev_trivial_usage \
+n	"[FILE]..." \
+n#define rev_full_usage "\n\n" \
+n	"Reverse lines of FILE" \
+n#if defined CONFIG_UDHCP_DEBUG && CONFIG_UDHCP_DEBUG >= 1 \
+n# define IF_UDHCP_VERBOSE(...) __VA_ARGS__ \
+n#else \
+n# define IF_UDHCP_VERBOSE(...) \
+n#endif \
+n#define udhcpc_trivial_usage \
+       "[-fbnq"IF_UDHCP_VERBOSE("v")"oCR] [-i IFACE] [-r IP] [-s PROG] [-p PIDFILE]\n" \
+       "	[-H HOSTNAME] [-V VENDOR] [-x OPT:VAL]... [-O OPT]..." IF_FEATURE_UDHCP_PORT(" [-P N]") \
+n#define udhcpc_full_usage "\n" \
+n	IF_LONG_OPTS( \
+     "\n	-i,--interface IFACE	Interface to use (default eth0)" \
+     "\n	-p,--pidfile FILE	Create pidfile" \
+     "\n	-s,--script PROG	Run PROG at DHCP events (default "CONFIG_UDHCPC_DEFAULT_SCRIPT")" \
+     "\n	-t,--retries N		Send up to N discover packets" \
+     "\n	-T,--timeout N		Pause between packets (default 3 seconds)" \
+     "\n	-A,--tryagain N		Wait N seconds after failure (default 20)" \
+     "\n	-f,--foreground		Run in foreground" \
+n	USE_FOR_MMU( \
+     "\n	-b,--background		Background if lease is not obtained" \
+n	) \
+     "\n	-n,--now		Exit if lease is not obtained" \
+     "\n	-q,--quit		Exit after obtaining lease" \
+     "\n	-R,--release		Release IP on exit" \
+     "\n	-S,--syslog		Log to syslog too" \
+n	IF_FEATURE_UDHCP_PORT( \
+     "\n	-P,--client-port N	Use port N (default 68)" \
+n	) \
+n	IF_FEATURE_UDHCPC_ARPING( \
+     "\n	-a,--arping		Use arping to validate offered address" \
+n	) \
+     "\n	-O,--request-option OPT	Request option OPT from server (cumulative)" \
+     "\n	-o,--no-default-options	Don't request any options (unless -O is given)" \
+     "\n	-r,--request IP		Request this IP address" \
+     "\n	-x OPT:VAL		Include option OPT in sent packets (cumulative)" \
+     "\n				Examples of string, numeric, and hex byte opts:" \
+     "\n				-x hostname:bbox - option 12" \
+     "\n				-x lease:3600 - option 51 (lease time)" \
+     "\n				-x 0x3d:0100BEEFC0FFEE - option 61 (client id)" \
+     "\n	-F,--fqdn NAME		Ask server to update DNS mapping for NAME" \
+     "\n	-H,-h,--hostname NAME	Send NAME as client hostname (default none)" \
+     "\n	-V,--vendorclass VENDOR	Vendor identifier (default 'udhcp VERSION')" \
+     "\n	-C,--clientid-none	Don't send MAC as client identifier" \
+n	IF_UDHCP_VERBOSE( \
+     "\n	-v			Verbose" \
+n	) \
+n	) \
+n	IF_NOT_LONG_OPTS( \
+     "\n	-i IFACE	Interface to use (default eth0)" \
+     "\n	-p FILE		Create pidfile" \
+     "\n	-s PROG		Run PROG at DHCP events (default "CONFIG_UDHCPC_DEFAULT_SCRIPT")" \
+     "\n	-t N		Send up to N discover packets" \
+     "\n	-T N		Pause between packets (default 3 seconds)" \
+     "\n	-A N		Wait N seconds (default 20) after failure" \
+     "\n	-f		Run in foreground" \
+n	USE_FOR_MMU( \
+     "\n	-b		Background if lease is not obtained" \
+n	) \
+     "\n	-n		Exit if lease is not obtained" \
+     "\n	-q		Exit after obtaining lease" \
+     "\n	-R		Release IP on exit" \
+     "\n	-S		Log to syslog too" \
+n	IF_FEATURE_UDHCP_PORT( \
+     "\n	-P N		Use port N (default 68)" \
+n	) \
+n	IF_FEATURE_UDHCPC_ARPING( \
+     "\n	-a		Use arping to validate offered address" \
+n	) \
+     "\n	-O OPT		Request option OPT from server (cumulative)" \
+     "\n	-o		Don't request any options (unless -O is given)" \
+     "\n	-r IP		Request this IP address" \
+     "\n	-x OPT:VAL	Include option OPT in sent packets (cumulative)" \
+     "\n			Examples of string, numeric, and hex byte opts:" \
+     "\n			-x hostname:bbox - option 12" \
+     "\n			-x lease:3600 - option 51 (lease time)" \
+     "\n			-x 0x3d:0100BEEFC0FFEE - option 61 (client id)" \
+     "\n	-F NAME		Ask server to update DNS mapping for NAME" \
+     "\n	-H,-h NAME	Send NAME as client hostname (default none)" \
+     "\n	-V VENDOR	Vendor identifier (default 'udhcp VERSION')" \
+     "\n	-C		Don't send MAC as client identifier" \
+n	IF_UDHCP_VERBOSE( \
+     "\n	-v		Verbose" \
+n	) \
+n	) \
 
 #define acpid_trivial_usage \
        "[-d] [-c CONFDIR] [-l LOGFILE] [-a ACTIONFILE] [-M MAPFILE] [-e PROC_EVENT_FILE] [-p PIDFILE]"
