@@ -9,7 +9,7 @@ filesToProcess() {
 }
 
 flags=" --bdd \
-  --refEval extract --study busybox --refLink $path/busyboxfinal.interface
+  --study busybox --serializeAST --interface --debugInterface
   -x CONFIG_ \
   -c $path/redhat.properties \
   --include $path/config.h \
