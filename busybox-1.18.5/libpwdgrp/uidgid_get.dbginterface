@@ -1,0 +1,42 @@
+fm True
+features (0)
+	
+imports (34)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	__builtin_alloca: (unsigned int) => void* 		if True		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/alloca.h:36:22
+	bb_error_msg_and_die: (const char*, ...) => void 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:82:2
+	bb_internal_getgrnam: (const char*) => struct group* 		if def(CONFIG_USE_BB_PWD_GRP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:39:21, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:39:21
+	bb_internal_getpwnam: (const char*) => struct passwd* 		if def(CONFIG_USE_BB_PWD_GRP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h:40:20, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h:40:20
+	bb_internal_getpwuid: (unsigned int) => struct passwd* 		if def(CONFIG_USE_BB_PWD_GRP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h:39:20, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h:39:20
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:67:7, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:47:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	get_ug_id: (const char*, (const char*) => signed long*) => unsigned long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:107:11, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:105:11
+	getgrnam: (const char*) => struct group* 		if !def(CONFIG_USE_BB_PWD_GRP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h:39:21
+	getpwnam: (const char*) => struct passwd* 		if !def(CONFIG_USE_BB_PWD_GRP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h:40:20
+	getpwuid: (unsigned int) => struct passwd* 		if !def(CONFIG_USE_BB_PWD_GRP)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h:39:20
+	safe_strncpy: (char*, const char*, unsigned long) => char* 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:44:2
+	strchr: (const char*, signed int) => char* 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:99:10, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:97:9, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:39:9
+	xatoll: (const char*) => signed long long 		if True		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if True		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if True		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if True		at string literal: xatoll_sfx:1:0
+	xatou: (const char*) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if True		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if True		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xatoull_sfx:1:0
+	xgroup2gid: (const char*) => signed long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:107:32, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:107:32
+	xstrtoll: (const char*, signed int) => signed long long 		if True		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if True		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if True		at string literal: xstrtoll_range_sfx:1:0
+	xstrtoull: (const char*, signed int) => unsigned long long 		if True		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if True		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_sfx:1:0
+	xuname2uid: (const char*) => signed long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:105:33, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:105:33
+exports (3)
+	get_uidgid: (struct bb_uidgid_t*, const char*, signed int) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:31:0
+	parse_chown_usergroup_or_die: (struct bb_uidgid_t*, char*) => void 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:92:0
+	xget_uidgid: (struct bb_uidgid_t*, const char*) => void 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libpwdgrp/uidgid_get.c:79:0

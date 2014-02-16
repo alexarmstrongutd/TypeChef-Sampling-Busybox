@@ -1,0 +1,44 @@
+fm True
+features (0)
+	
+imports (38)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_error_msg: (const char*, ...) => void 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:170:2
+	bb_perror_msg: (const char*, ...) => void 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:255:3
+	bb_show_usage: (void) => void 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:125:2
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	bb_xioctl: (signed int, unsigned int, void*) => signed int 		if (def(CONFIG_ETHER_WAKE)&!def(CONFIG_IOCTL_HEX2STR_ERROR))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39
+	bb_xioctl: (signed int, unsigned int, void*, const char*) => signed int 		if (def(CONFIG_ETHER_WAKE)&def(CONFIG_IOCTL_HEX2STR_ERROR))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39
+	close: (signed int) => signed int 		if (def(CONFIG_ETHER_WAKE)&def(CONFIG_FEATURE_CLEAN_UP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:277:2
+	ether_aton_r: (const char*, struct ether_addr*) => struct ether_addr* 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:114:7
+	ether_hostton: (const char*, struct ether_addr*) => signed int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:121:12
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:201:9
+	ioctl_or_perror_and_die: (signed int, unsigned int, void*, const char*, ...) => signed int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:226:2
+	memcpy: (void*, const void*, unsigned long) => void* 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:269:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:246:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:228:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:149:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:139:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:136:2
+	memset: (void*, signed int, unsigned long) => void* 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:263:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:145:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:134:1
+	setsockopt_broadcast: (signed int) => signed int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:254:6
+	sscanf: (const char*, const char*, ...) => signed int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:167:13, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:161:12
+	strncpy_IFNAMSIZ: (char*, const char*) => char* 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:261:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:225:2
+	xatoll: (const char*) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoll_sfx:1:0
+	xatou: (const char*) => unsigned int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xatoull_sfx:1:0
+	xsendto: (signed int, const void*, unsigned long, const struct sockaddr*, unsigned int) => signed long 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:275:1
+	xsocket: (signed int, signed int, signed int) => signed int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:81:23
+	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoll_range_sfx:1:0
+	xstrtoull: (const char*, signed int) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_ETHER_WAKE)		at string literal: xstrtoull_sfx:1:0
+exports (1)
+	ether_wake_main: (signed int, char**) => signed int 		if def(CONFIG_ETHER_WAKE)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/ether-wake.c:185:0

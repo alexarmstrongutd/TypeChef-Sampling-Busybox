@@ -1,0 +1,41 @@
+fm True
+features (0)
+	
+imports (35)
+	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_error_msg_and_die: (const char*, ...) => void 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:104:3, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:98:3, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:53:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:28:2
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	close: (signed int) => signed int 		if (def(CONFIG_RPM2CPIO)&def(CONFIG_FEATURE_CLEAN_UP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:109:2
+	htonl: (unsigned int) => unsigned int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:52:19, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:27:29
+	ntohl: (unsigned int) => unsigned int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:33:36, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:33:12
+	seek_by_jump: (signed int, signed long) => void 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:58:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:34:1
+	unpack_bz2_stream: (signed int, signed int) => signed int 		if (!def(CONFIG_DESKTOP)&def(CONFIG_FEATURE_SEAMLESS_BZ2)&def(CONFIG_RPM2CPIO))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:85:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:85:12
+	unpack_bz2_stream: (signed int, signed int) => signed long long 		if (def(CONFIG_DESKTOP)&def(CONFIG_FEATURE_SEAMLESS_BZ2)&def(CONFIG_RPM2CPIO))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:85:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:85:12
+	unpack_gz_stream: (signed int, signed int) => signed int 		if (def(CONFIG_RPM2CPIO)&!def(CONFIG_DESKTOP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:80:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:80:12
+	unpack_gz_stream: (signed int, signed int) => signed long long 		if (def(CONFIG_RPM2CPIO)&def(CONFIG_DESKTOP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:80:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:80:12
+	unpack_xz_stream: (signed int, signed int) => signed int 		if (!def(CONFIG_DESKTOP)&def(CONFIG_FEATURE_SEAMLESS_XZ)&def(CONFIG_RPM2CPIO))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:95:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:95:12
+	unpack_xz_stream: (signed int, signed int) => signed long long 		if (def(CONFIG_DESKTOP)&def(CONFIG_FEATURE_SEAMLESS_XZ)&def(CONFIG_RPM2CPIO))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:95:12, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:95:12
+	xatoll: (const char*) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoll:1:0
+	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoll_range:1:0
+	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoll_range_sfx:1:0
+	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoll_sfx:1:0
+	xatou: (const char*) => unsigned int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatoull: (const char*) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoull:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoull_range:1:0
+	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoull_range_sfx:1:0
+	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xatoull_sfx:1:0
+	xmove_fd: (signed int, signed int) => void 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:47:2
+	xopen: (const char*, signed int) => signed int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:47:11, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:47:11
+	xread: (signed int, void*, unsigned long) => void 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:90:3, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:78:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:49:1, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:20:1
+	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoll:1:0
+	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoll_range:1:0
+	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoll_range_sfx:1:0
+	xstrtoull: (const char*, signed int) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoull:1:0
+	xstrtoull_range: (const char*, signed int, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoull_range:1:0
+	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoull_range_sfx:1:0
+	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_RPM2CPIO)		at string literal: xstrtoull_sfx:1:0
+exports (1)
+	rpm2cpio_main: (signed int, char**) => signed int 		if def(CONFIG_RPM2CPIO)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/rpm2cpio.c:41:0
