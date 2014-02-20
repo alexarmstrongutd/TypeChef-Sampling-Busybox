@@ -1,7 +1,6 @@
 #!/bin/bash
 
 path=$(cd "$(dirname "$0")"; pwd)
-chmod a-x systems/
 
 filesToProcess() {
   local listFile=busybox_files
