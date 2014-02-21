@@ -2,14 +2,13 @@
 
 path=$(cd "$(dirname "$0")"; pwd)
 
-
 filesToProcess() {
   local listFile=busybox_files
   cat $listFile
 }
 
 flags=" --bdd \
-  --study busybox --interface --debugInterface
+  --study busybox --reuseAST --refEval rename --refLink $path/CLinking.interface \
   -x CONFIG_ \
   -c $path/redhat.properties \
   --include $path/config.h \
