@@ -5,34 +5,58 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                bb_error_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+            </file>
+            <line>
+                63
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range
             </file>
             <line>
                 1
@@ -45,77 +69,27 @@
         </import><import>
             <sig>
             <name>
-                grantpt
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_DEVPTS)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
-            </file>
-            <line>
-                20
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                136
+                108
             </line>
             <col>
                 9
@@ -125,38 +99,24 @@
         </import><import>
             <sig>
             <name>
-                xatoll_range
+                xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                string literal: xatoll_range
+                string literal: xatoull
             </file>
             <line>
                 1
@@ -169,42 +129,24 @@
         </import><import>
             <sig>
             <name>
-                stat
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                !definedEx(CONFIG_FEATURE_DEVPTS)
+                1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                48
+                111
             </line>
             <col>
-                6
+                8
             </col>
         </pos>
         </sig>
@@ -214,27 +156,19 @@
                 bb_perror_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_DEVPTS)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
             </file>
             <line>
                 32
@@ -247,48 +181,78 @@
         </import><import>
             <sig>
             <name>
-                bb_strtoull
+                open
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
             </file>
             <line>
-                133
+                55
             </line>
             <col>
-                9
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+            </file>
+            <line>
+                18
+            </line>
+            <col>
+                5
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -298,29 +262,21 @@
                 xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 1
@@ -339,63 +295,21 @@
         </import><import>
             <sig>
             <name>
-                bb_error_msg_and_die
+                BUG_bb_strtou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
-            </file>
-            <line>
-                63
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                111
+                169
             </line>
             <col>
                 8
@@ -405,33 +319,103 @@
         </import><import>
             <sig>
             <name>
-                xatou
+                stat
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        stat
+    </struct>
+    </pointer></param><ret><signed>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                !definedEx(CONFIG_FEATURE_DEVPTS)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+            </file>
+            <line>
+                48
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                string literal: xatoull_range
             </file>
             <line>
-                108
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                136
             </line>
             <col>
                 9
@@ -441,44 +425,134 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range_sfx
+                bb_strtoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                ptsname_r
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_DEVPTS)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+            </file>
+            <line>
+                31
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 1
@@ -500,25 +574,17 @@
                 xstrtoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
@@ -537,306 +603,34 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_range
+                xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
-            </file>
-            <line>
-                55
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
-            </file>
-            <line>
-                18
-            </line>
-            <col>
-                5
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                ptsname_r
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_DEVPTS)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
-            </file>
-            <line>
-                31
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                string literal: xstrtoull_range_sfx
+                string literal: xatoull_range_sfx
             </file>
             <line>
                 1
@@ -849,48 +643,130 @@
         </import><import>
             <sig>
             <name>
-                bb_strtou
+                strcpy
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                !definedEx(CONFIG_FEATURE_DEVPTS)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+            </file>
+            <line>
+                43
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                unlockpt
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_DEVPTS)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+            </file>
+            <line>
+                21
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
-        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
     </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                string literal: xatoull_sfx
             </file>
             <line>
-                166
+                1
             </line>
             <col>
-                9
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -900,33 +776,23 @@
                 xstrtoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 1
@@ -948,37 +814,25 @@
                 xatoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 1
@@ -997,208 +851,18 @@
         </import><import>
             <sig>
             <name>
-                strcpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                !definedEx(CONFIG_FEATURE_DEVPTS)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
-            </file>
-            <line>
-                43
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                1
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 1
@@ -1217,32 +881,106 @@
         </import><import>
             <sig>
             <name>
-                unlockpt
+                bb_strtou
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><ret><unsigned>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                grantpt
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_DEVPTS)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
             </file>
             <line>
-                21
+                20
             </line>
             <col>
                 2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                1
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1252,31 +990,25 @@
                 xgetpty
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 1
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/getpty.c
             </file>
             <line>
                 13
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>

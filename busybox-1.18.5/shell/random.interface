@@ -5,34 +5,244 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><param><unsigned>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll
+                string literal: xstrtoull_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                108
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_xatou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                111
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_range
             </file>
             <line>
                 1
@@ -48,39 +258,29 @@
                 bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
                 136
@@ -93,32 +293,60 @@
         </import><import>
             <sig>
             <name>
-                xatoll_range
+                bb_strtoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
@@ -140,21 +368,15 @@
                 monotonic_us
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/shell/random.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/shell/random.c
             </file>
             <line>
                 27
@@ -167,202 +389,30 @@
         </import><import>
             <sig>
             <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xstrtoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
@@ -381,58 +431,20 @@
         </import><import>
             <sig>
             <name>
-                getpid
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/shell/random.c
-            </file>
-            <line>
-                27
-            </line>
-            <col>
-                21
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xstrtoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
@@ -451,494 +463,28 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
@@ -957,24 +503,188 @@
         </import><import>
             <sig>
             <name>
-                xatoll
+                xatoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getpid
+            </name>
+            <type>
+                <function><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/shell/random.c
+            </file>
+            <line>
+                27
+            </line>
+            <col>
+                21
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
@@ -990,34 +700,108 @@
             </col>
         </pos>
         </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
         </import><export>
             <sig>
             <name>
                 next_random
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         random_t
     </struct>
-    </pointer>
-        </param><ret>
-            <unsigned>
+    </pointer></param><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_ASH_RANDOM_SUPPORT) || definedEx(CONFIG_HUSH_RANDOM_SUPPORT))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/shell/random.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/shell/random.c
             </file>
             <line>
-                12
+                13
             </line>
             <col>
                 0

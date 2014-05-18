@@ -5,352 +5,22 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strtod
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><ret>
-            <double/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                197
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                196
-            </line>
-            <col>
-                15
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                atoi
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; !definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                251
-            </line>
-            <col>
-                22
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                251
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 bb_error_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 346
@@ -360,7 +30,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 343
@@ -370,7 +40,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 301
@@ -380,7 +50,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 273
@@ -390,7 +60,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 270
@@ -400,7 +70,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 183
@@ -410,405 +80,13 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 183
             </line>
             <col>
                 3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                qsort
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                394
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xrealloc_vector_helper
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                642
-            </line>
-            <col>
-                45
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strlen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                73
-            </line>
-            <col>
-                7
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                403
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                246
-            </line>
-            <col>
-                27
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                245
-            </line>
-            <col>
-                27
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                atof
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <double/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                239
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                238
-            </line>
-            <col>
-                15
             </col>
         </pos>
         </sig>
@@ -818,33 +96,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
@@ -863,136 +129,54 @@
         </import><import>
             <sig>
             <name>
-                getopt32
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                294
+                108
             </line>
             <col>
-                8
+                9
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                fflush_stdout_and_exit
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
+                421
+            </line>
+            <col>
                 1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strchr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                341
-            </line>
-            <col>
-                12
             </col>
         </pos>
         </sig>
@@ -1002,21 +186,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
@@ -1035,213 +213,21 @@
         </import><import>
             <sig>
             <name>
-                bb_get_chunk_from_file
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                151
-            </line>
-            <col>
-                51
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                llist_pop
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <pointer>
-        <struct isUnion="false">
-        llist_t
-    </struct>
-    </pointer>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                322
-            </line>
-            <col>
-                16
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                printf
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                419
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xfopen_stdin
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                366
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xzalloc
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                148
-            </line>
-            <col>
-                16
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
+                111
             </line>
             <col>
                 8
@@ -1251,114 +237,114 @@
         </import><import>
             <sig>
             <name>
-                strcmp
+                strtod
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><param><pointer>
+        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></param><ret><double/></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_SORT)
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                259
+                197
             </line>
             <col>
-                11
+                15
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                190
+                196
             </line>
             <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                190
-            </line>
-            <col>
-                12
+                15
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrtoull_range_sfx
+                qsort
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><pointer>
+        <function><param><const>
             <pointer>
-        <nosign>
-        <char/>
-    </nosign>
+        <void/>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoull_range_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                394
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -1371,78 +357,36 @@
         </import><import>
             <sig>
             <name>
-                bb_strtou
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
+        </const></param><param><const>
             <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
     </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                string literal: xatoll_sfx
             </file>
             <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fflush_stdout_and_exit
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                421
-            </line>
-            <col>
                 1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1452,27 +396,21 @@
                 xmalloc_fgetline
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <pointer>
+    </pointer></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 151
@@ -1482,7 +420,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 151
@@ -1495,242 +433,120 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_sfx
+                atof
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_LOCALE_SUPPORT))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                188
-            </line>
-            <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
-            </file>
-            <line>
-                188
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_SORT)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><ret><double/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                386
+                239
             </line>
             <col>
-                4
+                15
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                238
+            </line>
+            <col>
+                15
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fclose_if_not_stdin
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                374
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strlen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                73
+            </line>
+            <col>
+                7
             </col>
         </pos>
         </sig>
@@ -1740,29 +556,19 @@
                 xatoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
@@ -1781,160 +587,632 @@
         </import><import>
             <sig>
             <name>
-                xopen
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                136
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_LOCALE_SUPPORT))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                188
+            </line>
+            <col>
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                188
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xrealloc_vector_helper
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                642
+            </line>
+            <col>
+                45
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                llist_pop
+            </name>
+            <type>
+                <function><param><pointer>
+        <pointer>
+        <struct isUnion="false">
+        llist_t
+    </struct>
+    </pointer>
+    </pointer></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                415
+                322
+            </line>
+            <col>
+                16
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                386
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xfopen_stdin
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                366
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strtoul
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                271
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                259
             </line>
             <col>
                 11
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                415
+                190
             </line>
             <col>
-                11
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                190
+            </line>
+            <col>
+                12
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                fclose_if_not_stdin
+                strchr
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                341
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_get_chunk_from_file
+            </name>
+            <type>
+                <function><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><param><pointer>
+        <signed>
         <int/>
     </signed>
-        </ret>
-    </function>
+    </pointer></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                151
+            </line>
+            <col>
+                51
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strptime
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        tm
+    </struct>
+    </pointer></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                227
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                225
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                string literal: xstrtoll_range_sfx
             </file>
             <line>
-                374
+                1
             </line>
             <col>
-                2
+                0
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xmove_fd
+                getopt32
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+                definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                415
+                294
             </line>
             <col>
-                2
+                8
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrndup
+                xzalloc
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                120
+                148
             </line>
             <col>
-                7
+                16
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1944,37 +1222,25 @@
                 xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
@@ -1993,62 +1259,288 @@
         </import><import>
             <sig>
             <name>
-                strptime
+                xatoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
-        tm
+        suffix_mult
     </struct>
     </pointer>
-        </param><ret>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </ret>
-    </function>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrndup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                227
+                120
             </line>
             <col>
-                8
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xmove_fd
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                415
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xopen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                415
+            </line>
+            <col>
+                11
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
-                225
+                415
             </line>
             <col>
-                8
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                atoi
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_SORT) &amp;&amp; !definedEx(CONFIG_FEATURE_SORT_BIG))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                251
+            </line>
+            <col>
+                22
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                251
+            </line>
+            <col>
+                12
             </col>
         </pos>
         </sig>
@@ -2058,21 +1550,15 @@
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
@@ -2091,48 +1577,154 @@
         </import><import>
             <sig>
             <name>
-                strtoul
+                free
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                403
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                246
+            </line>
+            <col>
+                27
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                245
+            </line>
+            <col>
+                27
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_SORT) &amp;&amp; definedEx(CONFIG_FEATURE_SORT_BIG))
+                definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                271
+                166
             </line>
             <col>
-                6
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                printf
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+            </file>
+            <line>
+                419
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_SORT)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -2142,37 +1734,29 @@
                 sort_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_SORT)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/sort.c
             </file>
             <line>
                 279
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>

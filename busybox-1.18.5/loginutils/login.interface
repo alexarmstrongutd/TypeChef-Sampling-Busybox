@@ -5,918 +5,40 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                pam_acct_mgmt
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                config_close
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                80
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                pam_set_item
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         pam_handle
     </struct>
-    </pointer>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                279
+                294
             </line>
             <col>
                 11
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                279
+                294
             </line>
             <col>
                 11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                ndelay_off
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                190
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_internal_getpwnam
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; !definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                update_utmp
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_UTMP))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                834
-            </line>
-            <col>
-                66
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                834
-            </line>
-            <col>
-                66
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                security_compute_relabel
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <short/>
-    </unsigned>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                104
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                104
-            </line>
-            <col>
-                5
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xasprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                257
-            </line>
-            <col>
-                13
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                255
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fchown
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                386
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                run_shell
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                437
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xsetenv
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                126
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                125
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                123
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                122
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_do_delay
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                361
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_perror_msg_and_die
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                109
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                106
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                102
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                openlog
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                263
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                alarm
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                376
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                224
-            </line>
-            <col>
-                1
             </col>
         </pos>
         </sig>
@@ -926,27 +48,19 @@
                 bb_error_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 239
@@ -956,7 +70,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 99
@@ -969,270 +83,80 @@
         </import><import>
             <sig>
             <name>
-                pam_get_item
+                pam_authenticate
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         pam_handle
     </struct>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <pointer>
-        <void/>
-    </pointer>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                303
+                284
             </line>
             <col>
-                6
+                11
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                303
+                284
             </line>
             <col>
-                6
+                11
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xmalloc_ttyname
+                getpwnam_r
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                249
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                setup_environment
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><param><pointer>
         <struct isUnion="false">
         passwd
     </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                399
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getenv
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+    </pointer></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                119
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_internal_getpwnam_r
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <unsigned>
+    </pointer></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><param>
-            <pointer>
+    </unsigned></param><param><pointer>
         <pointer>
         <struct isUnion="false">
         passwd
     </struct>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
+                (!definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                43
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
             </file>
             <line>
                 43
@@ -1245,371 +169,45 @@
         </import><import>
             <sig>
             <name>
-                xatou
+                pam_get_item
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                puts
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                363
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                58
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
+                <function><param><const>
             <pointer>
         <struct isUnion="false">
-        suffix_mult
+        pam_handle
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
             <pointer>
+        <pointer>
         <void/>
     </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_CLEAN_UP))
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                409
+                303
             </line>
             <col>
-                2
+                6
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                369
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getpid
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_UTMP))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                389
-            </line>
-            <col>
-                13
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                389
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                close
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                176
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getpwnam
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; !definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fgets
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                159
+                303
             </line>
             <col>
                 6
@@ -1622,33 +220,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
@@ -1667,83 +253,164 @@
         </import><import>
             <sig>
             <name>
-                pam_strerror
+                is_selinux_enabled
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        pam_handle
-    </struct>
-    </pointer>
-        </param><param>
-            <signed>
+                <function><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                333
+                95
             </line>
             <col>
-                5
+                6
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                333
+                95
             </line>
             <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                333
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                333
-            </line>
-            <col>
-                5
+                6
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                getopt32
+                fchmod
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                387
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                update_utmp
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_UTMP))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                834
+            </line>
+            <col>
+                66
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                834
+            </line>
+            <col>
+                66
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_do_delay
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                361
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                run_shell
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
             <pointer>
         <pointer>
         <nosign>
@@ -1751,256 +418,177 @@
     </nosign>
     </pointer>
     </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                236
+                437
             </line>
             <col>
-                7
+                1
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                bb_putchar
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
+                definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                54
+                108
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fflush_all
+            </name>
+            <type>
+                <function><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                187
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                174
             </line>
             <col>
                 2
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                53
+                61
             </line>
             <col>
-                3
+                1
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                pam_authenticate
+                bb_daemonize_or_rexec
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        pam_handle
-    </struct>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_NOMMU))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                284
+                932
             </line>
             <col>
-                11
+                44
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                284
+                932
             </line>
             <col>
-                11
+                44
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                config_open2
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><pointer>
+        <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+    </pointer></param><ret><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_LOGIN)
+                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                1
+                74
             </line>
             <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strchr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                161
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                172
-            </line>
-            <col>
-                6
+                20
             </col>
         </pos>
         </sig>
@@ -2010,21 +598,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
@@ -2043,35 +625,33 @@
         </import><import>
             <sig>
             <name>
-                printf
+                setup_environment
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer>
+        </const></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                186
+                399
             </line>
             <col>
                 1
@@ -2081,197 +661,65 @@
         </import><import>
             <sig>
             <name>
-                correct_password
+                setfilecon
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_PAM))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                356
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                unsetenv
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                132
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                131
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                130
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                129
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                128
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fopen_for_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+        </const></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN)) || (!definedEx(CONFIG_PAM) &amp;&amp; (definedEx(CONFIG_FEATURE_NOLOGIN) || definedEx(CONFIG_FEATURE_SECURETTY)))))
+                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                74
+                108
             </line>
             <col>
-                51
+                5
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                74
+                108
             </line>
             <col>
-                51
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                47
-            </line>
-            <col>
-                6
+                5
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                BUG_bb_strtou32_unimplemented
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                169
+                111
             </line>
             <col>
                 8
@@ -2281,734 +729,40 @@
         </import><import>
             <sig>
             <name>
-                strcmp
+                pam_setcred
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                76
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                config_open2
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                74
-            </line>
-            <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                tcdrain
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                63
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                set_current_security_context
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                413
-            </line>
-            <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                413
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                safe_strncpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                334
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                309
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                244
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                240
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                signal
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                434
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                223
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                pam_acct_mgmt
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         pam_handle
     </struct>
-    </pointer>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                294
+                322
             </line>
             <col>
                 11
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                294
+                322
             </line>
             <col>
                 11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                _IO_getc
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
-            </featureexpr><pos>
-            <file>
-                file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/stdio.h
-            </file>
-            <line>
-                547
-            </line>
-            <col>
-                18
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                config_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1157
-            </line>
-            <col>
-                59
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrdup
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                251
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                is_selinux_enabled
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                95
-            </line>
-            <col>
-                6
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                95
-            </line>
-            <col>
-                6
             </col>
         </pos>
         </sig>
@@ -3018,25 +772,19 @@
                 change_identity
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <struct isUnion="false">
         passwd
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 395
@@ -3049,120 +797,300 @@
         </import><import>
             <sig>
             <name>
-                strcpy
+                correct_password
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
-        <nosign>
-        <char/>
-    </nosign>
+        <struct isUnion="false">
+        passwd
+    </struct>
     </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_PAM))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                338
+                356
             </line>
             <col>
-                3
+                6
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                skip_dev_pfx
+                pam_start
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                252
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
-        suffix_mult
+        pam_conv
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><param><pointer>
+        <pointer>
+        <struct isUnion="false">
+        pam_handle
+    </struct>
+    </pointer>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                273
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                273
+            </line>
+            <col>
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_perror_msg_and_die
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                109
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                106
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                102
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                security_compute_relabel
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><unsigned>
+        <short/>
+    </unsigned></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                104
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                104
+            </line>
+            <col>
+                5
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                ndelay_on
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                string literal: xatoull_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                185
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                ndelay_off
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                190
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                open
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                172
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -3175,30 +1103,124 @@
         </import><import>
             <sig>
             <name>
-                getchar
+                pam_open_session
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
+                <function><param><pointer>
+        <struct isUnion="false">
+        pam_handle
+    </struct>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                317
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                317
+            </line>
+            <col>
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                string literal: xatoll_sfx
             </file>
             <line>
-                148
+                1
             </line>
             <col>
-                6
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sanitize_env_if_suid
+            </name>
+            <type>
+                <function><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                228
+            </line>
+            <col>
+                16
             </col>
         </pos>
         </sig>
@@ -3208,29 +1230,19 @@
                 xatoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
@@ -3249,120 +1261,22 @@
         </import><import>
             <sig>
             <name>
-                utoa
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                125
-            </line>
-            <col>
-                23
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                125
-            </line>
-            <col>
-                23
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                23
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                23
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                print_login_prompt
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                145
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 fclose
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 60
@@ -3375,214 +1289,38 @@
         </import><import>
             <sig>
             <name>
-                pam_start
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        pam_conv
-    </struct>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <struct isUnion="false">
-        pam_handle
-    </struct>
-    </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                273
-            </line>
-            <col>
-                11
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                273
-            </line>
-            <col>
-                11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getpwnam_r
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <pointer>
-        <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                43
-            </line>
-            <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                pam_open_session
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        pam_handle
-    </struct>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                317
-            </line>
-            <col>
-                11
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                317
-            </line>
-            <col>
-                11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                spawn_and_wait
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
+        </const></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
+                definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                127
+                136
             </line>
             <col>
-                2
+                9
             </col>
         </pos>
         </sig>
@@ -3592,41 +1330,31 @@
                 get_default_context
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 98
@@ -3636,7 +1364,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 98
@@ -3652,31 +1380,21 @@
                 syslog
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 406
@@ -3686,7 +1404,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 365
@@ -3696,7 +1414,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 332
@@ -3709,49 +1427,43 @@
         </import><import>
             <sig>
             <name>
-                setfilecon
+                getfilecon
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
+        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                108
+                101
             </line>
             <col>
                 5
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                108
+                101
             </line>
             <col>
                 5
@@ -3761,79 +1473,127 @@
         </import><import>
             <sig>
             <name>
-                isatty
+                skip_dev_pfx
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                247
+                252
             </line>
             <col>
-                57
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                247
-            </line>
-            <col>
-                31
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                247
-            </line>
-            <col>
-                6
+                13
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                _exit
+                bb_strtoull
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                191
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                config_close
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                80
             </line>
             <col>
                 1
@@ -3843,24 +1603,172 @@
         </import><import>
             <sig>
             <name>
-                exit
+                getchar
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                148
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getenv
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                119
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                76
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                tcflush
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                267
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                161
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                exit
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 162
@@ -3870,7 +1778,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 160
@@ -3880,7 +1788,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 153
@@ -3890,7 +1798,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 150
@@ -3900,7 +1808,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 64
@@ -3913,40 +1821,424 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range_sfx
+                set_current_security_context
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                413
+            </line>
+            <col>
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                413
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                isatty
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                247
+            </line>
+            <col>
+                57
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                247
+            </line>
+            <col>
+                31
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                247
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                alarm
+            </name>
+            <type>
+                <function><param><unsigned>
+        <int/>
+    </unsigned></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                376
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                224
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                safe_strncpy
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                334
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                309
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                244
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                240
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xsetenv
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                126
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                125
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                123
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                122
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getopt32
+            </name>
+            <type>
+                <function><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                236
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                tcdrain
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                63
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
@@ -3965,29 +2257,319 @@
         </import><import>
             <sig>
             <name>
-                ndelay_on
+                strcpy
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_PAM))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                338
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fopen_for_read
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN)) || (!definedEx(CONFIG_PAM) &amp;&amp; (definedEx(CONFIG_FEATURE_NOLOGIN) || definedEx(CONFIG_FEATURE_SECURETTY)))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                74
+            </line>
+            <col>
+                51
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                74
+            </line>
+            <col>
+                51
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                47
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                string literal: xatoull_sfx
             </file>
             <line>
-                185
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_putchar
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                54
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                53
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xmalloc_ttyname
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                249
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_internal_getpwnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; !definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                40
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                40
+            </line>
+            <col>
+                20
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_copyfd_eof
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                175
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                openlog
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                263
             </line>
             <col>
                 1
@@ -3997,32 +2579,84 @@
         </import><import>
             <sig>
             <name>
-                bb_daemonize_or_rexec
+                _IO_getc
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </param><param>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_NOLOGIN))
+            </featureexpr><pos>
+            <file>
+                file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/stdio.h
+            </file>
+            <line>
+                547
+            </line>
+            <col>
+                18
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
-        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
     </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_NOMMU))
+                definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_daemonize_or_rexec
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_NOMMU))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
                 932
@@ -4032,7 +2666,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
                 932
@@ -4045,24 +2679,314 @@
         </import><import>
             <sig>
             <name>
-                xatoll
+                spawn_and_wait
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                127
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                _exit
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                191
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                pam_set_item
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        pam_handle
+    </struct>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                279
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                279
+            </line>
+            <col>
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                utoa
+            </name>
+            <type>
+                <function><param><unsigned>
+        <int/>
+    </unsigned></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                125
+            </line>
+            <col>
+                23
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                125
+            </line>
+            <col>
+                23
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                23
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                23
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fgets
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                159
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getpid
+            </name>
+            <type>
+                <function><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_UTMP))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                389
+            </line>
+            <col>
+                13
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                389
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fchown
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                386
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
@@ -4081,69 +3005,23 @@
         </import><import>
             <sig>
             <name>
-                fchmod
+                close
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><ret><signed>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                387
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_copyfd_eof
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                175
+                176
             </line>
             <col>
                 2
@@ -4153,177 +3031,287 @@
         </import><import>
             <sig>
             <name>
-                tcflush
+                puts
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_LOGIN)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                267
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getfilecon
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                363
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                58
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                config_read
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
+    </pointer></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; (definedEx(CONFIG_FEATURE_FIND_CONTEXT) || definedEx(CONFIG_SELINUX)))
+                (!definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_FEATURE_SECURETTY) &amp;&amp; definedEx(CONFIG_LOGIN))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                101
+                1157
             </line>
             <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
-            </file>
-            <line>
-                101
-            </line>
-            <col>
-                5
+                59
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                bb_daemonize_or_rexec
+                xasprintf
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_NOMMU))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                932
-            </line>
-            <col>
-                44
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                932
-            </line>
-            <col>
-                44
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fflush_all
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                187
+                257
             </line>
             <col>
-                1
+                13
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                174
+                255
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                pam_strerror
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        pam_handle
+    </struct>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                333
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                333
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                333
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                333
+            </line>
+            <col>
+                5
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                free
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_FEATURE_CLEAN_UP))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                409
             </line>
             <col>
                 2
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                61
+                369
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                printf
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                186
             </line>
             <col>
                 1
@@ -4333,78 +3321,296 @@
         </import><import>
             <sig>
             <name>
-                pam_setcred
+                signal
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        pam_handle
-    </struct>
-    </pointer>
-        </param><param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><param><pointer>
+        <function><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><void/></ret></function>
+    </pointer></param><ret><pointer>
+        <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_PAM))
+                definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                322
+                434
             </line>
             <col>
-                11
+                1
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                322
+                223
             </line>
             <col>
-                11
+                1
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                sanitize_env_if_suid
+                print_login_prompt
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+                <function><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
-                228
+                145
             </line>
             <col>
-                16
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_internal_getpwnam_r
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><pointer>
+        <pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                43
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                43
+            </line>
+            <col>
+                20
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                unsetenv
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_LOGIN_SCRIPTS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                132
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                131
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                130
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                129
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                128
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrdup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_LOGIN)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                251
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getpwnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (!definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; !definedEx(CONFIG_PAM) &amp;&amp; definedEx(CONFIG_LOGIN))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+            </file>
+            <line>
+                336
+            </line>
+            <col>
+                7
             </col>
         </pos>
         </sig>
@@ -4414,37 +3620,29 @@
                 login_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_LOGIN)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/loginutils/login.c
             </file>
             <line>
                 195
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>

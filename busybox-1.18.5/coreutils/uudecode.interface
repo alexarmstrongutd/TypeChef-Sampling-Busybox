@@ -5,328 +5,22 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xfopen_for_write
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_UUDECODE)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                123
-            </line>
-            <col>
-                16
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_perror_msg_and_die
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_BASE64)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                183
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 bb_error_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_UUDECODE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 131
@@ -336,7 +30,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 74
@@ -346,7 +40,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 48
@@ -359,364 +53,24 @@
         </import><import>
             <sig>
             <name>
-                read_base64
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                169
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                103
-            </line>
-            <col>
-                19
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fileno
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                177
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                10
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                10
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_UUDECODE)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                126
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                72
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                44
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
@@ -735,212 +89,82 @@
         </import><import>
             <sig>
             <name>
-                getopt32
+                fchmod
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <unsigned>
+                <function><param><signed>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                162
-            </line>
-            <col>
-                8
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                87
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_putchar
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
+    </signed></param><param><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </unsigned></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_BASE64)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                187
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fflush
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_BASE64)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                188
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strchr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_UUDECODE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
-                115
+                124
             </line>
             <col>
-                13
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                108
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fflush_stdout_and_exit
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_BASE64)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                192
+            </line>
+            <col>
+                1
             </col>
         </pos>
         </sig>
@@ -950,21 +174,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
@@ -983,125 +201,21 @@
         </import><import>
             <sig>
             <name>
-                bb_uuencode
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_BASE64)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                185
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xfopen_stdin
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                167
-            </line>
-            <col>
-                14
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                92
-            </line>
-            <col>
-                14
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
+                111
             </line>
             <col>
                 8
@@ -1111,94 +225,94 @@
         </import><import>
             <sig>
             <name>
-                strcmp
+                fwrite
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
-        <nosign>
-        <char/>
-    </nosign>
+        <void/>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_UUDECODE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
-                24
+                71
             </line>
             <col>
-                6
+                2
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrtoull_range_sfx
+                bb_perror_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_BASE64)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                183
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoull_range_sfx
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -1211,88 +325,36 @@
         </import><import>
             <sig>
             <name>
-                bb_strtou
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
+        </const></param><param><const>
             <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
     </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                string literal: xatoll_sfx
             </file>
             <line>
-                113
-            </line>
-            <col>
-                9
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fflush_stdout_and_exit
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_BASE64)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                192
-            </line>
-            <col>
                 1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1302,27 +364,21 @@
                 xmalloc_fgetline
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <pointer>
+    </pointer></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_UUDECODE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 95
@@ -1332,7 +388,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 20
@@ -1345,184 +401,24 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_sfx
+                BUG_bb_strtou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoull_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                1
+                169
             </line>
             <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                full_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_BASE64)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
-            </file>
-            <line>
-                179
-            </line>
-            <col>
-                17
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
+                8
             </col>
         </pos>
         </sig>
@@ -1532,29 +428,19 @@
                 xatoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
@@ -1573,37 +459,369 @@
         </import><import>
             <sig>
             <name>
-                xwrite
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
+                <function><param><const>
             <pointer>
-        <void/>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                136
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xfopen_stdin
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                167
+            </line>
+            <col>
+                14
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                92
+            </line>
+            <col>
+                14
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xfopen_for_write
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_UUDECODE)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                123
+            </line>
+            <col>
+                16
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strncmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_UUDECODE)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                104
+            </line>
+            <col>
+                13
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                101
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_UUDECODE)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                24
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                read_base64
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                103
+            </line>
+            <col>
+                19
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_UUDECODE)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                115
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fflush
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_BASE64)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
-                186
+                188
             </line>
             <col>
                 3
@@ -1613,40 +831,148 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range_sfx
+                xstrtoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getopt32
+            </name>
+            <type>
+                <function><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                162
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                87
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
@@ -1665,48 +991,318 @@
         </import><import>
             <sig>
             <name>
-                fwrite
+                xwrite
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><const>
             <pointer>
         <void/>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
+    </unsigned></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_BASE64)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                186
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fileno
+            </name>
+            <type>
+                <function><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_UUDECODE)
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
-                71
+                177
             </line>
             <col>
-                2
+                15
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                10
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                10
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_putchar
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_BASE64)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                187
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_uuencode
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_BASE64)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                185
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                full_read
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_BASE64)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                179
+            </line>
+            <col>
+                17
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1716,21 +1312,15 @@
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
@@ -1749,33 +1339,51 @@
         </import><import>
             <sig>
             <name>
-                fchmod
+                free
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_UUDECODE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
-                124
+                126
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                108
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                72
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+            </file>
+            <line>
+                44
             </line>
             <col>
                 3
@@ -1785,58 +1393,90 @@
         </import><import>
             <sig>
             <name>
-                strncmp
+                bb_strtou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><param><pointer>
+        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_UUDECODE)
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
-                104
+                113
             </line>
             <col>
-                13
+                9
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                101
+                166
             </line>
             <col>
-                6
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_BASE64) || definedEx(CONFIG_UUDECODE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1846,37 +1486,29 @@
                 base64_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_BASE64)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 156
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>
@@ -1886,37 +1518,29 @@
                 uudecode_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_UUDECODE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/uudecode.c
             </file>
             <line>
                 80
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>

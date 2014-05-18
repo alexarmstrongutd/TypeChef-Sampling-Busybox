@@ -5,34 +5,58 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                bb_error_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; !definedEx(CONFIG_NOMMU))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                25
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><param><unsigned>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll
+                string literal: xstrtoull_range
             </file>
             <line>
                 1
@@ -45,45 +69,27 @@
         </import><import>
             <sig>
             <name>
-                bb_strtoll
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                136
+                108
             </line>
             <col>
                 9
@@ -93,38 +99,76 @@
         </import><import>
             <sig>
             <name>
-                xatoll_range
+                open_transformer
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (!definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                string literal: xatoll_range
+                string literal: xatoull
             </file>
             <line>
                 1
@@ -137,48 +181,118 @@
         </import><import>
             <sig>
             <name>
-                bb_strtoull
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                133
+                111
             </line>
             <col>
-                9
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                unpack_gz_stream
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (!definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
             </col>
         </pos>
         </sig>
@@ -188,29 +302,21 @@
                 xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
@@ -229,63 +335,21 @@
         </import><import>
             <sig>
             <name>
-                bb_error_msg_and_die
+                BUG_bb_strtou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; !definedEx(CONFIG_NOMMU))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                25
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                111
+                169
             </line>
             <col>
                 8
@@ -295,33 +359,69 @@
         </import><import>
             <sig>
             <name>
-                xatou
+                xatoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                string literal: xatoull_range
             </file>
             <line>
-                108
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                136
             </line>
             <col>
                 9
@@ -331,44 +431,208 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range_sfx
+                seek_by_read
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <long/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                16
+            </line>
+            <col>
+                24
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                open_transformer
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xread
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; !definedEx(CONFIG_NOMMU))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                22
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
@@ -390,25 +654,17 @@
                 xstrtoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
@@ -427,42 +683,34 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_range
+                xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoull_range
+                string literal: xatoull_range_sfx
             </file>
             <line>
                 1
@@ -475,110 +723,30 @@
         </import><import>
             <sig>
             <name>
-                open_transformer
+                xatoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                string literal: xatoull_sfx
             </file>
             <line>
                 1
@@ -591,30 +759,26 @@
         </import><import>
             <sig>
             <name>
-                xatoull
+                xstrtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                string literal: xatoull
+                string literal: xstrtoll
             </file>
             <line>
                 1
@@ -627,65 +791,25 @@
         </import><import>
             <sig>
             <name>
-                xread
+                get_header_tar
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; !definedEx(CONFIG_NOMMU))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                22
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+                <function><param><pointer>
+        <struct isUnion="false">
+        archive_handle_t
+    </struct>
+    </pointer></param><ret><nosign>
+        <char/>
+    </nosign></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
             </file>
             <line>
-                169
+                31
             </line>
             <col>
                 8
@@ -695,140 +819,26 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xstrtoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
@@ -850,37 +860,25 @@
                 xatoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
@@ -899,490 +897,18 @@
         </import><import>
             <sig>
             <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                seek_by_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                16
-            </line>
-            <col>
-                24
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                unpack_gz_stream
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (!definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                get_header_tar
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        archive_handle_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <nosign>
-        <char/>
-    </nosign>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                31
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open_transformer
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                unpack_gz_stream
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
-            </file>
-            <line>
-                29
-            </line>
-            <col>
-                42
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open_transformer
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; definedEx(CONFIG_NOMMU))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
-            </file>
-            <line>
-                230
-            </line>
-            <col>
-                58
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
@@ -1398,37 +924,219 @@
             </col>
         </pos>
         </sig>
+        </import><import>
+            <sig>
+            <name>
+                open_transformer
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; definedEx(CONFIG_NOMMU))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/archive.h
+            </file>
+            <line>
+                230
+            </line>
+            <col>
+                58
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                unpack_gz_stream
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DESKTOP) &amp;&amp; !definedEx(CONFIG_NOMMU) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+            </file>
+            <line>
+                29
+            </line>
+            <col>
+                42
+            </col>
+        </pos>
+        </sig>
         </import><export>
             <sig>
             <name>
                 get_header_tar_gz
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         archive_handle_t
     </struct>
-    </pointer>
-        </param><ret>
-            <nosign>
+    </pointer></param><ret><nosign>
         <char/>
-    </nosign>
-        </ret>
-    </function>
+    </nosign></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_SEAMLESS_GZ)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/get_header_tar_gz.c
             </file>
             <line>
                 9
             </line>
             <col>
-                0
+                15
             </col>
         </pos>
         </sig>

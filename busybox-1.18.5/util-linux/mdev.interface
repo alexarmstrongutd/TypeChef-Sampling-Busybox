@@ -5,69 +5,23 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                sleep
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><param><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                config_close
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                404
+                475
             </line>
             <col>
                 2
@@ -77,861 +31,63 @@
         </import><import>
             <sig>
             <name>
-                recursive_action
+                symlink
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <signed>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-    </pointer>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-    </pointer>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                544
+                366
             </line>
             <col>
-                2
+                6
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                540
+                359
             </line>
             <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xasprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                373
-            </line>
-            <col>
-                15
+                5
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                372
+                366
             </line>
             <col>
-                14
+                6
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                373
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                372
-            </line>
-            <col>
-                14
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                get_uidgid
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        bb_uidgid_t
-    </struct>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                260
-            </line>
-            <col>
-                7
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_makedev
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1280
-            </line>
-            <col>
-                21
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1280
-            </line>
-            <col>
-                21
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1280
-            </line>
-            <col>
-                21
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1280
-            </line>
-            <col>
-                21
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_basename
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                138
-            </line>
-            <col>
-                23
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_sanitize_stdio
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                511
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xopen_xwrite_close
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                610
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strlen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                414
-            </line>
-            <col>
-                14
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                299
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                299
-            </line>
-            <col>
-                26
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                299
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                299
-            </line>
-            <col>
-                26
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                250
-            </line>
-            <col>
-                35
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                226
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                226
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                121
-            </line>
-            <col>
-                29
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getenv
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                571
-            </line>
-            <col>
-                8
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                566
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                563
-            </line>
-            <col>
-                16
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                562
-            </line>
-            <col>
-                13
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                561
-            </line>
-            <col>
-                11
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                223
-            </line>
-            <col>
-                19
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                full_write
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                494
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                492
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                481
+                359
             </line>
             <col>
                 5
@@ -941,56 +97,20 @@
         </import><import>
             <sig>
             <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 regfree
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         re_pattern_buffer
     </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
                 237
@@ -1006,35 +126,25 @@
                 xregcomp
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         re_pattern_buffer
     </struct>
-    </pointer>
-        </param><param>
-            <const>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </signed></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
                 235
@@ -1047,171 +157,41 @@
         </import><import>
             <sig>
             <name>
-                bb_error_msg
+                strchrnul
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                326
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                261
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><param><signed>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_MDEV)
+                (definedEx(CONFIG_FEATURE_MDEV_CONF) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_RENAME) &amp;&amp; definedEx(CONFIG_MDEV))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                610
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                610
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                610
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                610
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
+                274
             </line>
             <col>
                 9
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strrchr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                438
-            </line>
-            <col>
-                16
-            </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                86
+                273
             </line>
             <col>
                 8
@@ -1221,258 +201,36 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range_sfx
+                get_uidgid
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
-        suffix_mult
+        bb_uidgid_t
     </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                234
-            </line>
-            <col>
-                43
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                437
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                405
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                392
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                380
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                392
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                380
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                328
-            </line>
-            <col>
-                6
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                94
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                close
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_CLEAN_UP))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                500
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                499
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                498
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_MDEV)
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoull
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                1
+                260
             </line>
             <col>
-                0
+                7
             </col>
         </pos>
         </sig>
@@ -1482,33 +240,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -1527,248 +273,240 @@
         </import><import>
             <sig>
             <name>
-                sleep
+                index_in_strings
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                475
+                567
             </line>
             <col>
-                2
+                7
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                1
+                610
             </line>
             <col>
-                0
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                610
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                610
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                610
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                108
+            </line>
+            <col>
+                9
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                strchr
+                bb_parse_mode
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </unsigned>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                323
+                264
             </line>
             <col>
-                21
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                219
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                195
-            </line>
-            <col>
-                18
+                3
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                mknod
+                config_open2
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                356
-            </line>
-            <col>
-                8
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                356
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+        </const></param><param><pointer>
+        <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+    </pointer></param><ret><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_MDEV)
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                485
+                167
             </line>
             <col>
                 11
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_unsetenv_and_free
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                472
+                379
             </line>
             <col>
-                15
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                378
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                379
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                378
+            </line>
+            <col>
+                4
             </col>
         </pos>
         </sig>
@@ -1778,21 +516,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -1811,704 +543,20 @@
         </import><import>
             <sig>
             <name>
-                concat_path_file
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                161
-            </line>
-            <col>
-                28
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                93
-            </line>
-            <col>
-                11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                putenv
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                375
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                374
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                375
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                374
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xzalloc
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_MDEV_RENAME) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_RENAME_REGEXP) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF) &amp;&amp; definedEx(CONFIG_MDEV))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                299
-            </line>
-            <col>
-                18
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_unsetenv_and_free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                379
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                378
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                379
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                378
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fopen_for_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                167
-            </line>
-            <col>
-                42
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                167
-            </line>
-            <col>
-                42
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_show_usage
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                565
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                usleep
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                589
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcmp
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                585
-            </line>
-            <col>
-                8
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                518
-            </line>
-            <col>
-                16
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                418
-            </line>
-            <col>
-                5
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                config_open2
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                167
-            </line>
-            <col>
-                11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xmalloc
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
+    </unsigned></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (!definedEx(CONFIG_FEATURE_BUFFERS_GO_ON_STACK) &amp;&amp; !definedEx(CONFIG_FEATURE_BUFFERS_GO_IN_BSS) &amp;&amp; definedEx(CONFIG_MDEV))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
                 241
@@ -2521,64 +569,60 @@
         </import><import>
             <sig>
             <name>
-                config_read
+                snprintf
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <const>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><vargs/></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                1157
+                593
             </line>
             <col>
-                59
+                2
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_xatou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                1157
+                111
             </line>
             <col>
-                59
+                8
             </col>
         </pos>
         </sig>
@@ -2588,17 +632,11 @@
                 gnu_dev_minor
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -2617,96 +655,28 @@
         </import><import>
             <sig>
             <name>
-                xstrdup
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                440
-            </line>
-            <col>
-                17
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                340
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                316
-            </line>
-            <col>
-                14
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 chown
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
+    </unsigned></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
                 362
@@ -2719,195 +689,139 @@
         </import><import>
             <sig>
             <name>
-                strcpy
+                unlink
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                421
+                388
             </line>
             <col>
-                1
+                4
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                123
+                386
+            </line>
+            <col>
+                6
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                388
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                386
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                recursive_action
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><pointer>
+        <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        stat
+    </struct>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+    </pointer></param><param><pointer>
+        <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        stat
+    </struct>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                544
             </line>
             <col>
                 2
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open_read_close
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                578
-            </line>
-            <col>
-                13
-            </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                124
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strncpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_MDEV_RENAME) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_RENAME_REGEXP) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF) &amp;&amp; definedEx(CONFIG_MDEV))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                307
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_parse_mode
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <unsigned>
-        <int/>
-    </unsigned>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                264
+                540
             </line>
             <col>
                 3
@@ -2917,38 +831,72 @@
         </import><import>
             <sig>
             <name>
-                xatoull_sfx
+                open
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                string literal: xatoull_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                485
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                472
+            </line>
+            <col>
+                15
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -2961,32 +909,288 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                usleep
+            </name>
+            <type>
+                <function><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                589
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_show_usage
+            </name>
+            <type>
+                <function><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                565
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strlen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                414
+            </line>
+            <col>
+                14
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                299
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                299
+            </line>
+            <col>
+                26
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                299
+            </line>
+            <col>
+                42
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                299
+            </line>
+            <col>
+                26
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                250
+            </line>
+            <col>
+                35
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                226
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                226
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                121
+            </line>
+            <col>
+                29
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xchdir
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                516
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                470
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                463
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -3005,34 +1209,134 @@
         </import><import>
             <sig>
             <name>
-                access
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                136
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstat
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        stat
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                524
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strstr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                144
+            </line>
+            <col>
+                5
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                access
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
                 534
@@ -3045,81 +1349,55 @@
         </import><import>
             <sig>
             <name>
-                utoa
+                bb_perror_msg
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                610
+                377
             </line>
             <col>
-                34
+                5
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                610
+                357
             </line>
             <col>
-                34
+                5
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                chmod
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
-            </featureexpr><pos>
+        </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                361
+                377
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                357
             </line>
             <col>
                 5
@@ -3129,264 +1407,64 @@
         </import><import>
             <sig>
             <name>
-                strchrnul
+                umask
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><param><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_FEATURE_MDEV_CONF) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_RENAME) &amp;&amp; definedEx(CONFIG_MDEV))
+                definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                274
+                514
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
             </line>
             <col>
                 9
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                273
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                symlink
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                366
-            </line>
-            <col>
-                6
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                359
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                366
-            </line>
-            <col>
-                6
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                359
-            </line>
-            <col>
-                5
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                index_in_strings
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                567
-            </line>
-            <col>
-                7
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xopen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                464
-            </line>
-            <col>
-                15
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xchdir
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                516
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                470
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                463
-            </line>
-            <col>
-                1
             </col>
         </pos>
         </sig>
@@ -3396,17 +1474,11 @@
                 gnu_dev_major
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -3425,45 +1497,57 @@
         </import><import>
             <sig>
             <name>
-                snprintf
+                xatoll_range
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                string literal: xatoll_range
             </file>
             <line>
-                593
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                config_close
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                404
             </line>
             <col>
                 2
@@ -3473,43 +1557,241 @@
         </import><import>
             <sig>
             <name>
-                strstr
+                getenv
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                571
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                566
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                563
+            </line>
+            <col>
+                16
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                562
+            </line>
+            <col>
+                13
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                561
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                223
+            </line>
+            <col>
+                19
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strncmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                152
+            </line>
+            <col>
+                10
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                150
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
                 144
+            </line>
+            <col>
+                48
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                concat_path_file
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                161
+            </line>
+            <col>
+                28
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                93
+            </line>
+            <col>
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                585
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                518
+            </line>
+            <col>
+                16
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                418
             </line>
             <col>
                 5
@@ -3519,32 +1801,232 @@
         </import><import>
             <sig>
             <name>
-                umask
+                system
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                376
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                376
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                323
+            </line>
+            <col>
+                21
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                219
+            </line>
+            <col>
+                15
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                195
+            </line>
+            <col>
+                18
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                string literal: xstrtoll_range_sfx
             </file>
             <line>
-                514
+                1
             </line>
             <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_error_msg
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                326
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                261
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xzalloc
+            </name>
+            <type>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_MDEV_RENAME) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_RENAME_REGEXP) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF) &amp;&amp; definedEx(CONFIG_MDEV))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                299
+            </line>
+            <col>
+                18
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
                 1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -3554,37 +2036,25 @@
                 xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -3603,129 +2073,239 @@
         </import><import>
             <sig>
             <name>
-                unlink
+                strcpy
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                388
+                421
             </line>
             <col>
-                4
+                1
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                386
+                123
             </line>
             <col>
-                6
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                388
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
-            </file>
-            <line>
-                386
-            </line>
-            <col>
-                6
+                2
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                bb_perror_msg
+                bb_make_directory
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </pointer></param><param><signed>
+        <long/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                377
+                89
             </line>
             <col>
-                5
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fopen_for_read
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                167
+            </line>
+            <col>
+                42
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                357
+                167
             </line>
             <col>
-                5
+                42
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                string literal: xatoull_sfx
             </file>
             <line>
-                377
+                1
             </line>
             <col>
-                5
+                0
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                string literal: xstrtoll
             </file>
             <line>
-                357
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_sanitize_stdio
+            </name>
+            <type>
+                <function><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                511
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                chmod
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                361
             </line>
             <col>
                 5
@@ -3735,53 +2315,263 @@
         </import><import>
             <sig>
             <name>
-                sscanf
+                bb_copyfd_eof
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <long/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                207
+                488
             </line>
             <col>
-                9
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strrchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                438
+            </line>
+            <col>
+                16
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                131
+                86
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xopen_xwrite_close
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                610
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_basename
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                138
+            </line>
+            <col>
+                23
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                mknod
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                356
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                356
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                regexec
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <struct isUnion="false">
+        re_pattern_buffer
+    </struct>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><pointer>
+        <astruct isUnion="false">
+        
+    </astruct>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                236
             </line>
             <col>
                 13
@@ -3791,24 +2581,172 @@
         </import><import>
             <sig>
             <name>
-                xatoll
+                utoa
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><unsigned>
+        <int/>
+    </unsigned></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                610
+            </line>
+            <col>
+                34
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                610
+            </line>
+            <col>
+                34
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                open_read_close
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                578
+            </line>
+            <col>
+                13
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xopen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                464
+            </line>
+            <col>
+                15
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
@@ -3827,39 +2765,101 @@
         </import><import>
             <sig>
             <name>
-                bb_make_directory
+                putenv
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><param>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_MDEV)
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                89
+                375
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                374
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                375
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                374
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                close
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_CLEAN_UP))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                500
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                499
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                498
             </line>
             <col>
                 2
@@ -3869,131 +2869,147 @@
         </import><import>
             <sig>
             <name>
-                xstat
+                full_write
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><const>
             <pointer>
-        <nosign>
-        <char/>
-    </nosign>
+        <void/>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                524
+                494
             </line>
             <col>
                 2
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_copyfd_eof
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_MDEV)
-            </featureexpr><pos>
+        </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                488
+                492
             </line>
             <col>
-                7
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                481
+            </line>
+            <col>
+                5
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                regexec
+                config_read
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
-        re_pattern_buffer
+        parser_t
     </struct>
+    </pointer></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+    </pointer></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <array length="-1">
-        <astruct isUnion="false">
-        
-    </astruct>
-    </array>
-        </param><param>
-            <signed>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF))
+                definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                236
+                1157
+            </line>
+            <col>
+                59
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                1157
+            </line>
+            <col>
+                59
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sscanf
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                207
+            </line>
+            <col>
+                9
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                131
             </line>
             <col>
                 13
@@ -4003,114 +3019,394 @@
         </import><import>
             <sig>
             <name>
-                system
+                bb_makedev
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
+                <function><param><unsigned>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
+                definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                376
+                1280
             </line>
             <col>
-                8
+                21
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                376
+                1280
             </line>
             <col>
-                8
+                21
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                1280
+            </line>
+            <col>
+                21
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                1280
+            </line>
+            <col>
+                21
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                strncmp
+                xasprintf
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><param><vargs/></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_MDEV) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_EXEC))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                373
+            </line>
+            <col>
+                15
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                372
+            </line>
+            <col>
+                14
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                373
+            </line>
+            <col>
+                15
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                372
+            </line>
+            <col>
+                14
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                free
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                152
+                234
             </line>
             <col>
-                10
+                43
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                150
+                437
             </line>
             <col>
-                5
+                2
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
-                144
+                405
             </line>
             <col>
-                48
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                392
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                380
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                392
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                380
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                328
+            </line>
+            <col>
+                6
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                94
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strncpy
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_MDEV_RENAME) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_RENAME_REGEXP) &amp;&amp; definedEx(CONFIG_FEATURE_MDEV_CONF) &amp;&amp; definedEx(CONFIG_MDEV))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                307
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrdup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_MDEV)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                440
+            </line>
+            <col>
+                17
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                340
+            </line>
+            <col>
+                15
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+            </file>
+            <line>
+                316
+            </line>
+            <col>
+                14
             </col>
         </pos>
         </sig>
@@ -4120,37 +3416,29 @@
                 mdev_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_MDEV)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/mdev.c
             </file>
             <line>
                 505
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>

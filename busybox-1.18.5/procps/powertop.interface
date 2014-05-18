@@ -5,281 +5,23 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                sleep
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><param><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                definedEx(CONFIG_POWERTOP)
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; !definedEx(CONFIG_FEATURE_USE_TERMIOS))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                closedir
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        __dirstream
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                206
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                tcgetattr
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        termios
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                713
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                memset
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                846
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                845
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                783
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                765
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                764
+                746
             </line>
             <col>
                 2
@@ -289,808 +31,44 @@
         </import><import>
             <sig>
             <name>
-                bb_strtoull
+                strchrnul
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                347
-            </line>
-            <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                196
-            </line>
-            <col>
-                22
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                191
-            </line>
-            <col>
-                19
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+    </signed></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                string literal: xatoll_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                get_cpu_count
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                708
-            </line>
-            <col>
-                16
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                skip_non_whitespace
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                430
-            </line>
-            <col>
-                14
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                430
-            </line>
-            <col>
-                14
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                qsort
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                149
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xrealloc_vector_helper
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                642
-            </line>
-            <col>
-                45
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strlen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                168
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_error_msg
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                705
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                654
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                skip_whitespace
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                449
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                442
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                424
-            </line>
-            <col>
-                11
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                359
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                344
-            </line>
-            <col>
-                7
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                puts
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                633
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                127
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                126
+                475
             </line>
             <col>
                 3
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                smart_ulltoa5
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <array length="-1">
-        <nosign>
-        <char/>
-    </nosign>
-    </array>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                644
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fgets
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                418
-            </line>
-            <col>
-                9
-            </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                310
+                363
             </line>
             <col>
-                8
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                186
-            </line>
-            <col>
-                9
+                2
             </col>
         </pos>
         </sig>
@@ -1100,33 +78,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
@@ -1145,195 +111,29 @@
         </import><import>
             <sig>
             <name>
-                sleep
+                xfopen_for_read
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; !definedEx(CONFIG_FEATURE_USE_TERMIOS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                746
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_putchar
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                856
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                653
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fflush
-            </name>
-            <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                842
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                safe_poll
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        pollfd
-    </struct>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                748
+                309
             </line>
             <col>
                 6
@@ -1343,162 +143,76 @@
         </import><import>
             <sig>
             <name>
-                strchr
+                index_in_strings
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                445
+                470
             </line>
             <col>
-                7
+                9
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                440
+                326
             </line>
             <col>
                 7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                425
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                356
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                318
-            </line>
-            <col>
-                6
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                get_terminal_width_height
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
+                <function><param><const>
             <pointer>
-        <unsigned>
-        <int/>
-    </unsigned>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><param>
-            <pointer>
-        <unsigned>
+        </const></param><ret><unsigned>
         <int/>
-    </unsigned>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                623
+                108
             </line>
             <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                readdir
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        __dirstream
-    </struct>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        dirent
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                162
-            </line>
-            <col>
-                13
+                9
             </col>
         </pos>
         </sig>
@@ -1508,21 +222,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
@@ -1541,243 +249,21 @@
         </import><import>
             <sig>
             <name>
-                xfopen_for_read
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                309
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                printf
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                834
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                780
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                710
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                645
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                geteuid
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                704
-            </line>
-            <col>
-                5
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xzalloc
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                90
-            </line>
-            <col>
-                42
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fopen_for_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                405
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                173
-            </line>
-            <col>
-                7
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
+                111
             </line>
             <col>
                 8
@@ -1787,588 +273,148 @@
         </import><import>
             <sig>
             <name>
-                fopen_for_write
+                skip_whitespace
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                109
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcmp
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                430
+                449
             </line>
             <col>
                 7
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                214
+                442
             </line>
             <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                429
-            </line>
-            <col>
-                9
+                7
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                166
+                424
             </line>
             <col>
-                9
+                11
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
+        </pos><pos>
             <file>
-                string literal: xstrtoull_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                1
+                359
             </line>
             <col>
-                0
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                344
+            </line>
+            <col>
+                7
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                safe_read
+                qsort
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><pointer>
+        <function><param><const>
             <pointer>
         <void/>
     </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+                definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                750
+                149
             </line>
             <col>
-                7
+                1
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xatoll_range_sfx
+                xstrtoll_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                string literal: xatoll_range_sfx
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
             </line>
             <col>
                 0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrdup
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                223
-            </line>
-            <col>
-                31
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                tcsetattr_stdin_TCSANOW
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        termios
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                720
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                97
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                809
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                799
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                797
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                482
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                434
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                368
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                366
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                172
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                787
-            </line>
-            <col>
-                3
             </col>
         </pos>
         </sig>
@@ -2378,33 +424,25 @@
                 fputs
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 819
@@ -2414,7 +452,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 112
@@ -2427,38 +465,30 @@
         </import><import>
             <sig>
             <name>
-                xatoull_sfx
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                string literal: xatoull_sfx
+                string literal: xatoll_sfx
             </file>
             <line>
                 1
@@ -2471,39 +501,55 @@
         </import><import>
             <sig>
             <name>
-                bb_signals
+                BUG_bb_strtou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+                definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                719
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                get_terminal_width_height
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <unsigned>
+        <int/>
+    </unsigned>
+    </pointer></param><param><pointer>
+        <unsigned>
+        <int/>
+    </unsigned>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                623
             </line>
             <col>
                 1
@@ -2513,32 +559,52 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range
+                strlen
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                168
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
@@ -2560,25 +626,19 @@
                 fclose
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         _IO_FILE
     </struct>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 487
@@ -2588,7 +648,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 385
@@ -2598,7 +658,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 204
@@ -2608,7 +668,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 113
@@ -2621,256 +681,38 @@
         </import><import>
             <sig>
             <name>
-                strchrnul
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                475
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                363
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                atexit
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <function>
-        <param>
-            <void/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                718
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                index_in_strings
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                470
+                136
             </line>
             <col>
                 9
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                326
-            </line>
-            <col>
-                7
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                memcpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                definedEx(CONFIG_POWERTOP)
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                853
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                852
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                731
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                730
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                714
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                _exit
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
-            </file>
-            <line>
-                103
-            </line>
-            <col>
-                1
             </col>
         </pos>
         </sig>
@@ -2880,37 +722,29 @@
                 strstr
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <pointer>
+        </const></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 263
@@ -2920,7 +754,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 192
@@ -2930,7 +764,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 187
@@ -2943,40 +777,750 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range_sfx
+                xrealloc_vector_helper
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                642
+            </line>
+            <col>
+                45
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                atexit
+            </name>
+            <type>
+                <function><param><pointer>
+        <function><ret><void/></ret></function>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                718
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                memcpy
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                853
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                852
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                731
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                730
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                714
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                347
+            </line>
+            <col>
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                196
+            </line>
+            <col>
+                22
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                191
+            </line>
+            <col>
+                19
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strncmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                465
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                463
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                get_cpu_count
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                708
+            </line>
+            <col>
+                16
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strtoul
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                332
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                430
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                214
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                445
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                440
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                425
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                356
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                318
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fopen_for_write
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                109
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                tcgetattr
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <struct isUnion="false">
+        termios
+    </struct>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                713
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fflush
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                842
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_error_msg
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                705
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                654
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                smart_ulltoa5
+            </name>
+            <type>
+                <function><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                644
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xzalloc
+            </name>
+            <type>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                90
+            </line>
+            <col>
+                42
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
@@ -2995,24 +1539,712 @@
         </import><import>
             <sig>
             <name>
-                xatoll
+                bb_signals
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                719
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcpy
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                787
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                readdir
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        __dirstream
+    </struct>
+    </pointer></param><ret><pointer>
+        <struct isUnion="false">
+        dirent
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                162
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fopen_for_read
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                405
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                173
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_putchar
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                856
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                653
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                809
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                799
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                797
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                482
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                434
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                368
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                366
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                172
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                opendir
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        __dirstream
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                158
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                closedir
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        __dirstream
+    </struct>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                206
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                _exit
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                103
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                safe_read
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                750
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fgets
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                418
+            </line>
+            <col>
+                9
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                310
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                186
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                memset
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                846
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                845
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                783
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                765
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                764
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                safe_poll
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        pollfd
+    </struct>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                748
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
@@ -3031,144 +2263,352 @@
         </import><import>
             <sig>
             <name>
-                opendir
+                geteuid
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        __dirstream
-    </struct>
-    </pointer>
-        </ret>
-    </function>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                158
+                704
             </line>
             <col>
-                7
+                5
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                strtoul
+                puts
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                633
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                skip_non_whitespace
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                430
+            </line>
+            <col>
+                14
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                430
+            </line>
+            <col>
+                14
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                tcsetattr_stdin_TCSANOW
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <struct isUnion="false">
+        termios
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_POWERTOP) &amp;&amp; definedEx(CONFIG_FEATURE_USE_TERMIOS))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                720
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                97
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                free
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                127
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                126
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                332
+                429
             </line>
             <col>
-                8
+                9
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                strncmp
+                printf
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
+        </const></param><param><vargs/></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                465
+                834
             </line>
             <col>
-                7
+                2
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
-                463
+                780
             </line>
             <col>
-                7
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                710
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                645
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrdup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                definedEx(CONFIG_POWERTOP)
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+            </file>
+            <line>
+                223
+            </line>
+            <col>
+                31
             </col>
         </pos>
         </sig>
@@ -3178,37 +2618,29 @@
                 powertop_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_POWERTOP)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/powertop.c
             </file>
             <line>
                 683
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>

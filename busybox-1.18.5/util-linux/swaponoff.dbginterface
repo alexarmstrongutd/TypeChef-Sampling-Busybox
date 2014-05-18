@@ -2,34 +2,34 @@ fm True
 features (0)
 	
 imports (35)
-	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_error_msg: (const char*, ...) => void 		if (def(CONFIG_SWAPONOFF)&def(CONFIG_DESKTOP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:42:3
-	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:66:2
-	bb_show_usage: (void) => void 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:110:2
-	bb_simple_perror_msg: (const char*) => void 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:51:2
-	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
-	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
-	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	endmntent: (struct _IO_FILE*) => signed int 		if (def(CONFIG_SWAPONOFF)&def(CONFIG_FEATURE_CLEAN_UP))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:82:2
-	getmntent: (struct _IO_FILE*) => struct mntent* 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:69:13
-	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:96:7, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:93:7
-	hasmntopt: (const struct mntent*, const char*) => char* 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:74:7
-	resolve_mount_spec: (char**) => signed int 		if (def(CONFIG_SWAPONOFF)&def(CONFIG_FEATURE_MOUNT_LABEL))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:17:36, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:17:36
-	setmntent: (const char*, const char*) => struct _IO_FILE* 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:64:5
-	strcmp: (const char*, const char*) => signed int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:70:6
-	swapoff: (const char*) => signed int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:48:11
-	swapon: (const char*, signed int) => signed int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:46:11
+	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_error_msg: (const char*, ...) => void 		if (def(CONFIG_SWAPONOFF)&def(CONFIG_DESKTOP))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:42:3
+	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:66:2
+	bb_show_usage: () => void 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:110:2
+	bb_simple_perror_msg: (const char*) => void 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:51:2
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	endmntent: (struct _IO_FILE*) => signed int 		if (def(CONFIG_SWAPONOFF)&def(CONFIG_FEATURE_CLEAN_UP))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:82:2
+	getmntent: (struct _IO_FILE*) => struct mntent* 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:69:13
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:96:7, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:93:7
+	hasmntopt: (const struct mntent*, const char*) => char* 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:74:7
+	resolve_mount_spec: (char**) => signed int 		if (def(CONFIG_SWAPONOFF)&def(CONFIG_FEATURE_MOUNT_LABEL))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:17:36, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:17:36
+	setmntent: (const char*, const char*) => struct _IO_FILE* 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:64:5
+	strcmp: (const char*, const char*) => signed int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:70:6
+	swapoff: (const char*) => signed int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:48:11
+	swapon: (const char*, signed int) => signed int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:46:11
 	xatoll: (const char*) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoll_sfx:1:0
-	xatou: (const char*) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatou: (const char*) => unsigned int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoull:1:0
 	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoull_range_sfx:1:0
 	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at string literal: xatoull_sfx:1:0
-	xstat: (const char*, struct stat*) => void 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:36:1
+	xstat: (const char*, struct stat*) => void 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:36:1
 	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xstrtoll:1:0
 	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xstrtoll_range:1:0
 	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_SWAPONOFF)		at string literal: xstrtoll_range_sfx:1:0
@@ -38,4 +38,4 @@ imports (35)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SWAPONOFF)		at string literal: xstrtoull_sfx:1:0
 exports (1)
-	swap_on_off_main: (signed int, char**) => signed int 		if def(CONFIG_SWAPONOFF)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:88:0
+	swap_on_off_main: (signed int, char**) => signed int 		if def(CONFIG_SWAPONOFF)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/swaponoff.c:88:4

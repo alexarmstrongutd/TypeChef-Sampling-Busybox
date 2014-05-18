@@ -2,22 +2,22 @@ fm True
 features (0)
 	
 imports (27)
-	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_xatou32_unimplemented: (void) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_error_msg_and_die: (const char*, ...) => void 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:66:1
-	bb_strtoll: (const char*, char**, signed int) => signed long long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
-	bb_strtou: (const char*, char**, signed int) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
-	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	bb_xioctl: (signed int, unsigned int, void*) => signed int 		if !def(CONFIG_IOCTL_HEX2STR_ERROR)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1270:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1270:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39
-	bb_xioctl: (signed int, unsigned int, void*, const char*) => signed int 		if def(CONFIG_IOCTL_HEX2STR_ERROR)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39
-	close: (signed int) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:60:3
-	ioctl: (signed int, unsigned long, ...) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:57:6
-	open: (const char*, signed int, ...) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:29:7, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:25:7, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:21:6
+	BUG_bb_strtou32_unimplemented: () => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: () => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_error_msg_and_die: (const char*, ...) => void 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:66:1
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	bb_xioctl: (signed int, unsigned int, void*) => signed int 		if !def(CONFIG_IOCTL_HEX2STR_ERROR)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1270:39, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1270:39, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39
+	bb_xioctl: (signed int, unsigned int, void*, const char*) => signed int 		if def(CONFIG_IOCTL_HEX2STR_ERROR)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1265:39
+	close: (signed int) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:60:3
+	ioctl: (signed int, unsigned long, ...) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:57:6
+	open: (const char*, signed int, ...) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:29:7, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:25:7, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:21:6
 	xatoll: (const char*) => signed long long 		if True		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if True		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if True		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if True		at string literal: xatoll_sfx:1:0
-	xatou: (const char*) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatou: (const char*) => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if True		at string literal: xatoull:1:0
 	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if True		at string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xatoull_range_sfx:1:0
@@ -30,5 +30,5 @@ imports (27)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_sfx:1:0
 exports (2)
-	console_make_active: (signed int, const signed int) => void 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:76:0
-	get_console_fd_or_die: (void) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:39:0
+	console_make_active: (signed int, const signed int) => void 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:76:15
+	get_console_fd_or_die: () => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/get_console.c:39:14

@@ -2,19 +2,19 @@ fm True
 features (0)
 	
 imports (24)
-	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_xatou32_unimplemented: (void) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_strtoll: (const char*, char**, signed int) => signed long long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
-	bb_strtou: (const char*, char**, signed int) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
-	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	strcmp: (const char*, const char*) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:27:6, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:15:6
-	strlen: (const char*) => unsigned long 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:80:13, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:80:13, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:69:14, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:69:14, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:57:17, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:30:13, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:30:13
-	strncmp: (const char*, const char*, unsigned long) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:62:7
+	BUG_bb_strtou32_unimplemented: () => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: () => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	strcmp: (const char*, const char*) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:27:6, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:15:6
+	strlen: (const char*) => unsigned long 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:80:13, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:80:13, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:69:14, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:69:14, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:57:17, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:30:13, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:30:13
+	strncmp: (const char*, const char*, unsigned long) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:62:7
 	xatoll: (const char*) => signed long long 		if True		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if True		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if True		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if True		at string literal: xatoll_sfx:1:0
-	xatou: (const char*) => unsigned int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatou: (const char*) => unsigned int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if True		at string literal: xatoull:1:0
 	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if True		at string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xatoull_range_sfx:1:0
@@ -27,7 +27,7 @@ imports (24)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_sfx:1:0
 exports (4)
-	index_in_str_array: (const char*[], const char*) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:10:0
-	index_in_strings: (const char*, const char*) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:22:0
-	index_in_substrings: (const char*, const char*) => signed int 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:54:0
-	nth_string: (const char*, signed int) => const char* 		if True		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:76:0
+	index_in_str_array: (const char**, const char*) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:10:14
+	index_in_strings: (const char*, const char*) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:22:14
+	index_in_substrings: (const char*, const char*) => signed int 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:54:14
+	nth_string: (const char*, signed int) => const char* 		if True		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/compare_string_array.c:76:22

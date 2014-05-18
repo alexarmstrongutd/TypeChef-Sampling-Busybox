@@ -5,358 +5,22 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_internal_getpwnam
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_perror_msg_and_die
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                82
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                68
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                58
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 bb_error_msg_and_die
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
                 155
@@ -369,492 +33,36 @@
         </import><import>
             <sig>
             <name>
-                mkdir
+                symlink
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
-                121
+                133
             </line>
             <col>
                 8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                lstat
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                66
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_copyfd_exact_size
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                116
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_error_msg
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                75
-            </line>
-            <col>
-                4
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strrchr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                27
-            </line>
-            <col>
-                16
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                data_skip
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        archive_handle_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                78
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_AR) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_UNZIP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_UNXZ) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_UNCOMPRESS) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_CPIO) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_BUNZIP2) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_DPKG_DEB) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_RPM2CPIO) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_UNLZMA) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_RPM) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_GUNZIP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_TAR) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_DPKG) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                21
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                close
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                117
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getpwnam
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                20
             </col>
         </pos>
         </sig>
@@ -864,33 +72,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
@@ -909,89 +105,33 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                link
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                mknod
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><ret><signed>
         <int/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
-                147
+                94
             </line>
             <col>
                 8
@@ -1001,24 +141,48 @@
         </import><import>
             <sig>
             <name>
-                xatoull
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                108
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
@@ -1037,472 +201,24 @@
         </import><import>
             <sig>
             <name>
-                getgrnam
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        group
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h
-            </file>
-            <line>
-                39
-            </line>
-            <col>
-                21
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_internal_getgrnam
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        group
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h
-            </file>
-            <line>
-                39
-            </line>
-            <col>
-                21
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h
-            </file>
-            <line>
-                39
-            </line>
-            <col>
-                21
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                169
+                111
             </line>
             <col>
                 8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcmp
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                51
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                setfscreatecon
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_TAR) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (definedEx(CONFIG_DPKG) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT))) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                197
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                197
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                20
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                20
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                utimes
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <array length="-1">
-        <struct isUnion="false">
-        timeval
-    </struct>
-    </array>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                189
-            </line>
-            <col>
-                3
             </col>
         </pos>
         </sig>
@@ -1512,35 +228,25 @@
                 chown
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
+    </unsigned></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
                 176
@@ -1553,38 +259,154 @@
         </import><import>
             <sig>
             <name>
-                xatoull_sfx
+                utimes
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
-        suffix_mult
+        timeval
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                string literal: xatoull_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                189
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                unlink
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                81
+            </line>
+            <col>
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                55
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_perror_msg_and_die
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                82
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                68
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                58
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -1597,32 +419,114 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                mkdir
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                121
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
@@ -1641,37 +545,61 @@
         </import><import>
             <sig>
             <name>
-                chmod
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                182
+                136
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                data_skip
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        archive_handle_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                78
             </line>
             <col>
                 3
@@ -1681,41 +609,205 @@
         </import><import>
             <sig>
             <name>
-                symlink
+                bb_perror_msg
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                151
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                137
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                127
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                96
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_internal_getgrnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        group
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h
+            </file>
+            <line>
+                39
+            </line>
+            <col>
+                21
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h
+            </file>
+            <line>
+                39
+            </line>
+            <col>
+                21
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
                 133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                51
             </line>
             <col>
                 8
@@ -1725,40 +817,196 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range_sfx
+                xstrtoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xopen3
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                112
+            </line>
+            <col>
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getgrnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        group
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/grp_.h
+            </file>
+            <line>
+                39
+            </line>
+            <col>
+                21
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_error_msg
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                75
+            </line>
+            <col>
+                4
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
@@ -1777,41 +1025,335 @@
         </import><import>
             <sig>
             <name>
-                link
+                bb_make_directory
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
+    </pointer></param><param><signed>
+        <long/>
+    </signed></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
-                94
+                30
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_internal_getpwnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                40
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                40
+            </line>
+            <col>
+                20
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                chmod
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                182
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strrchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                27
+            </line>
+            <col>
+                16
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                setfscreatecon
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_TAR) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT)))) || (definedEx(CONFIG_DPKG) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_SELINUX) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT))) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                197
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                197
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                20
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                20
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                mknod
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                147
             </line>
             <col>
                 8
@@ -1821,112 +1363,102 @@
         </import><import>
             <sig>
             <name>
-                unlink
+                lstat
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><pointer>
+        <struct isUnion="false">
+        stat
+    </struct>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
-                81
+                66
             </line>
             <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                55
-            </line>
-            <col>
-                7
+                6
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                bb_perror_msg
+                bb_copyfd_exact_size
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <long/>
+    </signed></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
-                151
+                116
             </line>
             <col>
-                3
+                2
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                string literal: xatoll_range_sfx
             </file>
             <line>
-                137
+                1
             </line>
             <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                127
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
-            </file>
-            <line>
-                96
-            </line>
-            <col>
-                3
+                0
             </col>
         </pos>
         </sig>
@@ -1936,21 +1468,15 @@
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
@@ -1969,86 +1495,162 @@
         </import><import>
             <sig>
             <name>
-                bb_make_directory
+                close
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
-                30
+                117
             </line>
             <col>
-                3
+                2
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xopen3
+                free
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_AR) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_UNZIP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_UNXZ) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_UNCOMPRESS) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_CPIO) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_BUNZIP2) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_DPKG_DEB) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_RPM2CPIO) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_UNLZMA) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_RPM) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_GUNZIP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_TAR) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX)) || (definedEx(CONFIG_DPKG) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_SELINUX) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+            </file>
+            <line>
+                21
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                112
+                166
             </line>
             <col>
-                11
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getpwnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_AR)) || (!definedEx(CONFIG_AR) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNZIP)) || (!definedEx(CONFIG_UNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNXZ)) || (!definedEx(CONFIG_UNXZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_USAGE)) || (!definedEx(CONFIG_FEATURE_COMPRESS_USAGE) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNCOMPRESS)) || (!definedEx(CONFIG_UNCOMPRESS) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG)) || (!definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_TAR_TO_COMMAND)) || (!definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_Z)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_Z) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_CPIO)) || (!definedEx(CONFIG_CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_BUNZIP2)) || (!definedEx(CONFIG_BUNZIP2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG_DEB)) || (!definedEx(CONFIG_DPKG_DEB) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_XZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_XZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_BZ2)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM2CPIO)) || (!definedEx(CONFIG_RPM2CPIO) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_UNLZMA)) || (!definedEx(CONFIG_UNLZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_RPM)) || (!definedEx(CONFIG_RPM) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_GZ)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_GZ) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_FEATURE_SEAMLESS_LZMA)) || (!definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_GUNZIP)) || (!definedEx(CONFIG_GUNZIP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_TAR)) || (definedEx(CONFIG_FEATURE_TAR_UNAME_GNAME) &amp;&amp; !definedEx(CONFIG_USE_BB_PWD_GRP) &amp;&amp; definedEx(CONFIG_DPKG) &amp;&amp; !definedEx(CONFIG_TAR)))))))))))))))))))))))))))))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/pwd_.h
+            </file>
+            <line>
+                40
+            </line>
+            <col>
+                20
             </col>
         </pos>
         </sig>
@@ -2058,29 +1660,23 @@
                 data_extract_all
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         archive_handle_t
     </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_AR) || definedEx(CONFIG_FEATURE_SEAMLESS_BZ2) || definedEx(CONFIG_GUNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_XZ) || definedEx(CONFIG_TAR) || definedEx(CONFIG_RPM) || definedEx(CONFIG_UNCOMPRESS) || definedEx(CONFIG_UNLZMA) || definedEx(CONFIG_FEATURE_COMPRESS_BBCONFIG) || definedEx(CONFIG_FEATURE_SEAMLESS_Z) || definedEx(CONFIG_UNXZ) || definedEx(CONFIG_RPM2CPIO) || definedEx(CONFIG_UNZIP) || definedEx(CONFIG_FEATURE_SEAMLESS_LZMA) || definedEx(CONFIG_DPKG_DEB) || definedEx(CONFIG_FEATURE_COMPRESS_USAGE) || definedEx(CONFIG_DPKG) || definedEx(CONFIG_FEATURE_SEAMLESS_GZ) || definedEx(CONFIG_FEATURE_TAR_TO_COMMAND) || definedEx(CONFIG_CPIO) || definedEx(CONFIG_BUNZIP2))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/archival/libarchive/data_extract_all.c
             </file>
             <line>
                 9
             </line>
             <col>
-                0
+                15
             </col>
         </pos>
         </sig>

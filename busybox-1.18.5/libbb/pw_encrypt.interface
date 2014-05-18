@@ -5,998 +5,34 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                strchrnul
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                crypt
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+    </signed></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                16
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                124
-            </line>
-            <col>
-                16
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                md5_begin
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        md5_ctx_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                127
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                107
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                93
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                memset
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                275
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                274
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                273
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                158
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                116
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strlen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                89
-            </line>
-            <col>
-                11
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                53
-            </line>
-            <col>
-                7
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                94
-            </line>
-            <col>
-                10
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sha256_begin
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        md5_ctx_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
             </file>
             <line>
-                93
+                78
             </line>
             <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sha512_begin
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        sha512_ctx_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                98
-            </line>
-            <col>
-                21
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sha512_hash
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        sha512_ctx_t
-    </struct>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                99
-            </line>
-            <col>
-                20
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                103
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                102
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                277
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                276
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                getpid
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                32
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                md5_hash
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        md5_ctx_t
-    </struct>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1540
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                142
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                140
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                137
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                134
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                131
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                129
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                118
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                113
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                110
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                109
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                98
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
-            </file>
-            <line>
-                95
-            </line>
-            <col>
-                1
+                12
             </col>
         </pos>
         </sig>
@@ -1006,33 +42,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
@@ -1051,48 +75,104 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                1
+                108
             </line>
             <col>
-                0
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sha512_begin
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        sha512_ctx_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                98
+            </line>
+            <col>
+                21
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                crypt
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                16
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                16
             </col>
         </pos>
         </sig>
@@ -1102,21 +182,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
@@ -1135,342 +209,20 @@
         </import><import>
             <sig>
             <name>
-                xzalloc
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                96
-            </line>
-            <col>
-                27
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                96
-            </line>
-            <col>
-                27
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                86
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                86
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                57
-            </line>
-            <col>
-                19
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                66
-            </line>
-            <col>
-                8
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xmalloc
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
+    </unsigned></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
             </file>
             <line>
                 360
@@ -1480,7 +232,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
             </file>
             <line>
                 273
@@ -1493,235 +245,183 @@
         </import><import>
             <sig>
             <name>
-                sha512_end
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        sha512_ctx_t
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                100
-            </line>
-            <col>
-                19
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrdup
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_SULOGIN) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA)) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
-            </file>
-            <line>
-                124
+                111
             </line>
             <col>
                 8
             </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                90
-            </line>
-            <col>
-                12
-            </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                md5_end
+                md5_hash
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
         md5_ctx_t
     </struct>
-    </pointer>
-        </param><param>
+    </pointer></param><param><const>
             <pointer>
         <void/>
     </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                143
+                1540
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                142
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                140
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                137
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                134
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                131
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                129
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                118
             </line>
             <col>
                 2
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
             </file>
             <line>
-                120
+                113
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                110
             </line>
             <col>
                 1
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
             </file>
             <line>
-                111
+                109
             </line>
             <col>
                 1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
-            </file>
-            <line>
-                75
-            </line>
-            <col>
-                13
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
             </file>
             <line>
-                75
+                108
             </line>
             <col>
-                13
+                1
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
-            </featureexpr><pos>
+        </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
             </file>
             <line>
-                85
+                98
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                95
             </line>
             <col>
                 1
@@ -1731,38 +431,56 @@
         </import><import>
             <sig>
             <name>
-                xatoull_sfx
+                sha256_begin
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+                <function><param><pointer>
         <struct isUnion="false">
-        suffix_mult
+        md5_ctx_t
     </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                93
+            </line>
+            <col>
+                20
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
             </featureexpr><pos>
             <file>
-                string literal: xatoull_sfx
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -1775,32 +493,132 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strlen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                89
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                53
+            </line>
+            <col>
+                7
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                94
+            </line>
+            <col>
+                10
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
@@ -1819,42 +637,66 @@
         </import><import>
             <sig>
             <name>
-                strchrnul
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                78
+                136
             </line>
             <col>
-                12
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                time
+            </name>
+            <type>
+                <function><param><pointer>
+        <signed>
+        <long/>
+    </signed>
+    </pointer></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                32
+            </line>
+            <col>
+                17
             </col>
         </pos>
         </sig>
@@ -1864,23 +706,17 @@
                 ntohl
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
             </file>
             <line>
                 516
@@ -1890,7 +726,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_des.c
             </file>
             <line>
                 515
@@ -1906,33 +742,23 @@
                 memcpy
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><const>
             <pointer>
         <void/>
     </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
+    </unsigned></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
             </file>
             <line>
                 168
@@ -1942,7 +768,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
             </file>
             <line>
                 165
@@ -1952,7 +778,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
             </file>
             <line>
                 150
@@ -1962,7 +788,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
             </file>
             <line>
                 147
@@ -1972,7 +798,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
             </file>
             <line>
                 101
@@ -1985,30 +811,132 @@
         </import><import>
             <sig>
             <name>
-                sha1_end
+                bb_strtoull
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
-        <struct isUnion="false">
-        md5_ctx_t
-    </struct>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><param>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
-        <void/>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strncmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                63
+            </line>
+            <col>
+                5
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sha1_end
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        md5_ctx_t
+    </struct>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
                 1541
@@ -2021,76 +949,188 @@
         </import><import>
             <sig>
             <name>
-                xstrndup
+                md5_end
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+                <function><param><pointer>
+        <struct isUnion="false">
+        md5_ctx_t
+    </struct>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
             </file>
             <line>
-                83
+                143
             </line>
             <col>
-                13
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                120
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                111
+            </line>
+            <col>
+                1
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                time
+                xstrtoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
-        <signed>
-        <long/>
-    </signed>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+                string literal: xstrtoll_range_sfx
             </file>
             <line>
-                32
+                1
             </line>
             <col>
-                17
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xzalloc
+            </name>
+            <type>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                96
+            </line>
+            <col>
+                27
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                96
+            </line>
+            <col>
+                27
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                86
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                86
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                57
+            </line>
+            <col>
+                19
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -2100,37 +1140,25 @@
                 xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
@@ -2149,24 +1177,478 @@
         </import><import>
             <sig>
             <name>
-                xatoll
+                sha512_end
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <struct isUnion="false">
+        sha512_ctx_t
+    </struct>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                100
+            </line>
+            <col>
+                19
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcpy
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                85
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sha512_hash
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        sha512_ctx_t
+    </struct>
+    </pointer></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                99
+            </line>
+            <col>
+                20
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                75
+            </line>
+            <col>
+                13
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                75
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                md5_begin
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        md5_ctx_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                127
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                107
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                93
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getpid
+            </name>
+            <type>
+                <function><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                32
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrndup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                83
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                memset
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                275
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                274
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                273
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                158
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_md5.c
+            </file>
+            <line>
+                116
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
@@ -2185,48 +1667,186 @@
         </import><import>
             <sig>
             <name>
-                strncmp
+                free
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SULOGIN)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_VLOCK)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CHPASSWD)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_SU)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_LOGIN)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_PASSWD)) || (definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT_SHA) &amp;&amp; definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
             </file>
             <line>
-                63
+                103
             </line>
             <col>
-                5
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                102
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                277
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                276
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                66
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrdup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_SULOGIN) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA))) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; (!definedEx(CONFIG_USE_BB_CRYPT) || definedEx(CONFIG_USE_BB_CRYPT_SHA)) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+            </file>
+            <line>
+                124
+            </line>
+            <col>
+                8
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt_sha.c
+            </file>
+            <line>
+                90
+            </line>
+            <col>
+                12
             </col>
         </pos>
         </sig>
@@ -2236,43 +1856,35 @@
                 pw_encrypt
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <pointer>
+        </const></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_SULOGIN) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; !definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
             </file>
             <line>
-                108
+                1220
             </line>
             <col>
-                0
+                41
             </col>
         </pos>
         </sig>
@@ -2282,47 +1894,37 @@
                 pw_encrypt
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
+    </signed></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_SULOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SULOGIN) &amp;&amp; ((definedEx(CONFIG_VLOCK) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_VLOCK) &amp;&amp; ((definedEx(CONFIG_CHPASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_CHPASSWD) &amp;&amp; ((definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) &amp;&amp; ((definedEx(CONFIG_SU) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_SU) &amp;&amp; ((definedEx(CONFIG_LOGIN) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (!definedEx(CONFIG_LOGIN) &amp;&amp; ((definedEx(CONFIG_PASSWD) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT)) || (definedEx(CONFIG_CRYPTPW) &amp;&amp; definedEx(CONFIG_USE_BB_CRYPT) &amp;&amp; !definedEx(CONFIG_PASSWD)))))))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
             </file>
             <line>
                 108
             </line>
             <col>
-                0
+                16
             </col>
         </pos>
         </sig>
@@ -2332,39 +1934,29 @@
                 crypt_make_salt
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><param>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
+    </signed></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_LOGIN) || definedEx(CONFIG_SULOGIN) || definedEx(CONFIG_FEATURE_HTTPD_AUTH_MD5) || definedEx(CONFIG_PASSWD) || definedEx(CONFIG_CHPASSWD) || definedEx(CONFIG_CRYPTPW) || definedEx(CONFIG_SU) || definedEx(CONFIG_VLOCK))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/pw_encrypt.c
             </file>
             <line>
                 30
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>

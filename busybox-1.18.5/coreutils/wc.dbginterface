@@ -2,26 +2,26 @@ fm True
 features (0)
 	
 imports (31)
-	BUG_bb_strtou32_unimplemented: (void) => unsigned int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_xatou32_unimplemented: (void) => unsigned int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
 	_IO_getc: (struct _IO_FILE*) => signed int 		if def(CONFIG_WC)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/stdio.h:547:18
-	bb_simple_perror_msg: (const char*) => void 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:153:5
-	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
-	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
-	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	fclose_if_not_stdin: (struct _IO_FILE*) => signed int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:205:2
-	ferror: (struct _IO_FILE*) => signed int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:152:8
-	fflush_stdout_and_exit: (signed int) => void 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:240:1
-	fopen_or_warn_stdin: (const char*) => struct _IO_FILE* 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:136:7
-	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:107:14
-	init_unicode: (void) => void 		if (def(CONFIG_UNICODE_SUPPORT)&(def(CONFIG_UNICODE_USING_LOCALE)|def(CONFIG_FEATURE_CHECK_UNICODE_IN_ENV))&def(CONFIG_WC))		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24
-	memset: (void*, signed int, unsigned long) => void* 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:142:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:123:1
-	printf: (const char*, ...) => signed int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:225:2, file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:220:4
+	bb_simple_perror_msg: (const char*) => void 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:153:5
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	fclose_if_not_stdin: (struct _IO_FILE*) => signed int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:205:2
+	ferror: (struct _IO_FILE*) => signed int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:152:8
+	fflush_stdout_and_exit: (signed int) => void 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:240:1
+	fopen_or_warn_stdin: (const char*) => struct _IO_FILE* 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:136:7
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:107:14
+	init_unicode: () => void 		if (def(CONFIG_UNICODE_SUPPORT)&(def(CONFIG_UNICODE_USING_LOCALE)|def(CONFIG_FEATURE_CHECK_UNICODE_IN_ENV))&def(CONFIG_WC))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/unicode.h:29:24
+	memset: (void*, signed int, unsigned long) => void* 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:142:2, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:123:1
+	printf: (const char*, ...) => signed int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:225:2, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:220:4
 	xatoll: (const char*) => signed long long 		if def(CONFIG_WC)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_WC)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_WC)		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_WC)		at string literal: xatoll_sfx:1:0
-	xatou: (const char*) => unsigned int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatou: (const char*) => unsigned int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if def(CONFIG_WC)		at string literal: xatoull:1:0
 	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_WC)		at string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_WC)		at string literal: xatoull_range_sfx:1:0
@@ -34,4 +34,4 @@ imports (31)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_WC)		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_WC)		at string literal: xstrtoull_sfx:1:0
 exports (1)
-	wc_main: (signed int, char**) => signed int 		if def(CONFIG_WC)		at file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:93:0
+	wc_main: (signed int, char**) => signed int 		if def(CONFIG_WC)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/wc.c:93:4

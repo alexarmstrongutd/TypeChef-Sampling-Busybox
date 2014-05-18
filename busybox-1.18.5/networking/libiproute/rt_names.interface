@@ -5,490 +5,24 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                config_close
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                33
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_error_msg
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                27
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
@@ -507,48 +41,74 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                1
+                108
             </line>
             <col>
-                0
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                config_open2
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+    </pointer></param><ret><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                22
+            </line>
+            <col>
+                20
             </col>
         </pos>
         </sig>
@@ -558,21 +118,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
@@ -591,147 +145,21 @@
         </import><import>
             <sig>
             <name>
-                xzalloc
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                226
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                192
-            </line>
-            <col>
-                22
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                157
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                120
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                86
-            </line>
-            <col>
-                19
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fopen_for_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                22
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                22
-            </line>
-            <col>
-                39
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                169
+                111
             </line>
             <col>
                 8
@@ -741,104 +169,30 @@
         </import><import>
             <sig>
             <name>
-                strcmp
+                xstrtoll_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                47
-            </line>
-            <col>
-                6
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                40
-            </line>
-            <col>
-                24
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -851,123 +205,129 @@
         </import><import>
             <sig>
             <name>
-                config_open2
+                xatoll_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
+        </const></param><param><const>
             <pointer>
         <struct isUnion="false">
-        _IO_FILE
+        suffix_mult
     </struct>
     </pointer>
-        </ret>
-    </function>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                string literal: xatoll_sfx
             </file>
             <line>
-                22
+                1
             </line>
             <col>
-                20
+                0
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                bb_strtou
+                BUG_bb_strtou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                56
+                169
             </line>
             <col>
-                5
+                8
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                string literal: xatoull_range
             </file>
             <line>
-                25
+                1
             </line>
             <col>
-                16
+                0
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                166
+                136
             </line>
             <col>
                 9
@@ -977,36 +337,644 @@
         </import><import>
             <sig>
             <name>
-                xstrtoull_sfx
+                memcpy
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                87
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                config_close
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                33
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                47
+            </line>
+            <col>
+                6
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                40
+            </line>
+            <col>
+                24
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_error_msg
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                27
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xzalloc
+            </name>
+            <type>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                226
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                192
+            </line>
+            <col>
+                22
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                157
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                120
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                86
+            </line>
+            <col>
+                19
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fopen_for_read
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                22
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                22
+            </line>
+            <col>
+                39
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                246
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                237
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                209
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                200
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                181
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                172
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                141
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                132
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                103
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                94
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
@@ -1028,37 +996,25 @@
                 xatoll_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <signed>
+    </signed></param><param><signed>
         <longlong/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
@@ -1077,432 +1033,18 @@
         </import><import>
             <sig>
             <name>
-                config_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        parser_t
-    </struct>
-    </pointer>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
-            </file>
-            <line>
-                1157
-            </line>
-            <col>
-                59
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrdup
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                31
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                246
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                237
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                209
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                200
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                181
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                172
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                141
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                132
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                103
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                94
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                memcpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
-            </file>
-            <line>
-                87
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
@@ -1518,43 +1060,209 @@
             </col>
         </pos>
         </sig>
+        </import><import>
+            <sig>
+            <name>
+                config_read
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        parser_t
+    </struct>
+    </pointer></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><unsigned>
+        <int/>
+    </unsigned></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h
+            </file>
+            <line>
+                1157
+            </line>
+            <col>
+                59
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                56
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                25
+            </line>
+            <col>
+                16
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrdup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+            </file>
+            <line>
+                31
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
         </import><export>
             <sig>
             <name>
                 rtnl_rttable_a2n
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <unsigned>
         <int/>
     </unsigned>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_IP_RULE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 250
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1564,39 +1272,31 @@
                 rtnl_rttable_n2a
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
+    </signed></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_IP_RULE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 234
             </line>
             <col>
-                0
+                22
             </col>
         </pos>
         </sig>
@@ -1606,37 +1306,29 @@
                 rtnl_dsfield_a2n
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <unsigned>
         <int/>
     </unsigned>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 213
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1646,39 +1338,31 @@
                 rtnl_dsfield_n2a
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
+    </signed></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 197
             </line>
             <col>
-                0
+                22
             </col>
         </pos>
         </sig>
@@ -1688,39 +1372,31 @@
                 rtnl_rtrealm_n2a
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
+    </signed></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 definedEx(CONFIG_FEATURE_IP_RULE)
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 169
             </line>
             <col>
-                0
+                22
             </col>
         </pos>
         </sig>
@@ -1730,37 +1406,29 @@
                 rtnl_rtrealm_a2n
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <unsigned>
         <int/>
     </unsigned>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 162
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1770,37 +1438,29 @@
                 rtnl_rtscope_a2n
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <unsigned>
         <int/>
     </unsigned>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 145
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1810,39 +1470,31 @@
                 rtnl_rtscope_n2a
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
+    </signed></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 129
             </line>
             <col>
-                0
+                22
             </col>
         </pos>
         </sig>
@@ -1852,37 +1504,29 @@
                 rtnl_rtprot_a2n
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <unsigned>
         <int/>
     </unsigned>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 107
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1892,39 +1536,31 @@
                 rtnl_rtprot_n2a
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
+    </signed></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_FEATURE_IP_ADDRESS) || definedEx(CONFIG_FEATURE_IP_TUNNEL) || definedEx(CONFIG_FEATURE_IP_ROUTE) || definedEx(CONFIG_IP) || definedEx(CONFIG_FEATURE_IP_LINK) || definedEx(CONFIG_FEATURE_IP_RULE))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/libiproute/rt_names.c
             </file>
             <line>
                 91
             </line>
             <col>
-                0
+                22
             </col>
         </pos>
         </sig>

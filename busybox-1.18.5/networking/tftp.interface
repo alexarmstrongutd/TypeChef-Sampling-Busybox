@@ -5,324 +5,36 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
+                htons
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xbind
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        sockaddr
-    </struct>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+                <function><param><unsigned>
+        <short/>
+    </unsigned></param><ret><unsigned>
+        <short/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                237
+                428
             </line>
             <col>
-                2
+                23
             </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                get_sock_lsa
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        len_and_sockaddr
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
-            </featureexpr><pos>
+        </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                738
+                411
             </line>
             <col>
-                11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fstat
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                391
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_progress_init
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        bb_progress_t
-    </struct>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                114
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_lookup_port
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                696
-            </line>
-            <col>
-                8
+                21
             </col>
         </pos>
         </sig>
@@ -332,33 +44,23 @@
                 xconnect
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <const>
+    </signed></param><param><const>
             <pointer>
         <struct isUnion="false">
         sockaddr
     </struct>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </unsigned></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 488
@@ -368,7 +70,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 238
@@ -381,784 +83,30 @@
         </import><import>
             <sig>
             <name>
-                bb_strtoull
+                fstat
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                554
-            </line>
-            <col>
-                15
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+    </signed></param><param><pointer>
         <struct isUnion="false">
-        suffix_mult
+        stat
     </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
             </featureexpr><pos>
             <file>
-                string literal: xatoll_sfx
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xmalloc_sockaddr2dotted
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        sockaddr
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                701
+                391
             </line>
             <col>
                 3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                701
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xgetpwnam
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                245
-            </line>
-            <col>
-                23
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strlen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                777
-            </line>
-            <col>
-                21
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                638
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                638
-            </line>
-            <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                348
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xhost2sockaddr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <struct isUnion="false">
-        len_and_sockaddr
-    </struct>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                697
-            </line>
-            <col>
-                12
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                full_write
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <void/>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_GET)) || (definedEx(CONFIG_TFTPD) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                582
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_xatou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                nth_string
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                528
-            </line>
-            <col>
-                10
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_error_msg
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                636
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                572
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                530
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                467
-            </line>
-            <col>
-                4
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                365
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                350
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                146
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                142
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strrchr
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                685
-            </line>
-            <col>
-                23
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_FEATURE_CLEAN_UP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; definedEx(CONFIG_TFTP)) || (definedEx(CONFIG_FEATURE_CLEAN_UP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; definedEx(CONFIG_TFTPD) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                628
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                627
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                close
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_FEATURE_CLEAN_UP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTPD)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                822
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                626
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                625
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
             </col>
         </pos>
         </sig>
@@ -1168,33 +116,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
@@ -1213,205 +149,113 @@
         </import><import>
             <sig>
             <name>
-                bb_progress_update
+                xhost2sockaddr
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        bb_progress_t
-    </struct>
-    </pointer>
-        </param><param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <struct isUnion="false">
+        len_and_sockaddr
+    </struct>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                110
+                697
             </line>
             <col>
-                1
+                12
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                getopt32
+                ntohs
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
+                <function><param><unsigned>
+        <short/>
+    </unsigned></param><ret><unsigned>
+        <short/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                752
+                762
             </line>
             <col>
-                36
+                10
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                666
+                506
+            </line>
+            <col>
+                13
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                505
             </line>
             <col>
                 11
             </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                666
-            </line>
-            <col>
-                18
-            </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                nth_string
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                safe_poll
-            </name>
-            <type>
-                <function>
-        <param>
+    </signed></param><ret><const>
             <pointer>
-        <struct isUnion="false">
-        pollfd
-    </struct>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                459
+                528
             </line>
             <col>
                 10
@@ -1421,82 +265,30 @@
         </import><import>
             <sig>
             <name>
-                xsocket
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                227
-            </line>
-            <col>
-                13
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                open
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                296
+                108
             </line>
             <col>
-                13
+                9
             </col>
         </pos>
         </sig>
@@ -1506,21 +298,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
@@ -1539,32 +325,360 @@
         </import><import>
             <sig>
             <name>
-                xzalloc
+                xmalloc
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
+    </unsigned></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                748
+                225
             </line>
             <col>
-                12
+                14
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                224
+            </line>
+            <col>
+                14
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                snprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                378
+            </line>
+            <col>
+                9
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                378
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_xatou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                111
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xsocket
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                227
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                change_identity
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer>
+        </const></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                246
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                unlink
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_GET))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                717
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                open
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                296
+            </line>
+            <col>
+                13
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                setsockopt_reuseaddr
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                228
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_lookup_port
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                696
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1574,21 +688,15 @@
                 BUG_bb_strtou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><ret><unsigned>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
                 169
@@ -1604,19 +712,13 @@
                 bb_show_usage
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+                <function><ret><void/></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 743
@@ -1626,7 +728,7 @@
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 694
@@ -1639,739 +741,85 @@
         </import><import>
             <sig>
             <name>
-                strcmp
+                strlen
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                777
+            </line>
+            <col>
+                21
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                638
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                638
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                348
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xchdir
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                778
-            </line>
-            <col>
-                35
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                138
-            </line>
-            <col>
-                20
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                safe_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                494
-            </line>
-            <col>
-                10
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xmalloc
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                225
-            </line>
-            <col>
-                14
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                224
-            </line>
-            <col>
-                14
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                change_identity
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        passwd
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                246
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_putchar_stderr
-            </name>
-            <type>
-                <function>
-        <param>
-            <nosign>
-        <char/>
-    </nosign>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                121
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                sprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                392
-            </line>
-            <col>
-                9
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                392
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strcpy
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                833
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                633
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                584
-            </line>
-            <col>
-                5
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                388
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                376
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                356
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                353
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                299
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                full_read
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PUT)) || (definedEx(CONFIG_TFTPD) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                417
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fprintf
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <struct isUnion="false">
-        _IO_FILE
-    </struct>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                700
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                508
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                441
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                440
-            </line>
-            <col>
-                3
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                438
+                755
             </line>
             <col>
                 2
@@ -2384,29 +832,19 @@
                 xatoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
@@ -2425,105 +863,177 @@
         </import><import>
             <sig>
             <name>
-                strcasecmp
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><param><pointer>
+        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                170
+                136
             </line>
             <col>
-                7
+                9
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xsendto
+                strstr
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
+                <function><param><const>
             <pointer>
-        <void/>
+        <nosign>
+        <char/>
+    </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                773
+            </line>
+            <col>
+                29
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xbind
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
         <struct isUnion="false">
         sockaddr
     </struct>
-    </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+    </pointer></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                638
+                237
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                fprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        _IO_FILE
+    </struct>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                700
             </line>
             <col>
                 1
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                443
+                508
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                441
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                440
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                438
             </line>
             <col>
                 2
@@ -2533,104 +1043,28 @@
         </import><import>
             <sig>
             <name>
-                xopen
+                get_sock_lsa
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                324
-            </line>
-            <col>
-                14
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xchdir
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </signed></param><ret><pointer>
+        <struct isUnion="false">
+        len_and_sockaddr
+    </struct>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                755
+                738
             </line>
             <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                setsockopt_reuseaddr
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
-            </file>
-            <line>
-                228
-            </line>
-            <col>
-                1
+                11
             </col>
         </pos>
         </sig>
@@ -2640,51 +1074,33 @@
                 recv_from_to
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
+    </pointer></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><param>
-            <signed>
+    </unsigned></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <struct isUnion="false">
         sockaddr
     </struct>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <struct isUnion="false">
         sockaddr
     </struct>
-    </pointer>
-        </param><param>
-            <unsigned>
+    </pointer></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
+    </unsigned></param><ret><signed>
         <long/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 757
@@ -2700,43 +1116,27 @@
                 recvfrom
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
+    </pointer></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><param>
-            <signed>
+    </unsigned></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <ignore/>
-        </param><param>
-            <pointer>
+    </signed></param><param><ignore/></param><param><pointer>
         <unsigned>
         <int/>
     </unsigned>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <long/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 482
@@ -2749,55 +1149,45 @@
         </import><import>
             <sig>
             <name>
-                snprintf
+                bb_strtoull
             </name>
             <type>
-                <function>
-        <param>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
+        </const></param><param><pointer>
+        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
+    </pointer></param><param><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                378
+                554
             </line>
             <col>
-                9
+                15
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                378
+                133
             </line>
             <col>
                 9
@@ -2807,46 +1197,474 @@
         </import><import>
             <sig>
             <name>
-                strstr
+                xatoll_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_putchar_stderr
+            </name>
+            <type>
+                <function><param><nosign>
+        <char/>
+    </nosign></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                121
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcasecmp
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </ret>
-    </function>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                170
+            </line>
+            <col>
+                7
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xsendto
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        sockaddr
+    </struct>
+    </pointer>
+        </const></param><param><unsigned>
+        <int/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                638
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                443
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strcmp
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                773
+                778
             </line>
             <col>
-                29
+                35
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                getopt32
+            </name>
+            <type>
+                <function><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                752
+            </line>
+            <col>
+                36
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                666
+            </line>
+            <col>
+                11
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                666
+            </line>
+            <col>
+                18
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_error_msg
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                636
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                572
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                530
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                467
+            </line>
+            <col>
+                4
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                365
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                350
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                146
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                142
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_progress_update
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        bb_progress_t
+    </struct>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <long/>
+    </signed></param><param><signed>
+        <long/>
+    </signed></param><param><signed>
+        <long/>
+    </signed></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                110
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xzalloc
+            </name>
+            <type>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                748
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -2856,37 +1674,25 @@
                 xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
@@ -2905,78 +1711,554 @@
         </import><import>
             <sig>
             <name>
-                unlink
+                strcpy
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
             </type>
             <featureexpr>
-                (definedEx(CONFIG_TFTP) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_GET))
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                717
+                833
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                633
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                584
+            </line>
+            <col>
+                5
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                388
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                376
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                356
             </line>
             <col>
                 2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                353
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                299
+            </line>
+            <col>
+                3
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                htons
+                xatoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
-        <short/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <short/>
-    </unsigned>
-        </ret>
-    </function>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_BLOCKSIZE) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                392
+            </line>
+            <col>
+                9
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                392
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xmalloc_sockaddr2dotted
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <struct isUnion="false">
+        sockaddr
+    </struct>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_TFTP_DEBUG) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                701
+            </line>
+            <col>
+                3
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                701
+            </line>
+            <col>
+                3
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xgetpwnam
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <struct isUnion="false">
+        passwd
+    </struct>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                428
+                245
             </line>
             <col>
                 23
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strrchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                411
+                685
             </line>
             <col>
-                21
+                23
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_progress_init
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        bb_progress_t
+    </struct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; ((definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR)) || (definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PROGRESS_BAR) &amp;&amp; !definedEx(CONFIG_FEATURE_TFTP_GET))) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                114
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                safe_read
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                494
+            </line>
+            <col>
+                10
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                full_read
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PUT)) || (definedEx(CONFIG_TFTPD) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_PUT) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                417
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xopen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                324
+            </line>
+            <col>
+                14
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                safe_poll
+            </name>
+            <type>
+                <function><param><pointer>
+        <struct isUnion="false">
+        pollfd
+    </struct>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                459
+            </line>
+            <col>
+                10
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -2986,21 +2268,15 @@
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
@@ -3019,52 +2295,202 @@
         </import><import>
             <sig>
             <name>
-                ntohs
+                close
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
-        <short/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
-        <short/>
-    </unsigned>
-        </ret>
-    </function>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
-                ((definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
+                ((definedEx(CONFIG_TFTP) &amp;&amp; ((definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT))) || (definedEx(CONFIG_FEATURE_CLEAN_UP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTPD)))) || (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; !definedEx(CONFIG_TFTP)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                762
+                822
             </line>
             <col>
-                10
+                1
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                506
+                626
+            </line>
+            <col>
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                625
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                full_write
+            </name>
+            <type>
+                <function><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <void/>
+    </pointer>
+        </const></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_TFTP) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_GET)) || (definedEx(CONFIG_TFTPD) &amp;&amp; definedEx(CONFIG_FEATURE_TFTP_GET) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                582
             </line>
             <col>
                 13
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                free
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_FEATURE_CLEAN_UP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; definedEx(CONFIG_TFTP)) || (definedEx(CONFIG_FEATURE_CLEAN_UP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)) &amp;&amp; definedEx(CONFIG_TFTPD) &amp;&amp; !definedEx(CONFIG_TFTP)))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
-                505
+                628
             </line>
             <col>
-                11
+                2
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                627
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+            </file>
+            <line>
+                138
+            </line>
+            <col>
+                20
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_TFTP) || definedEx(CONFIG_TFTPD))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -3074,37 +2500,29 @@
                 tftpd_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTPD) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 726
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>
@@ -3114,37 +2532,29 @@
                 tftp_main
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <pointer>
+    </signed></param><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_TFTP) &amp;&amp; (definedEx(CONFIG_FEATURE_TFTP_GET) || definedEx(CONFIG_FEATURE_TFTP_PUT)))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/tftp.c
             </file>
             <line>
                 647
             </line>
             <col>
-                0
+                4
             </col>
         </pos>
         </sig>

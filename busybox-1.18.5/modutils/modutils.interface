@@ -5,458 +5,22 @@
             </featuremodel><import>
             <sig>
             <name>
-                xstrtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoll
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                136
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                fstat
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <pointer>
-        <struct isUnion="false">
-        stat
-    </struct>
-    </pointer>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                95
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                __builtin_constant_p
-            </name>
-            <type>
-                <function>
-        <param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
-            </featureexpr><pos>
-            <file>
-                file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h
-            </file>
-            <line>
-                68
-            </line>
-            <col>
-                118
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xmalloc_open_zipped_read_close
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <unsigned>
-        <long/>
-    </unsigned>
-    </pointer>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                145
-            </line>
-            <col>
-                10
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                133
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                llist_add_to_end
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <pointer>
-        <struct isUnion="false">
-        llist_t
-    </struct>
-    </pointer>
-    </pointer>
-        </param><param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                42
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strlen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                73
-            </line>
-            <col>
-                43
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                73
-            </line>
-            <col>
-                43
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                43
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xrealloc
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
+    </pointer></param><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
+    </unsigned></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 73
@@ -469,276 +33,30 @@
         </import><import>
             <sig>
             <name>
-                BUG_xatou32_unimplemented
+                fstat
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
+                <function><param><signed>
         <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                111
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                108
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                mmap
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <long/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                100
-            </line>
-            <col>
-                10
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
+    </signed></param><param><pointer>
         <struct isUnion="false">
-        suffix_mult
+        stat
     </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                free
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                156
-            </line>
-            <col>
-                2
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                close
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
+    </pointer></param><ret><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                112
+                95
             </line>
             <col>
                 1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
             </col>
         </pos>
         </sig>
@@ -748,33 +66,21 @@
                 xstrtoull_range
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><param><signed>
         <int/>
-    </signed>
-        </param><param>
-            <unsigned>
+    </signed></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
@@ -793,100 +99,58 @@
         </import><import>
             <sig>
             <name>
-                xstrtoll_range
+                strerror
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                string literal: xstrtoll_range
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                1
+                183
             </line>
             <col>
-                0
+                8
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                strchr
+                xatou
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
+        </const></param><ret><unsigned>
         <int/>
-    </signed>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                78
+                108
             </line>
             <col>
-                39
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                78
-            </line>
-            <col>
-                39
+                9
             </col>
         </pos>
         </sig>
@@ -896,21 +160,15 @@
                 xatoull
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
@@ -929,376 +187,20 @@
         </import><import>
             <sig>
             <name>
-                munmap
-            </name>
-            <type>
-                <function>
-        <param>
-            <pointer>
-        <void/>
-    </pointer>
-        </param><param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                154
-            </line>
-            <col>
-                2
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                105
-            </line>
-            <col>
-                3
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_get_last_path_component_nostrip
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                57
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xzalloc
-            </name>
-            <type>
-                <function>
-        <param>
-            <unsigned>
-        <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
-        <void/>
-    </pointer>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                70
-            </line>
-            <col>
-                11
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                BUG_bb_strtou32_unimplemented
-            </name>
-            <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                169
-            </line>
-            <col>
-                8
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                bb_strtou
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <unsigned>
-        <int/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
-            </file>
-            <line>
-                166
-            </line>
-            <col>
-                9
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xstrtoull_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
-        <longlong/>
-    </unsigned>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xstrtoull_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xatoll_range_sfx
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <signed>
-        <longlong/>
-    </signed>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <signed>
-        <longlong/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                string literal: xatoll_range_sfx
-            </file>
-            <line>
-                1
-            </line>
-            <col>
-                0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xmalloc
             </name>
             <type>
-                <function>
-        <param>
-            <unsigned>
+                <function><param><unsigned>
         <long/>
-    </unsigned>
-        </param><ret>
-            <pointer>
+    </unsigned></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 56
@@ -1311,130 +213,116 @@
         </import><import>
             <sig>
             <name>
-                xstrdup
+                munmap
             </name>
             <type>
-                <function>
-        <param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                42
+                154
             </line>
             <col>
-                26
+                2
             </col>
         </pos><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                42
+                105
             </line>
             <col>
-                26
+                3
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                sprintf
+                BUG_xatou32_unimplemented
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
+                <function><ret><unsigned>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                78
+                111
             </line>
             <col>
-                12
+                8
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                xatoull_sfx
+                __builtin_constant_p
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><vargs/></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
+            </featureexpr><pos>
+            <file>
+                file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h
+            </file>
+            <line>
+                68
+            </line>
+            <col>
+                118
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
-            <pointer>
-        <struct isUnion="false">
-        suffix_mult
-    </struct>
-    </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                string literal: xatoull_sfx
+                string literal: xstrtoll_range
             </file>
             <line>
                 1
@@ -1447,32 +335,168 @@
         </import><import>
             <sig>
             <name>
-                xatoull_range
+                syscall
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><signed>
+        <long/>
+    </signed></param><param><vargs/></param><ret><signed>
+        <long/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                16
+            </line>
+            <col>
+                35
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                15
+            </line>
+            <col>
+                37
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_sfx
+            </name>
+            <type>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                BUG_bb_strtou32_unimplemented
+            </name>
+            <type>
+                <function><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                169
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strlen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><unsigned>
+        <long/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                73
+            </line>
+            <col>
+                43
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                73
+            </line>
+            <col>
+                43
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                43
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoull_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><ret>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
@@ -1491,148 +515,364 @@
         </import><import>
             <sig>
             <name>
-                syscall
+                bb_strtoll
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
-        <long/>
-    </signed>
-        </param><param>
-            <vargs/>
-        </param><ret>
-            <signed>
-        <long/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                16
-            </line>
-            <col>
-                35
-            </col>
-        </pos><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                15
-            </line>
-            <col>
-                37
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                xopen
-            </name>
-            <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <signed>
-        <int/>
-    </signed>
-        </ret>
-    </function>
-            </type>
-            <featureexpr>
-                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
-            </featureexpr><pos>
-            <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
-            </file>
-            <line>
-                94
-            </line>
-            <col>
-                6
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                strerror
-            </name>
-            <type>
-                <function>
-        <param>
-            <signed>
-        <int/>
-    </signed>
-        </param><ret>
-            <pointer>
+        </const></param><param><pointer>
+        <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </ret>
-    </function>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
             </file>
             <line>
-                183
+                136
             </line>
             <col>
-                8
+                9
             </col>
         </pos>
         </sig>
         </import><import>
             <sig>
             <name>
-                get_linux_version_code
+                bb_init_module_24
             </name>
             <type>
-                <function>
-        <param>
-            <void/>
-        </param><ret>
-            <signed>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                134
+                135
             </line>
             <col>
-                5
+                9
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                135
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                133
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xmalloc_open_zipped_read_close
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <unsigned>
+        <long/>
+    </unsigned>
+    </pointer></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                145
+            </line>
+            <col>
+                10
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoll_range
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strchr
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                78
+            </line>
+            <col>
+                39
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                78
+            </line>
+            <col>
+                39
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                llist_add_to_end
+            </name>
+            <type>
+                <function><param><pointer>
+        <pointer>
+        <struct isUnion="false">
+        llist_t
+    </struct>
+    </pointer>
+    </pointer></param><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                42
+            </line>
+            <col>
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xzalloc
+            </name>
+            <type>
+                <function><param><unsigned>
+        <long/>
+    </unsigned></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                70
+            </line>
+            <col>
+                11
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
             </col>
         </pos>
         </sig>
@@ -1642,37 +882,25 @@
                 xatoull_range_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <unsigned>
+    </unsigned></param><param><unsigned>
         <longlong/>
-    </unsigned>
-        </param><param>
-            <const>
+    </unsigned></param><param><const>
             <pointer>
         <struct isUnion="false">
         suffix_mult
     </struct>
     </pointer>
-        </const>
-        </param><ret>
-            <unsigned>
+        </const></param><ret><unsigned>
         <longlong/>
-    </unsigned>
-        </ret>
-    </function>
+    </unsigned></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
@@ -1691,54 +919,306 @@
         </import><import>
             <sig>
             <name>
-                bb_init_module_24
+                xatoull_sfx
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xatoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                sprintf
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><param><vargs/></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                78
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoll
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoll
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                strsep
+            </name>
+            <type>
+                <function><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                39
+            </line>
+            <col>
+                15
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_get_last_path_component_nostrip
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                57
+            </line>
+            <col>
+                8
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xopen
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                94
+            </line>
+            <col>
+                6
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                get_linux_version_code
+            </name>
+            <type>
+                <function><ret><signed>
+        <int/>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_2_4_MODULES) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                135
+                134
             </line>
             <col>
-                9
+                5
             </col>
-        </pos><pos>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xatoll_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <longlong/>
+    </signed></param><param><signed>
+        <longlong/>
+    </signed></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><signed>
+        <longlong/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                string literal: xatoll_range_sfx
             </file>
             <line>
-                135
+                1
             </line>
             <col>
-                9
+                0
             </col>
         </pos>
         </sig>
@@ -1748,21 +1228,15 @@
                 xatoll
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <longlong/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
@@ -1781,46 +1255,208 @@
         </import><import>
             <sig>
             <name>
-                strsep
+                close
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
-        <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-    </pointer>
-        </param><param>
-            <const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const>
-        </param><ret>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </ret>
-    </function>
+                <function><param><signed>
+        <int/>
+    </signed></param><ret><signed>
+        <int/>
+    </signed></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                112
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                free
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
-                39
+                156
             </line>
             <col>
-                15
+                2
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                bb_strtou
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><pointer>
+        <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+    </pointer></param><param><signed>
+        <int/>
+    </signed></param><ret><unsigned>
+        <int/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h
+            </file>
+            <line>
+                166
+            </line>
+            <col>
+                9
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrtoull_range_sfx
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><param><signed>
+        <int/>
+    </signed></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><unsigned>
+        <longlong/>
+    </unsigned></param><param><const>
+            <pointer>
+        <struct isUnion="false">
+        suffix_mult
+    </struct>
+    </pointer>
+        </const></param><ret><unsigned>
+        <longlong/>
+    </unsigned></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                string literal: xstrtoull_range_sfx
+            </file>
+            <line>
+                1
+            </line>
+            <col>
+                0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                xstrdup
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                42
+            </line>
+            <col>
+                26
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                42
+            </line>
+            <col>
+                26
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                mmap
+            </name>
+            <type>
+                <function><param><pointer>
+        <void/>
+    </pointer></param><param><unsigned>
+        <long/>
+    </unsigned></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <int/>
+    </signed></param><param><signed>
+        <long/>
+    </signed></param><ret><pointer>
+        <void/>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+            </file>
+            <line>
+                100
+            </line>
+            <col>
+                10
             </col>
         </pos>
         </sig>
@@ -1830,33 +1466,27 @@
                 moderror
             </name>
             <type>
-                <function>
-        <param>
-            <signed>
+                <function><param><signed>
         <int/>
-    </signed>
-        </param><ret>
-            <const>
+    </signed></param><ret><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </ret>
-    </function>
+        </const></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 167
             </line>
             <col>
-                0
+                22
             </col>
         </pos>
         </sig>
@@ -1866,37 +1496,29 @@
                 bb_delete_module
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <unsigned>
+        </const></param><param><unsigned>
         <int/>
-    </unsigned>
-        </param><ret>
-            <signed>
+    </unsigned></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 160
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1906,41 +1528,33 @@
                 bb_init_module
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <const>
+        </const></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 122
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -1950,39 +1564,31 @@
                 try_to_mmap_module
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
         <unsigned>
         <long/>
     </unsigned>
-    </pointer>
-        </param><ret>
-            <pointer>
+    </pointer></param><ret><pointer>
         <void/>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 ((definedEx(CONFIG_RMMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_RMMOD) &amp;&amp; ((definedEx(CONFIG_INSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_INSMOD) &amp;&amp; ((definedEx(CONFIG_DEPMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_DEPMOD) &amp;&amp; ((definedEx(CONFIG_MODPROBE) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (!definedEx(CONFIG_MODPROBE) &amp;&amp; ((definedEx(CONFIG_LSMOD) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP)) || (definedEx(CONFIG_MODINFO) &amp;&amp; definedEx(CONFIG_FEATURE_INSMOD_TRY_MMAP) &amp;&amp; !definedEx(CONFIG_LSMOD)))))))))))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 84
             </line>
             <col>
-                0
+                16
             </col>
         </pos>
         </sig>
@@ -1992,35 +1598,29 @@
                 parse_cmdline_module_options
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-    </pointer>
-        </param><ret>
-            <pointer>
+    </pointer></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 65
             </line>
             <col>
-                0
+                16
             </col>
         </pos>
         </sig>
@@ -2030,41 +1630,33 @@
                 filename2modname
             </name>
             <type>
-                <function>
-        <param>
-            <const>
+                <function><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><param>
-            <pointer>
+        </const></param><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <pointer>
+    </pointer></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 48
             </line>
             <col>
-                0
+                16
             </col>
         </pos>
         </sig>
@@ -2074,47 +1666,37 @@
                 string_to_llist
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><param>
-            <pointer>
+    </pointer></param><param><pointer>
         <pointer>
         <struct isUnion="false">
         llist_t
     </struct>
     </pointer>
-    </pointer>
-        </param><param>
-            <const>
+    </pointer></param><param><const>
             <pointer>
         <nosign>
         <char/>
     </nosign>
     </pointer>
-        </const>
-        </param><ret>
-            <signed>
+        </const></param><ret><signed>
         <int/>
-    </signed>
-        </ret>
-    </function>
+    </signed></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 34
             </line>
             <col>
-                0
+                14
             </col>
         </pos>
         </sig>
@@ -2124,33 +1706,27 @@
                 replace_underscores
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><ret>
-            <pointer>
+    </pointer></param><ret><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </ret>
-    </function>
+    </pointer></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 28
             </line>
             <col>
-                0
+                16
             </col>
         </pos>
         </sig>
@@ -2160,37 +1736,27 @@
                 replace
             </name>
             <type>
-                <function>
-        <param>
-            <pointer>
+                <function><param><pointer>
         <nosign>
         <char/>
     </nosign>
-    </pointer>
-        </param><param>
-            <nosign>
+    </pointer></param><param><nosign>
         <char/>
-    </nosign>
-        </param><param>
-            <nosign>
+    </nosign></param><param><nosign>
         <char/>
-    </nosign>
-        </param><ret>
-            <void/>
-        </ret>
-    </function>
+    </nosign></param><ret><void/></ret></function>
             </type>
             <featureexpr>
                 (definedEx(CONFIG_DEPMOD) || definedEx(CONFIG_MODPROBE) || definedEx(CONFIG_LSMOD) || definedEx(CONFIG_RMMOD) || definedEx(CONFIG_INSMOD) || definedEx(CONFIG_MODINFO))
             </featureexpr><pos>
             <file>
-                file /home/janker/FOSD/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
+                file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/modutils/modutils.c
             </file>
             <line>
                 19
             </line>
             <col>
-                0
+                15
             </col>
         </pos>
         </sig>
