@@ -2,46 +2,46 @@ fm True
 features (0)
 	
 imports (47)
-	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:80
-	bb_simple_perror_msg_and_die: (const char*) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:194:1
-	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
-	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
-	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	cfmakeraw: (struct termios*) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:80:1
-	close: (signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:178:1, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:176:1
-	execl: (const char*, const char*, ...) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:193:1
-	fprintf: (struct _IO_FILE*, const char*, ...) => signed int 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:133:6
-	fsync: (signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:139:6
-	full_write: (signed int, const void*, unsigned long) => signed long 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:165:3, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:164:3, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:150:5, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:137:5, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:136:5
-	getenv: (const char*) => char* 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:68:9
-	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:52:7
-	gettimeofday: (struct timeval*, struct timezone*) => signed int 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:131:6
-	ioctl: (signed int, unsigned long, ...) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:189:1, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:186:2, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:77:12
-	ndelay_on: (signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:106:2
-	poll: (struct pollfd*, unsigned long, signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:114:7
-	printf: (const char*, ...) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:171:3, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:66:2
-	record_signo: (signed int) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:87:17, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:87:17
-	safe_read: (signed int, void*, unsigned long) => signed long 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:163:28, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:144:12, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:121:12
-	setsid: () => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:188:1
-	signal: (signed int, (signed int) => void*) => (signed int) => void* 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:87:1
-	tcgetattr: (signed int, struct termios*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:76:11
-	tcsetattr: (signed int, signed int, const struct termios*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:184:2, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:169:3, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:82:1
-	time: (signed long*) => signed long 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:98:41
-	vfork: () => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:44
+	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:80
+	bb_simple_perror_msg_and_die: (const char*) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:194:1
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	cfmakeraw: (struct termios*) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:80:1
+	close: (signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:178:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:176:1
+	execl: (const char*, const char*, ...) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:193:1
+	fprintf: (struct _IO_FILE*, const char*, ...) => signed int 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:133:6
+	fsync: (signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:139:6
+	full_write: (signed int, const void*, unsigned long) => signed long 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:165:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:164:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:150:5, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:137:5, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:136:5
+	getenv: (const char*) => char* 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:68:9
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:52:7
+	gettimeofday: (struct timeval*, struct timezone*) => signed int 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:131:6
+	ioctl: (signed int, unsigned long, ...) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:189:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:186:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:77:12
+	ndelay_on: (signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:106:2
+	poll: (struct pollfd*, unsigned long, signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:114:7
+	printf: (const char*, ...) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:171:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:66:2
+	record_signo: (signed int) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:87:17, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:87:17
+	safe_read: (signed int, void*, unsigned long) => signed long 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:163:28, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:144:12, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:121:12
+	setsid: () => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:188:1
+	signal: (signed int, (signed int) => void*) => (signed int) => void* 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:87:1
+	tcgetattr: (signed int, struct termios*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:76:11
+	tcsetattr: (signed int, signed int, const struct termios*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:184:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:169:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:82:1
+	time: (signed long*) => signed long 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:98:41
+	vfork: () => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:44
 	xatoll: (const char*) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll_sfx:1:0
-	xatou: (const char*) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatou: (const char*) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if def(CONFIG_SCRIPT)		at string literal: xatoull:1:0
 	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_SCRIPT)		at string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SCRIPT)		at string literal: xatoull_range_sfx:1:0
 	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SCRIPT)		at string literal: xatoull_sfx:1:0
-	xdup2: (signed int, signed int) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:181:1, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:180:1
-	xgetpty: (char*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:73:7
-	xopen: (const char*, signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:179:1, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:101:10
+	xdup2: (signed int, signed int) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:181:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:180:1
+	xgetpty: (char*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:73:7
+	xopen: (const char*, signed int) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:179:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:101:10
 	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xstrtoll:1:0
 	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xstrtoll_range:1:0
 	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xstrtoll_range_sfx:1:0
@@ -50,4 +50,4 @@ imports (47)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SCRIPT)		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SCRIPT)		at string literal: xstrtoull_sfx:1:0
 exports (1)
-	script_main: (signed int, char**) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:16:4
+	script_main: (signed int, char**) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:16:4

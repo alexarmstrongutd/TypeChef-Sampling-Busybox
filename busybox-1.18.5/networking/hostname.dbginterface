@@ -2,36 +2,36 @@ fm True
 features (0)
 	
 imports (37)
-	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:28:2
-	bb_putchar: (signed int) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:141:4
-	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
-	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
-	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	config_close: (struct parser_t*) => void 		if (def(CONFIG_HOSTNAME)&def(CONFIG_FEATURE_CLEAN_UP))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:24:3
-	config_open2: (const char*, (const char*) => struct _IO_FILE**) => struct parser_t* 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:19:21
-	config_read: (struct parser_t*, char**, unsigned int, const char*) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1157:59
-	free: (void*) => void 		if (def(CONFIG_HOSTNAME)&def(CONFIG_FEATURE_CLEAN_UP))		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:156:2
-	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:113:8
-	inet_ntoa: (struct in_addr) => char* 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:138:19, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:138:19
-	printf: (const char*, ...) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:138:5
-	puts: (const char*) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:152:2, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:133:4, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:130:3, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:127:3
-	safe_gethostname: () => char* 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:115:7
-	sethostname: (const char*, unsigned long) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:25:12
-	strchrnul: (const char*, signed int) => char* 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:125:6
-	strlen: (const char*) => unsigned long 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:25:27, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:25:27
+	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
+	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:28:2
+	bb_putchar: (signed int) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:141:4
+	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
+	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
+	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
+	config_close: (struct parser_t*) => void 		if (def(CONFIG_HOSTNAME)&def(CONFIG_FEATURE_CLEAN_UP))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:24:3
+	config_open2: (const char*, (const char*) => struct _IO_FILE**) => struct parser_t* 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:19:21
+	config_read: (struct parser_t*, char**, unsigned int, const char*) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:1157:59
+	free: (void*) => void 		if (def(CONFIG_HOSTNAME)&def(CONFIG_FEATURE_CLEAN_UP))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:156:2
+	getopt32: (char**, const char*, ...) => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:113:8
+	inet_ntoa: (struct in_addr) => char* 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:138:19, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:138:19
+	printf: (const char*, ...) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:138:5
+	puts: (const char*) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:152:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:133:4, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:130:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:127:3
+	safe_gethostname: () => char* 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:115:7
+	sethostname: (const char*, unsigned long) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:25:12
+	strchrnul: (const char*, signed int) => char* 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:125:6
+	strlen: (const char*) => unsigned long 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:25:27, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:25:27
 	xatoll: (const char*) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoll_sfx:1:0
-	xatou: (const char*) => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
+	xatou: (const char*) => unsigned int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoull:1:0
 	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoull_range_sfx:1:0
 	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_HOSTNAME)		at string literal: xatoull_sfx:1:0
-	xfopen_for_read: (const char*) => struct _IO_FILE* 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:19:37, file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:19:37
-	xgethostbyname: (const char*) => struct hostent* 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:124:7
+	xfopen_for_read: (const char*) => struct _IO_FILE* 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:19:37, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:19:37
+	xgethostbyname: (const char*) => struct hostent* 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:124:7
 	xstrtoll: (const char*, signed int) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xstrtoll:1:0
 	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xstrtoll_range:1:0
 	xstrtoll_range_sfx: (const char*, signed int, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_HOSTNAME)		at string literal: xstrtoll_range_sfx:1:0
@@ -40,4 +40,4 @@ imports (37)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_HOSTNAME)		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_HOSTNAME)		at string literal: xstrtoull_sfx:1:0
 exports (1)
-	hostname_main: (signed int, char**) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/eval/rename/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:83:4
+	hostname_main: (signed int, char**) => signed int 		if def(CONFIG_HOSTNAME)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/hostname.c:83:4
