@@ -29,6 +29,7 @@
 #include <sys/poll.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
+#include <sys/resource.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/time.h>
@@ -102,6 +103,7 @@ char *dirname(char *path);
 #endif
 /* Include our own copy of struct sysinfo to avoid binary compatibility
  * problems with Linux 2.4, which changed things.  Grumble, grumble. */
+#ifndef __linux__
 struct sysinfo {
 	long uptime;			/* Seconds since boot */
 	unsigned long loads[3];		/* 1, 5, and 15 minute load averages */
@@ -119,6 +121,7 @@ struct sysinfo {
 	char _f[20 - 2 * sizeof(long) - sizeof(int)]; /* Padding: libc5 uses this.. */
 };
 int sysinfo(struct sysinfo* info);
+#endif
 #ifndef PATH_MAX
 # define PATH_MAX 256
 #endif
