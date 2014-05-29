@@ -4,12 +4,12 @@ features (0)
 imports (24)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_show_usage: () => void 		if (def(CONFIG_FREE)&def(CONFIG_DESKTOP))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:57:3
+	bb_show_usage: () => void 		if (def(CONFIG_FREE)&def(CONFIG_DESKTOP))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:60:3
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
 	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
 	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
-	printf: (const char*, ...) => signed int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:100:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:99:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:94:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:93:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:83:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:82:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:67:1
-	sysinfo: (struct sysinfo*) => signed int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:62:1
+	printf: (const char*, ...) => signed int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:103:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:102:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:97:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:96:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:86:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:85:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:70:1
+	sysinfo: (struct sysinfo*) => signed int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:65:1
 	xatoll: (const char*) => signed long long 		if def(CONFIG_FREE)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_FREE)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_FREE)		at string literal: xatoll_range_sfx:1:0
@@ -27,4 +27,4 @@ imports (24)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_FREE)		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_FREE)		at string literal: xstrtoull_sfx:1:0
 exports (1)
-	free_main: (signed int, char**) => signed int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:34:4
+	free_main: (signed int, char**) => signed int 		if def(CONFIG_FREE)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/procps/free.c:37:4

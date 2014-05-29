@@ -8,7 +8,7 @@ imports (35)
 	bb_daemonize_or_rexec: (signed int) => void 		if (def(CONFIG_TIMEOUT)&!def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:80:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:80:2
 	bb_daemonize_or_rexec: (signed int, char**) => void 		if (def(CONFIG_TIMEOUT)&def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:83:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:83:2
 	bb_error_msg_and_die: (const char*, ...) => void 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:55:2
-	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:80
+	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:861:80
 	bb_show_usage: () => void 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:68:2
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
 	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
@@ -18,7 +18,7 @@ imports (35)
 	getppid: () => signed int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:77:11
 	kill: (signed int, signed int) => signed int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:96:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:91:7
 	sleep: (unsigned int) => unsigned int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:88:3
-	vfork: () => signed int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:44
+	vfork: () => signed int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:861:44
 	wait: (CIgnore()) => signed int 		if def(CONFIG_TIMEOUT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:101:1
 	xasprintf: (const char*, ...) => char* 		if (def(CONFIG_TIMEOUT)&def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/miscutils/timeout.c:79:17
 	xatoll: (const char*) => signed long long 		if def(CONFIG_TIMEOUT)		at string literal: xatoll:1:0
