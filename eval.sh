@@ -26,6 +26,6 @@ flags=" --bdd \
 filesToProcess|while read i; do
          echo "Analysing $path/busybox-1.18.5/$i.c"
          echo "With settings: $flags"
-         ../TypeChef/cRefactor.sh $path/busybox-1.18.5/$i.c $flags
+         ../Morpheus/morpheus.sh $path/busybox-1.18.5/$i.c $flags
 	 done
 
