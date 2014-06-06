@@ -15,7 +15,7 @@ filesToProcess|while read config; do
         echo "Verifiying $1"
         echo "With config: $config"
         rm -f .config
-        cp $config/.config 
+        cp $config .config 
         ./build.sh | tee "$1"/"$i"_ref.build
         cd testsuite
         ./runtest | tee "$1"/"$i"_ref.test
@@ -33,7 +33,7 @@ filesToProcess|while read config; do
         echo "Verifiying $1"
         echo "With config: $config"
         rm -f .config
-        cp $config/.config 
+        cp $config .config 
         ./build.sh | tee "$1"/"$i"_org.build
         cd testsuite
         ./runtest | tee "$1"/"$i"_org.test
