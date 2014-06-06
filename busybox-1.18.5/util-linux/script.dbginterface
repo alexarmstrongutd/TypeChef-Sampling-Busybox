@@ -4,7 +4,7 @@ features (0)
 imports (47)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:80
+	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:861:80
 	bb_simple_perror_msg_and_die: (const char*) => void 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:194:1
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
 	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
@@ -29,7 +29,7 @@ imports (47)
 	tcgetattr: (signed int, struct termios*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:76:11
 	tcsetattr: (signed int, signed int, const struct termios*) => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:184:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:169:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:82:1
 	time: (signed long*) => signed long 		if (def(CONFIG_SCRIPT)&def(CONFIG_SCRIPTREPLAY))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/util-linux/script.c:98:41
-	vfork: () => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:44
+	vfork: () => signed int 		if def(CONFIG_SCRIPT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:861:44
 	xatoll: (const char*) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_SCRIPT)		at string literal: xatoll_range_sfx:1:0

@@ -16,14 +16,14 @@ imports (36)
 	safe_read: (signed int, void*, unsigned long) => signed long 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:103:15
 	strlen: (const char*) => unsigned long 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:91:16, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:31:14
 	xasprintf: (const char*, ...) => char* 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:97:8
-	xatoi_positive: (const char*) => signed int 		if (def(CONFIG_SPLIT)&!def(CONFIG_LFS))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:191:21
+	xatoi_positive: (const char*) => signed int 		if (def(CONFIG_SPLIT)&!def(CONFIG_LFS))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:194:21
 	xatoll: (const char*) => signed long long 		if def(CONFIG_SPLIT)		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if def(CONFIG_SPLIT)		at string literal: xatoll_range:1:0
 	xatoll_range_sfx: (const char*, signed long long, signed long long, const struct suffix_mult*) => signed long long 		if def(CONFIG_SPLIT)		at string literal: xatoll_range_sfx:1:0
 	xatoll_sfx: (const char*, const struct suffix_mult*) => signed long long 		if def(CONFIG_SPLIT)		at string literal: xatoll_sfx:1:0
 	xatou: (const char*) => unsigned int 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:108:9
 	xatoull: (const char*) => unsigned long long 		if def(CONFIG_SPLIT)		at string literal: xatoull:1:0
-	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:180:21, string literal: xatoull_range:1:0
+	xatoull_range: (const char*, unsigned long long, unsigned long long) => unsigned long long 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:183:21, string literal: xatoull_range:1:0
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SPLIT)		at string literal: xatoull_range_sfx:1:0
 	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:77:8, string literal: xatoull_sfx:1:0
 	xmove_fd: (signed int, signed int) => void 		if def(CONFIG_SPLIT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:113:4, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/coreutils/split.c:86:2

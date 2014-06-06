@@ -23,7 +23,7 @@ imports (57)
 	ndelay_on: (signed int) => signed int 		if (def(CONFIG_RUNSVDIR)&def(CONFIG_FEATURE_RUNSVDIR_LOG))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:264:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:263:3
 	open: (const char*, signed int, ...) => signed int 		if def(CONFIG_RUNSVDIR)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:279:10
 	opendir: (const char*) => struct __dirstream* 		if def(CONFIG_RUNSVDIR)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:137:7
-	pipe: (signed int*) => signed int 		if (def(CONFIG_RUNSVDIR)&def(CONFIG_FEATURE_RUNSVDIR_LOG))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:440:26
+	pipe: (signed int*) => signed int 		if (def(CONFIG_RUNSVDIR)&def(CONFIG_FEATURE_RUNSVDIR_LOG))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:443:26
 	poll: (struct pollfd*, unsigned long, signed int) => signed int 		if (def(CONFIG_RUNSVDIR)&def(CONFIG_FEATURE_RUNSVDIR_LOG))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:347:3
 	read: (signed int, void*, unsigned long) => signed long 		if (def(CONFIG_RUNSVDIR)&def(CONFIG_FEATURE_RUNSVDIR_LOG))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:356:10
 	readdir: (struct __dirstream*) => struct dirent* 		if def(CONFIG_RUNSVDIR)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsvdir.c:147:6

@@ -4,8 +4,8 @@ features (0)
 imports (42)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_KLOGD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_KLOGD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_daemonize_or_rexec: (signed int) => void 		if (def(CONFIG_KLOGD)&!def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44
-	bb_daemonize_or_rexec: (signed int, char**) => void 		if (def(CONFIG_KLOGD)&def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44
+	bb_daemonize_or_rexec: (signed int) => void 		if (def(CONFIG_KLOGD)&!def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:935:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:935:44
+	bb_daemonize_or_rexec: (signed int, char**) => void 		if (def(CONFIG_KLOGD)&def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:935:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:935:44
 	bb_perror_msg: (const char*, ...) => void 		if def(CONFIG_KLOGD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/sysklogd/klogd.c:203:3
 	bb_signals_recursive_norestart: (signed int, (signed int) => void*) => void 		if def(CONFIG_KLOGD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/sysklogd/klogd.c:187:1
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_KLOGD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
