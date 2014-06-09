@@ -28,6 +28,6 @@ filesToProcess|while read i; do
          echo "With settings: $flags"
          ../Morpheus/morpheus.sh $path/busybox-1.18.5/$i.c $flags
          echo "Verifiying  $path/result/$i"
-         /busybox-1.18.5/verify.sh $path/result/$i.c
+         busybox-1.18.5/verify.sh $path/result/$i.c
 	 done
 
