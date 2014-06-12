@@ -20,7 +20,7 @@ filesToProcess|while read config; do
         cd testsuite
         git clean -f
         git checkout .
-        ./runtest | tee "$1"/"$i"_ref.test
+        timeout 200 ./runtest | tee "$1"/"$i"_ref.test
         cd ..
         i=`expr $i + 1`
         done
@@ -40,7 +40,7 @@ filesToProcess|while read config; do
         cd testsuite
         git clean -f
         git checkout .
-        ./runtest | tee "$1"/"$i"_org.test
+        timeout 200 ./runtest | tee "$1"/"$i"_org.test
         cd ..        
         i=`expr $i + 1`
         done
