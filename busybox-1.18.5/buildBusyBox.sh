@@ -1,5 +1,5 @@
 #!/bin/bash
-timeout 200 make -j 4
+timeout 200 make -j 4 &> buildout
 
 RETVAL=$?
 [ $RETVAL -eq 0 ] && echo "Success_Build"

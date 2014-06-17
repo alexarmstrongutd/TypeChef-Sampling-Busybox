@@ -6,8 +6,8 @@ imports (45)
 	BUG_xatou32_unimplemented: () => unsigned int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
 	_exit: (signed int) => void 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:46:2
 	_setjmp: (struct __jmp_buf_tag*) => signed int 		if def(CONFIG_FEATURE_PREFER_APPLETS)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/setjmp.h:69:21
-	bb_execvp: (const char*, char**) => signed int 		if def(CONFIG_FEATURE_PREFER_APPLETS)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:846:28, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:846:28
-	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:80, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:219:1
+	bb_execvp: (const char*, char**) => signed int 		if def(CONFIG_FEATURE_PREFER_APPLETS)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:849:28, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:849:28
+	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:861:80, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:219:1
 	bb_simple_perror_msg_and_die: (const char*) => void 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:67:2
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
 	bb_strtou: (const char*, char**, signed int) => unsigned int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
@@ -16,7 +16,7 @@ imports (45)
 	dup2: (signed int, signed int) => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:270:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:269:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:268:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:270:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:269:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:268:2
 	dup: (signed int) => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:261:7, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:261:7
 	execv: (const char*, char**) => signed int 		if def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:218:1
-	execvp: (const char*, char**) => signed int 		if !def(CONFIG_FEATURE_PREFER_APPLETS)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:846:28
+	execvp: (const char*, char**) => signed int 		if !def(CONFIG_FEATURE_PREFER_APPLETS)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:849:28
 	exit: (signed int) => void 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:265:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:265:3
 	fflush_all: () => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:28:1
 	find_applet_by_name: (const char*) => signed int 		if def(CONFIG_FEATURE_PREFER_APPLETS)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:183:9
@@ -26,7 +26,7 @@ imports (45)
 	run_applet_no_and_exit: (signed int, char**) => void 		if (def(CONFIG_FEATURE_PREFER_APPLETS)&!def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:204:2
 	safe_waitpid: (signed int, signed int*, signed int) => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:55:2
 	setsid: () => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:267:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:267:2
-	vfork: () => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:858:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:32:7
+	vfork: () => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:861:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:32:7
 	wait4pid: (signed int) => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:209:8, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:201:10
 	xatoll: (const char*) => signed long long 		if True		at string literal: xatoll:1:0
 	xatoll_range: (const char*, signed long long, signed long long) => signed long long 		if True		at string literal: xatoll_range:1:0
@@ -38,7 +38,7 @@ imports (45)
 	xatoull_range_sfx: (const char*, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xatoull_range_sfx:1:0
 	xatoull_sfx: (const char*, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xatoull_sfx:1:0
 	xchdir: (const char*) => void 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:243:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:243:2
-	xfork: () => signed int 		if !def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:931:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:931:44
+	xfork: () => signed int 		if !def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:934:44, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:934:44
 	xopen: (const char*, signed int) => signed int 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:257:7, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:257:7
 	xstrtoll: (const char*, signed int) => signed long long 		if True		at string literal: xstrtoll:1:0
 	xstrtoll_range: (const char*, signed int, signed long long, signed long long) => signed long long 		if True		at string literal: xstrtoll_range:1:0
@@ -48,7 +48,7 @@ imports (45)
 	xstrtoull_range_sfx: (const char*, signed int, unsigned long long, unsigned long long, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_range_sfx:1:0
 	xstrtoull_sfx: (const char*, signed int, const struct suffix_mult*) => unsigned long long 		if True		at string literal: xstrtoull_sfx:1:0
 exports (12)
-	bb_daemonize_or_rexec: (signed int) => void 		if !def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:932:44
+	bb_daemonize_or_rexec: (signed int) => void 		if !def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/libbb.h:935:44
 	bb_daemonize_or_rexec: (signed int, char**) => void 		if def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:238:15
 	bb_sanitize_stdio: () => void 		if True		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:280:15
 	fork_or_rexec: (char**) => signed int 		if def(CONFIG_NOMMU)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/libbb/vfork_daemon_rexec.c:222:16
