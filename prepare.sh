@@ -36,7 +36,7 @@ interfacegen="--study busybox  --writeProjectInterface"
 
 echo "Generate interfaces"
 
-../Morpheus/morpheus.sh $path/busybox-1.18.5/$i.c $interfacegen
+../Morpheus/morpheus.sh $path/busybox-1.18.5/archival/ar.c $interfacegen
 
 refgen="--bdd \
   --study busybox --reuseAST --refPrep --refLink $path/CLinking.interface"
