@@ -1,11 +1,10 @@
 fm True
 features (0)
 	
-imports (41)
+imports (40)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_NBDCLIENT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_NBDCLIENT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	__builtin_constant_p: (...) => signed int 		if def(CONFIG_NBDCLIENT)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:68:118, file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:68:118
-	bb_bswap_64: (unsigned long) => unsigned long 		if def(CONFIG_NBDCLIENT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/platform.h:210:22, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/platform.h:210:22
+	__builtin_constant_p: (...) => signed int 		if def(CONFIG_NBDCLIENT)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:68:118, file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:68:118, file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:111:119, file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:111:119
 	bb_daemonize_or_rexec: (signed int, char**) => void 		if (def(CONFIG_NBDCLIENT)&def(CONFIG_NOMMU))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/nbd-client.c:69:1, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/nbd-client.c:69:1
 	bb_error_msg_and_die: (const char*, ...) => void 		if def(CONFIG_NBDCLIENT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/nbd-client.c:91:3
 	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_NBDCLIENT)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/nbd-client.c:107:3, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/nbd-client.c:105:4, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/nbd-client.c:101:3

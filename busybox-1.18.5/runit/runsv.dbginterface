@@ -1,13 +1,12 @@
 fm True
 features (0)
 	
-imports (67)
+imports (66)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
-	BUG_need_to_implement_gettimeofday_ns: () => void 		if (def(CONFIG_RUNSV)&!def(CONFIG_MONOTONIC_SYSCALL))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:56:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:56:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:56:2
+	BUG_need_to_implement_gettimeofday_ns: () => void 		if (def(CONFIG_RUNSV)&!def(CONFIG_MONOTONIC_SYSCALL))		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:56:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:56:2
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	__builtin_constant_p: (...) => signed int 		if def(CONFIG_RUNSV)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:68:118
+	__builtin_constant_p: (...) => signed int 		if def(CONFIG_RUNSV)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:68:118, file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:111:119
 	_exit: (signed int) => void 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:664:4
-	bb_bswap_64: (unsigned long) => unsigned long 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/platform.h:210:22
 	bb_error_msg_and_die: (const char*, ...) => void 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:123:1
 	bb_perror_msg: (const char*, ...) => void 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:157:2, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:128:1
 	bb_perror_msg_and_die: (const char*, ...) => void 		if def(CONFIG_RUNSV)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/runit/runsv.c:113:1

@@ -149,6 +149,62 @@
         </import><import>
             <sig>
             <name>
+                set_security_context_component
+            </name>
+            <type>
+                <function><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><param><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></param><ret><pointer>
+        <astruct isUnion="false">
+        
+    </astruct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_CHCON) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS))) || (definedEx(CONFIG_SELINUX) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT))))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                62
+            </line>
+            <col>
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                62
+            </line>
+            <col>
+                12
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
                 xatoull
             </name>
             <type>
@@ -479,6 +535,42 @@
         </import><import>
             <sig>
             <name>
+                context_free
+            </name>
+            <type>
+                <function><param><pointer>
+        <astruct isUnion="false">
+        
+    </astruct>
+    </pointer></param><ret><void/></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_CHCON) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                107
+            </line>
+            <col>
+                1
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                107
+            </line>
+            <col>
+                1
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
                 BUG_bb_strtou32_unimplemented
             </name>
             <type>
@@ -683,6 +775,46 @@
             </line>
             <col>
                 10
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                context_str
+            </name>
+            <type>
+                <function><param><pointer>
+        <astruct isUnion="false">
+        
+    </astruct>
+    </pointer></param><ret><pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_CHCON) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                76
+            </line>
+            <col>
+                18
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                76
+            </line>
+            <col>
+                18
             </col>
         </pos>
         </sig>
@@ -1277,42 +1409,6 @@
         </import><import>
             <sig>
             <name>
-                context_free
-            </name>
-            <type>
-                <function><param><pointer>
-        <astruct isUnion="false">
-        
-    </astruct>
-    </pointer></param><ret><void/></ret></function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_CHCON) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)))
-            </featureexpr><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                107
-            </line>
-            <col>
-                1
-            </col>
-        </pos><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                107
-            </line>
-            <col>
-                1
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
                 xatoull_sfx
             </name>
             <type>
@@ -1395,102 +1491,6 @@
             </line>
             <col>
                 0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                context_str
-            </name>
-            <type>
-                <function><param><pointer>
-        <astruct isUnion="false">
-        
-    </astruct>
-    </pointer></param><ret><pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer></ret></function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_CHCON) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)))
-            </featureexpr><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                76
-            </line>
-            <col>
-                18
-            </col>
-        </pos><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                76
-            </line>
-            <col>
-                18
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                set_security_context_component
-            </name>
-            <type>
-                <function><param><pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer></param><param><pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer></param><param><pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer></param><param><pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer></param><param><pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer></param><ret><pointer>
-        <astruct isUnion="false">
-        
-    </astruct>
-    </pointer></ret></function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_CHCON) &amp;&amp; ((definedEx(CONFIG_FEATURE_FIND_CONTEXT) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS))) || (definedEx(CONFIG_SELINUX) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)) &amp;&amp; !definedEx(CONFIG_FEATURE_FIND_CONTEXT))))
-            </featureexpr><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                62
-            </line>
-            <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                62
-            </line>
-            <col>
-                12
             </col>
         </pos>
         </sig>
@@ -1629,48 +1629,6 @@
             </line>
             <col>
                 0
-            </col>
-        </pos>
-        </sig>
-        </import><import>
-            <sig>
-            <name>
-                context_new
-            </name>
-            <type>
-                <function><param><const>
-            <pointer>
-        <nosign>
-        <char/>
-    </nosign>
-    </pointer>
-        </const></param><ret><pointer>
-        <astruct isUnion="false">
-        
-    </astruct>
-    </pointer></ret></function>
-            </type>
-            <featureexpr>
-                (definedEx(CONFIG_CHCON) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)))
-            </featureexpr><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                69
-            </line>
-            <col>
-                12
-            </col>
-        </pos><pos>
-            <file>
-                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
-            </file>
-            <line>
-                69
-            </line>
-            <col>
-                12
             </col>
         </pos>
         </sig>
@@ -1877,6 +1835,48 @@
             </line>
             <col>
                 0
+            </col>
+        </pos>
+        </sig>
+        </import><import>
+            <sig>
+            <name>
+                context_new
+            </name>
+            <type>
+                <function><param><const>
+            <pointer>
+        <nosign>
+        <char/>
+    </nosign>
+    </pointer>
+        </const></param><ret><pointer>
+        <astruct isUnion="false">
+        
+    </astruct>
+    </pointer></ret></function>
+            </type>
+            <featureexpr>
+                (definedEx(CONFIG_CHCON) &amp;&amp; (definedEx(CONFIG_FEATURE_TAR_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ADDGROUP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_INSTALL_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MV_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GETOPT_LONG) || definedEx(CONFIG_FEATURE_ADDUSER_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_EXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_ENV_LONG_OPTIONS) || !definedEx(CONFIG_FEATURE_CHCON_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_UNEXPAND_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_GZIP_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_DIFF_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_RMDIR_LONG_OPTIONS) || definedEx(CONFIG_LONG_OPTS) || definedEx(CONFIG_FEATURE_RUN_PARTS_LONG_OPTIONS) || definedEx(CONFIG_FEATURE_MKDIR_LONG_OPTIONS)))
+            </featureexpr><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                69
+            </line>
+            <col>
+                12
+            </col>
+        </pos><pos>
+            <file>
+                file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/selinux/chcon.c
+            </file>
+            <line>
+                69
+            </line>
+            <col>
+                12
             </col>
         </pos>
         </sig>

@@ -4,9 +4,9 @@ features (0)
 imports (44)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
+	__builtin_constant_p: (...) => signed int 		if def(CONFIG_UDHCPD)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:111:119, file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:111:119
 	add_lease: (const unsigned char*, unsigned int, unsigned int, const char*, signed int) => struct dyn_lease* 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/udhcp/files.c:200:7
 	add_static_lease: (struct static_lease**, unsigned char*, unsigned int) => void 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/udhcp/files.c:49:1
-	bb_bswap_64: (unsigned long) => unsigned long 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/platform.h:210:22, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/platform.h:210:22
 	bb_error_msg: (const char*, ...) => void 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/udhcp/files.c:205:4, file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/udhcp/files.c:105:5
 	bb_info_msg: (const char*, ...) => void 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/networking/udhcp/common.h:250:47
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_UDHCPD)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9

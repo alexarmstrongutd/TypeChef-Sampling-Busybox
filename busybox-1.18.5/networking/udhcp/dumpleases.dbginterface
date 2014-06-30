@@ -4,7 +4,7 @@ features (0)
 imports (36)
 	BUG_bb_strtou32_unimplemented: () => unsigned int 		if def(CONFIG_DUMPLEASES)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:169:8
 	BUG_xatou32_unimplemented: () => unsigned int 		if def(CONFIG_DUMPLEASES)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:111:8
-	bb_bswap_64: (unsigned long) => unsigned long 		if def(CONFIG_DUMPLEASES)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/platform.h:210:22
+	__builtin_constant_p: (...) => signed int 		if def(CONFIG_DUMPLEASES)		at file ../cRefactor-BusyBoxEvaluation/systems/redhat/usr/include/bits/byteswap.h:111:119
 	bb_strtoll: (const char*, char**, signed int) => signed long long 		if def(CONFIG_DUMPLEASES)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:136:9
 	bb_strtou: (const char*, char**, signed int) => unsigned int 		if def(CONFIG_DUMPLEASES)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:166:9
 	bb_strtoull: (const char*, char**, signed int) => unsigned long long 		if def(CONFIG_DUMPLEASES)		at file /local/janker/paper/cRefactor-BusyBoxEvaluation/busybox-1.18.5/include/xatonum.h:133:9
