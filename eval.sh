@@ -8,7 +8,7 @@ filesToProcess() {
 }
 
 flags=" --bdd \
-  --study busybox --reuseAST --refEval inline --refLink $path/CLinking.interface \
+  --study busybox --reuseAST --refEval rename --refLink $path/CLinking.interface \
   -x CONFIG_ \
   -c $path/redhat.properties \
   --include $path/config.h \
