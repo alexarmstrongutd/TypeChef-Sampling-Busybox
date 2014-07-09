@@ -359,7 +359,7 @@ static void read_lines(void)
 			/* backspace? [needed for manpages] */
 			/* <tab><bs> is (a) insane and */
 			/* (b) harder to do correctly, so we refuse to do it */
-			if (c == '\x8' && last_line_pos && p[-1] != '\t') {
+			if (c == '\x08' && last_line_pos && p[-1] != '\t') {
 				readpos++; /* eat it */
 				last_line_pos--;
 			/* was buggy (p could end up <= current_line)... */
@@ -909,7 +909,7 @@ static char* less_gets(int sz)
 		if (c == 0x7f)
 			c = 8;
 		if (c == 8 && i) {
-			printf("\x8 \x8");
+			printf("\x08 \x08");
 			i--;
 		}
 		if (c < ' ') /* filters out KEYCODE_xxx too (<0) */
