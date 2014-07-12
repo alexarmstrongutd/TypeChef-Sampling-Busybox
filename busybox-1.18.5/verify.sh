@@ -16,7 +16,7 @@ filesToProcess|while read config; do
         echo "With config: $config"
         rm -f .config
         cp $config .config 
-        ./build.sh | tee "$1"/"$i"_ref.build
+        ./build.sh 2>&1 | tee "$1"/"$i"_ref.build
         cd testsuite
         git clean -f
         git checkout .
