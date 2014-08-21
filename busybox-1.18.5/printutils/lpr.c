@@ -112,7 +112,7 @@ int lpqr_main(int argc UNUSED_PARAM, char *argv[])
 			goto command;
 		// delete job(s)
 		} else if (opts & LPQ_DELETE) {
-			fdprintf(fd, "\x5" "%s %s", queue, user);
+			fdprintf(fd, "\x05" "%s %s", queue, user);
 			while (*argv) {
 				fdprintf(fd, " %s", *argv++);
 			}
@@ -144,7 +144,7 @@ int lpqr_main(int argc UNUSED_PARAM, char *argv[])
 	if (!*argv)
 		*--argv = (char *)"-";
 
-	fdprintf(fd, "\x2" "%s\n", queue);
+	fdprintf(fd, "\x02" "%s\n", queue);
 	get_response_or_say_and_die(fd, "setting queue");
 
 	// process files
@@ -209,7 +209,7 @@ int lpqr_main(int argc UNUSED_PARAM, char *argv[])
 			bb_error_msg("sending control file");
 		/* "Acknowledgement processing must occur as usual
 		 * after the command is sent." */
-		fdprintf(fd, "\x2" "%u c%s\n", cflen, remote_filename);
+		fdprintf(fd, "\x02" "%u c%s\n", cflen, remote_filename);
 		get_response_or_say_and_die(fd, "sending control file");
 		/* "Once all of the contents have
 		 * been delivered, an octet of zero bits is sent as
@@ -224,7 +224,7 @@ int lpqr_main(int argc UNUSED_PARAM, char *argv[])
 			bb_error_msg("sending data file");
 		st.st_size = 0; /* paranoia: fstat may theoretically fail */
 		fstat(dfd, &st);
-		fdprintf(fd, "\x3" "%"OFF_FMT"u d%s\n", st.st_size, remote_filename);
+		fdprintf(fd, "\x03" "%"OFF_FMT"u d%s\n", st.st_size, remote_filename);
 		get_response_or_say_and_die(fd, "sending data file");
 		if (bb_copyfd_size(dfd, fd, st.st_size) != st.st_size) {
 			// We're screwed. We sent less bytes than we advertised.
