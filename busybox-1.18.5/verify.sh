@@ -27,7 +27,7 @@ filesToProcess|while read config; do
 
 #Clean
 git checkout .
-
+make clean
 #Org Next
 i=0
 
@@ -46,4 +46,6 @@ filesToProcess|while read config; do
         done
 
 #Clean
+git checkout . 
+make clean
 exit
