@@ -1,4 +1,4 @@
-Moprheus-BusyBoxEvaluation
+Morpheus-BusyBoxEvaluation
 ===========================
 
 Case study BusyBox 1.18.5 for the variability-aware refactoring engine for C, [Morpheus](https://github.com/joliebig/Morpheus).
