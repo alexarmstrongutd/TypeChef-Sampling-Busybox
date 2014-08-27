@@ -21,3 +21,9 @@ In order to show a GUI and refactor a single file of this case study "ide-like" 
 
 
 Good luck. In case of problems contact [me](mailto:janker@fim.uni-passau.de).
+
+License
+-------
+
+This case study is published as open source under LGPL 3.0. See [LICENSE](TypeChef/blob/master/LICENSE).
+The included source code of [BusyBox](http://www.busybox.net/) is published as open source under GPLv2.  See [LICENSE](http://www.busybox.net/license.html)
