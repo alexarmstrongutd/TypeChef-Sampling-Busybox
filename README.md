@@ -12,7 +12,7 @@ To run this case study a version of [Morpheus](https://github.com/joliebig/Morph
 Run the Evaluation
 -----------------
 
-If you want to run the evaluation of the refactoring engine [Morpheus](https://github.com/joliebig/Morpheus) run `prepare.sh` first to create the required .tunit, .interface and .pr files. Now you can edit `./eval.sh` to choose your desired refactoring method: rename, extract- or inline function and subsequently run `./eval.sh` to execute the evalution.
+If you want to run the evaluation of the refactoring engine [Morpheus](https://github.com/joliebig/Morpheus) run `prepare.sh` first to create the required .tunit, .interface and .pr files. Now you can edit `eval.sh` to choose your desired refactoring method: rename, extract- or inline function and subsequently run `./eval.sh` to execute the evalution.
 
 Run the experimental GUI
 -----------------
