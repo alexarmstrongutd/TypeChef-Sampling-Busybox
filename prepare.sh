@@ -3,15 +3,15 @@
 path=$(cd "$(dirname "$0")"; pwd)
 
 filesToProcess() {
-  local listFile=busybox_files
+  local listFile=casestudy/busybox_files
   cat $listFile
 }
 
 flags="-x CONFIG_ \
-  -c $path/redhat.properties \
-  --include $path/config.h \
+  -c $path/casestudy/redhat.properties \
+  --include $path/casestudy/config.h \
   -I $path/busybox-1.18.5/include \
-  --featureModelDimacs $path/BB_fm.dimacs \
+  --featureModelDimacs $path/casestudy/BB_fm.dimacs \
   --recordTiming --parserstatistics --lexNoStdout \
   -U HAVE_LIBDMALLOC \
   -DCONFIG_FIND \
