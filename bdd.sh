@@ -14,7 +14,7 @@ flags=" --bdd \
   -c $path/casestudy/redhat.properties \
   --include $path/casestudy/config.h \
   -I $path/busybox-1.18.5/include \
-  --featureModelDimacs $path/casestudy/BB_fm.dimacs \
+  --featureModelDimacs $path/casestudy/BB_fm.dimacs --simplifyFM $path/casestudy/featureModel \
   --recordTiming --parserstatistics --lexNoStdout \
   -U HAVE_LIBDMALLOC \
   -DCONFIG_FIND \
