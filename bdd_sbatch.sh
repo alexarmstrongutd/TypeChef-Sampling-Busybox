@@ -14,7 +14,7 @@ flags=" --bdd \
   -c $path/casestudy/redhat.properties \
   --include $path/casestudy/config.h \
   -I $path/busybox-1.18.5/include \
-  --featureModelDimacs $path/casestudy/BB_fm.dimacs --simplifyFM $path/casestudy/featureModel \
+  --featureModelDimacs $path/casestudy/BB_fm.dimacs --simplifyFM $path/casestudy/busybox.model \
   --recordTiming --parserstatistics --lexNoStdout \
   -U HAVE_LIBDMALLOC \
   -DCONFIG_FIND \
@@ -27,6 +27,6 @@ flags=" --bdd \
 filesToProcess|while read i; do
          echo "Analysing $path/busybox-1.18.5/$i.c"
          echo "With settings: $flags"
-         sbatch -p hydra -A hydra -n 1 -c 2 --cpu_bind=sockets  --mem_bind=local --mail-type=all --mail-user=janker@fim.uni-passau.de ../TypeChef/typechef_sbatch.sh $path/busybox-1.18.5/$i.c $flags
+         sbatch -p sphinx -A sphinx -n 1 -c 2 --cpu_bind=sockets  --mem_bind=local --mail-type=all --mail-user=janker@fim.uni-passau.de /home/janker/clusterScripts/setupAndRunBB.sh  $path/busybox-1.18.5/$i.c $flags
 	 done
 
