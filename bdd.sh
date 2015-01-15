@@ -8,13 +8,12 @@ filesToProcess() {
 }
 
 flags=" --bdd \
-  --reuseAST \
   -A doublefree -A xfree -A uninitializedmemory -A casetermination -A danglingswitchcode -A checkstdlibfuncreturn -A deadstore -A interactiondegree \
   -x CONFIG_ \
   -c $path/casestudy/redhat.properties \
   --include $path/casestudy/config.h \
   -I $path/busybox-1.18.5/include \
-  --featureModelDimacs $path/casestudy/BB_fm.dimacs --simplifyFM $path/casestudy/featureModel \
+  --featureModelDimacs $path/casestudy/BB_fm.dimacs --simplifyFM $path/casestudy/busybox.model \
   --recordTiming --parserstatistics --lexNoStdout \
   -U HAVE_LIBDMALLOC \
   -DCONFIG_FIND \
@@ -27,6 +26,6 @@ flags=" --bdd \
 filesToProcess|while read i; do
          echo "Analysing $path/busybox-1.18.5/$i.c"
          echo "With settings: $flags"
-         timeout 6h ../TypeChef/typechef.sh $path/busybox-1.18.5/$i.c $flags
+         timeout 3h ../TypeChef/typechef.sh $path/busybox-1.18.5/$i.c $flags
 	 done
 
