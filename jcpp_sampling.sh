@@ -19,6 +19,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 inp=$1
+shift
 
 if [ -z "$inp" ]; then
   echo "inp not defined!" >&2

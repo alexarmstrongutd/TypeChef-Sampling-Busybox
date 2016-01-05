@@ -27,7 +27,7 @@ flags=" --bdd --serializeAST \
 filesToProcess|while read i; do
          echo "Analysing $path/busybox-1.18.5/$i.c"
          echo "With settings: $flags"
-         #sbatch -p chimaira  -A spl -n 1 -c 2 --time=06:00:00  --mem_bind=local --output=/dev/null --error=/dev/null  /home/janker/clusterScripts/bb_vaa.sh $path/busybox-1.18.5/$i.c $flags
+         sbatch -p chimaira  -A spl -n 1 -c 2 --time=06:00:00  --mem_bind=local --output=/dev/null --error=/dev/null  /home/janker/clusterScripts/bb_vaa.sh $path/busybox-1.18.5/$i.c $flags
 	 # timeout 3h ../TypeChef/typechef.sh $path/busybox-1.18.5/$i.c $flags
 	 done
 
