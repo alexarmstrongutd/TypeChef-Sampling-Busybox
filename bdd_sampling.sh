@@ -13,7 +13,8 @@
 #SBATCH --output=/dev/null
 #SBATCH --error=/dev/null
 #SBATCH --time=12:00:00
-#SBATCH --array=0-570
+#SBATCH --array=0-516
+#SBATCH --exclude=chimaira17
 
 path=$(pwd)
 #path=$(echo $path | sed s/scratch/local/g)
@@ -36,8 +37,8 @@ flags=" --bdd --reuseAST \
   -U ENABLE_NC_110_COMPAT \
   -U CONFIG_EXTRA_COMPAT \
   -D_GNU_SOURCE"
-configId=${SLURM_ARRAY_TASK_ID}
 
+configId=${SLURM_ARRAY_TASK_ID}
 i=`cat casestudy/busybox_files | head -n $((configId + 1)) | tail -n1`
 
      echo "Analysing $path/busybox-1.18.5/$i.c"
