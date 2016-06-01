@@ -14,15 +14,15 @@
 #SBATCH --error=/dev/null
 #SBATCH --time=12:00:00
 #SBATCH --array=0-516
+#SBATCH --exclude=chimaira17
 
 path=$(pwd)
 
 configId=${SLURM_ARRAY_TASK_ID}
 i=`cat casestudy/busybox_files | head -n $((configId + 1)) | tail -n1`
 
-flags=" --bdd --serializeAST \
-  -A cfginnonvoidfunction -A doublefree -A xfree -A uninitializedmemory -A casetermination -A danglingswitchcode -A checkstdlibfuncreturn -A deadstore -A interactiondegree \
-  -x CONFIG_ \
+flags=" --bdd --reuseAST \
+  --printFeaturesPerFunction -x CONFIG_ \
   -c $path/casestudy/redhat.properties \
   --include $path/casestudy/config.h \
   -I $path/busybox-1.18.5/include \
