@@ -26,5 +26,5 @@ flags=" --bdd --serializeAST \
 filesToProcess|while read i; do
          echo "Analysing $path/busybox-1.18.5/$i.c"
          echo "With settings: $flags"
-         ../TypeChef/typechef.sh $path/busybox-1.18.5/$i.c $path/busybox-1.18.5/$i.c $flags
+         ../TypeChef-VAA/typechef.sh  $path/busybox-1.18.5/$i.c $flags
 done
